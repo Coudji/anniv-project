@@ -117,7 +117,15 @@ export function verifierReponse(question: Question, reponse: unknown): Verificat
  * Transforme le média du JSON en ce qu'il faut au front pour l'afficher
  */
 function mediaPourFront(media?: Media) {
-  return media ? { type: media.type, url: `/medias/${media.fichier}` } : null
+  if (!media) return null
+
+  return {
+    type: media.type,
+    url: `/medias/${media.fichier}`,
+    debut: media.debut ?? 0,
+    fin: media.fin ?? null,
+    bips: media.bips ?? [],
+  }
 }
 
 /**

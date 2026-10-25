@@ -1,6 +1,9 @@
 export type MediaFront = {
-  type: 'image' | 'audio'
+  type: 'image' | 'audio' | 'video'
   url: string
+  debut: number
+  fin: number | null
+  bips: [number, number][]
 }
 
 export type OptionFront = {

@@ -15,9 +15,16 @@ export const CATEGORY_IDS = [
 
 export type CategoryId = (typeof CATEGORY_IDS)[number]
 
+/**
+ * Un média. Pour le son et la vidéo, `debut` et `fin` (en secondes) limitent
+ * la lecture à un extrait, et `bips` masque des passages : [[debut, fin], ...]
+ */
 export interface Media {
-  type: 'image' | 'audio'
+  type: 'image' | 'audio' | 'video'
   fichier: string
+  debut?: number
+  fin?: number
+  bips?: [number, number][]
 }
 
 /**
