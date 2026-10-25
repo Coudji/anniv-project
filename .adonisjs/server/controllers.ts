@@ -4,5 +4,6 @@
  */
 
 export const controllers = {
+  Grille: () => import('#controllers/grille_controller'),
   Players: () => import('#controllers/players_controller'),
 }

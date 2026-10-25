@@ -1,0 +1,19 @@
+{
+  "categories": {
+    "cat1": {
+      "nom": "Catégorie 1",
+      "questions": [
+        { "type": "texte", "question": "Question test 1", "reponses": ["test"] },
+        { "type": "texte", "question": "Question test 2", "reponses": ["test"] }
+      ]
+    },
+    "cat2": { "nom": "Catégorie 2", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat3": { "nom": "Catégorie 3", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat4": { "nom": "Catégorie 4", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat5": { "nom": "Catégorie 5", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat6": { "nom": "Catégorie 6", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat7": { "nom": "Catégorie 7", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat8": { "nom": "Catégorie 8", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat9": { "nom": "Épreuve finale", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] }
+  }
+}
