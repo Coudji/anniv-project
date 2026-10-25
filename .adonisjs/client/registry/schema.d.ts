@@ -33,6 +33,19 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/players_controller').default['store']>>> | { status: 422; response: { errors: SimpleError[] } }
     }
   }
+  'players.reset': {
+    methods: ["POST"]
+    pattern: '/joueur/reset'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/players_controller').default['reset']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/players_controller').default['reset']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/players_controller').default['reset']>>>
+    }
+  }
   'grille': {
     methods: ["GET","HEAD"]
     pattern: '/grille'

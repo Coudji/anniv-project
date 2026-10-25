@@ -6,6 +6,7 @@ export type ScannedRoutes = {
   ALL: {
     'accueil': { paramsTuple?: []; params?: {} }
     'players.store': { paramsTuple?: []; params?: {} }
+    'players.reset': { paramsTuple?: []; params?: {} }
     'grille': { paramsTuple?: []; params?: {} }
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'categories.repondre': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
@@ -22,6 +23,7 @@ export type ScannedRoutes = {
   }
   POST: {
     'players.store': { paramsTuple?: []; params?: {} }
+    'players.reset': { paramsTuple?: []; params?: {} }
     'categories.repondre': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
 }

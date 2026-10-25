@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { Link } from '@adonisjs/inertia/vue'
+import { Link, useRouter } from '@adonisjs/inertia/vue'
+
+const router = useRouter()
+
+function reinitialiser() {
+  if (window.confirm('Tout recommencer ? Toute ta progression sera perdue.')) {
+    router.post({ route: 'players.reset' })
+  }
+}
 
 defineProps<{
   pseudo: string
@@ -29,6 +37,7 @@ defineProps<{
         </Link>
       </div>
     </div>
+    <button type="button" @click="reinitialiser">Tout recommencer</button>
   </div>
 </template>
 

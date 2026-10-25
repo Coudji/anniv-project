@@ -18,6 +18,12 @@ const routes = {
     tokens: [[0,"joueur"]],
     types: placeholder as Registry['players.store']['types'],
   },
+  'players.reset': {
+    methods: ["POST"],
+    pattern: '/joueur/reset',
+    tokens: [[0,"joueur"],[0,"reset"]],
+    types: placeholder as Registry['players.reset']['types'],
+  },
   'grille': {
     methods: ["GET","HEAD"],
     pattern: '/grille',

@@ -12,6 +12,7 @@ import router from '@adonisjs/core/services/router'
 
 router.on('/').renderInertia('accueil', {}).as('accueil')
 router.post('/joueur', [controllers.Players, 'store'])
+router.post('/joueur/reset', [controllers.Players, 'reset'])
 
 router.get('/grille', [controllers.Grille, 'show']).as('grille')
 router.get('/categorie/:id', [controllers.Categories, 'show'])

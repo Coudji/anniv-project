@@ -5,6 +5,7 @@ export interface ApiDefinition {
   accueil: typeof routes['accueil']
   players: {
     store: typeof routes['players.store']
+    reset: typeof routes['players.reset']
   }
   grille: typeof routes['grille']
   categories: {
