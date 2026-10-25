@@ -15,9 +15,15 @@ export const CATEGORY_IDS = [
 
 export type CategoryId = (typeof CATEGORY_IDS)[number]
 
+export interface Media {
+  type: 'image' | 'audio'
+  fichier: string
+}
+
 export interface QuestionTexte {
   type: 'texte'
   question: string
+  media?: Media
   reponses: string[]
   tolerance?: number
 }

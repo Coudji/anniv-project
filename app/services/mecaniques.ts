@@ -1,5 +1,5 @@
 import { distance } from 'fastest-levenshtein'
-import type { Question, QuestionTexte } from '#services/content'
+import type { Media, Question, QuestionTexte } from '#services/content'
 
 /**
  * Minuscules, sans accents, espaces multiples réduits
@@ -43,11 +43,22 @@ export function verifierReponse(question: Question, reponse: string) {
 }
 
 /**
+ * Transforme le média du JSON en ce qu'il faut au front pour l'afficher
+ */
+function mediaPourFront(media?: Media) {
+  return media ? { type: media.type, url: `/medias/${media.fichier}` } : null
+}
+
+/**
  * Ne garde que ce que le front a le droit de voir
  */
 export function questionPourFront(question: Question) {
   switch (question.type) {
     case 'texte':
-      return { type: question.type, question: question.question }
+      return {
+        type: question.type,
+        question: question.question,
+        media: mediaPourFront(question.media),
+      }
   }
 }

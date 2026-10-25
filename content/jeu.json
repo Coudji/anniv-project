@@ -3,8 +3,18 @@
     "cat1": {
       "nom": "Catégorie 1",
       "questions": [
-        { "type": "texte", "question": "Question test 1", "reponses": ["test"] },
-        { "type": "texte", "question": "Question test 2", "reponses": ["test"] }
+        {
+          "type": "texte",
+          "question": "Question avec image",
+          "media": { "type": "image", "fichier": "test.jpg" },
+          "reponses": ["test"]
+        },
+        {
+          "type": "texte",
+          "question": "Question avec son",
+          "media": { "type": "audio", "fichier": "test.mp3" },
+          "reponses": ["test"]
+        }
       ]
     },
     "cat2": { "nom": "Catégorie 2", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },

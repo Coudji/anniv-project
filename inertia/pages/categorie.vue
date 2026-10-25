@@ -9,7 +9,11 @@ const props = defineProps<{
   nom: string
   numero: number
   total: number
-  question: { type: string; question: string } | null
+  question: {
+    type: string
+    question: string
+    media: { type: 'image' | 'audio'; url: string } | null
+  } | null
   resultat: 'bonne' | 'terminee' | null
 }>()
 
