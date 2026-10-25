@@ -24,6 +24,18 @@ const routes = {
     tokens: [[0,"grille"]],
     types: placeholder as Registry['grille']['types'],
   },
+  'categories.show': {
+    methods: ["GET","HEAD"],
+    pattern: '/categorie/:id',
+    tokens: [[0,"categorie"],[1,"id"]],
+    types: placeholder as Registry['categories.show']['types'],
+  },
+  'categories.repondre': {
+    methods: ["POST"],
+    pattern: '/categorie/:id',
+    tokens: [[0,"categorie"],[1,"id"]],
+    types: placeholder as Registry['categories.repondre']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }

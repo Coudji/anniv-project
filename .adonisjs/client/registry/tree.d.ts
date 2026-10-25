@@ -7,4 +7,8 @@ export interface ApiDefinition {
     store: typeof routes['players.store']
   }
   grille: typeof routes['grille']
+  categories: {
+    show: typeof routes['categories.show']
+    repondre: typeof routes['categories.repondre']
+  }
 }

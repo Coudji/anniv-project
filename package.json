@@ -75,6 +75,7 @@
     "@vue/server-renderer": "^3.5.43",
     "better-sqlite3": "^13.0.3",
     "edge.js": "^6.5.1",
+    "fastest-levenshtein": "^1.0.16",
     "lucide-vue-next": "^1.0.0",
     "luxon": "^3.7.2",
     "reflect-metadata": "^0.2.2",

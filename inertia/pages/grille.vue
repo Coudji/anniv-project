@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Link } from '@adonisjs/inertia/vue'
+
 defineProps<{
   pseudo: string
   cases: {
@@ -22,6 +24,9 @@ defineProps<{
         <span v-if="c.verrouillee">Verrouillée</span>
         <span v-else-if="c.terminee">Terminée</span>
         <span v-else>{{ c.faites }} / {{ c.total }}</span>
+        <Link v-if="!c.verrouillee && !c.terminee" route="categories.show" :params="{ id: c.id }">
+          Jouer
+        </Link>
       </div>
     </div>
   </div>

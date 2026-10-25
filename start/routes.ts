@@ -14,3 +14,5 @@ router.on('/').renderInertia('accueil', {}).as('accueil')
 router.post('/joueur', [controllers.Players, 'store'])
 
 router.get('/grille', [controllers.Grille, 'show']).as('grille')
+router.get('/categorie/:id', [controllers.Categories, 'show'])
+router.post('/categorie/:id', [controllers.Categories, 'repondre'])

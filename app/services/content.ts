@@ -15,9 +15,18 @@ export const CATEGORY_IDS = [
 
 export type CategoryId = (typeof CATEGORY_IDS)[number]
 
+export interface QuestionTexte {
+  type: 'texte'
+  question: string
+  reponses: string[]
+  tolerance?: number
+}
+
+export type Question = QuestionTexte
+
 export interface Category {
   nom: string
-  questions: Record<string, unknown>[]
+  questions: Question[]
 }
 
 export interface Content {
