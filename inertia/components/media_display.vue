@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import PixelIcone from '~/components/pixel_icone.vue'
+import { muet, volume } from '../volume'
 
 defineProps<{
   media: { type: 'image' | 'audio'; url: string }
@@ -13,6 +14,18 @@ const audio = ref<HTMLAudioElement | null>(null)
 const enLecture = ref(false)
 const position = ref(0)
 const duree = ref(0)
+
+// Le volume et la coupure du son sont communs à tous les lecteurs
+watchEffect(() => {
+  if (!audio.value) return
+  audio.value.volume = volume.value
+  audio.value.muted = muet.value
+})
+
+function regler(event: Event) {
+  volume.value = Number((event.target as HTMLInputElement).value)
+  muet.value = false
+}
 
 function basculer() {
   if (!audio.value) return
@@ -79,6 +92,24 @@ function formater(secondes: number) {
         />
       </div>
       <span class="pixel lecteur__temps">{{ formater(position) }}</span>
+      <button
+        type="button"
+        class="lecteur__muet"
+        :aria-label="muet ? 'Remettre le son' : 'Couper le son'"
+        @click="muet = !muet"
+      >
+        <PixelIcone :nom="muet || volume === 0 ? 'muet' : 'haut_parleur'" :taille="20" />
+      </button>
+      <input
+        type="range"
+        class="lecteur__volume"
+        min="0"
+        max="1"
+        step="0.05"
+        aria-label="Volume"
+        :value="muet ? 0 : volume"
+        @input="regler"
+      />
     </div>
   </div>
 </template>
@@ -144,6 +175,60 @@ function formater(secondes: number) {
 .lecteur__avancee {
   height: 100%;
   background: var(--accent);
+}
+
+.lecteur__muet {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texte-doux);
+  background: transparent;
+  border: none;
+}
+
+.lecteur__muet:hover {
+  color: var(--accent);
+}
+
+.lecteur__volume {
+  flex: none;
+  width: 80px;
+  height: 8px;
+  appearance: none;
+  background: var(--ligne);
+  cursor: pointer;
+}
+
+.lecteur__volume::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: 0;
+}
+
+.lecteur__volume::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: none;
+  border-radius: 0;
+}
+
+.lecteur__volume::-moz-range-progress {
+  height: 8px;
+  background: var(--accent-attenue);
+}
+
+/* Sur téléphone, les boutons de volume de l'appareil suffisent : on garde juste la coupure */
+@media (max-width: 480px) {
+  .lecteur__volume {
+    display: none;
+  }
 }
 
 .lecteur__temps {
