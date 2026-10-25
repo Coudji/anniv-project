@@ -73,9 +73,25 @@ export interface QuestionSerie {
 
 export type Question = QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie
 
+/**
+ * Apparence d'une catégorie : une couleur de la palette et une icône pixel
+ * (les noms disponibles sont dans inertia/components/pixel_icone.vue)
+ */
+export interface Theme {
+  couleur: 'cyan' | 'magenta' | 'jaune' | 'vert'
+  icone: string
+}
+
 export interface Category {
   nom: string
+  theme?: Theme
   questions: Question[]
+}
+
+const THEME_PAR_DEFAUT: Theme = { couleur: 'cyan', icone: 'question' }
+
+export function themeDe(categorie: Category): Theme {
+  return { ...THEME_PAR_DEFAUT, ...categorie.theme }
 }
 
 export interface Content {

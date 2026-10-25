@@ -18,7 +18,7 @@ const mecaniques: Record<string, Component> = {
 </script>
 
 <template>
-  <div>
+  <div class="question">
     <MediaDisplay v-if="question.media" :media="question.media" />
     <component
       :is="mecaniques[question.type]"
@@ -28,3 +28,11 @@ const mecaniques: Record<string, Component> = {
     />
   </div>
 </template>
+
+<style scoped>
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+</style>

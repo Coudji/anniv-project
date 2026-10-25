@@ -1,0 +1,203 @@
+<script lang="ts">
+/**
+ * Les icônes, dessinées sur une grille de 10 x 10 : "#" = pixel allumé, "." = vide.
+ * Pour en ajouter une, copie un bloc, redessine-le et donne-lui un nom :
+ * ce nom s'utilise ensuite dans le JSON ("icone": "...").
+ */
+const DESSINS: Record<string, string> = {
+  oeil: `
+    ..........
+    ...####...
+    ..#....#..
+    .#..##..#.
+    #..####..#
+    #..####..#
+    .#..##..#.
+    ..#....#..
+    ...####...
+    ..........`,
+  question: `
+    ...####...
+    ..#....#..
+    .......#..
+    ......#...
+    .....#....
+    ....#.....
+    ....#.....
+    ..........
+    ....#.....
+    ..........`,
+  buste: `
+    ...####...
+    ..######..
+    ..######..
+    ..######..
+    ...####...
+    ..........
+    .########.
+    ##########
+    ##########
+    ##########`,
+  marteau: `
+    .######...
+    .#######..
+    .######...
+    ....##....
+    ....##....
+    ....##....
+    ....##....
+    ....##....
+    ...####...
+    ..........`,
+  manette: `
+    ..........
+    ..######..
+    .########.
+    ##.####.##
+    #...##.#.#
+    ##.####.##
+    ##########
+    ###....###
+    ##......##
+    ..........`,
+  casque: `
+    ..######..
+    .#......#.
+    #........#
+    #........#
+    #........#
+    ##......##
+    ###....###
+    ###....###
+    ###....###
+    .#......#.`,
+  haut_parleur: `
+    .....#....
+    ....##..#.
+    ...###...#
+    ####.#.#.#
+    ####.#.#.#
+    ####.#.#.#
+    ...###...#
+    ....##..#.
+    .....#....
+    ..........`,
+  bulle: `
+    .########.
+    #........#
+    #.##.##..#
+    #........#
+    #.#####..#
+    #........#
+    .########.
+    ...#......
+    ..#.......
+    ..........`,
+  cadenas: `
+    ...####...
+    ..#....#..
+    ..#....#..
+    ..#....#..
+    .########.
+    .###..###.
+    .###..###.
+    .####.###.
+    .########.
+    ..........`,
+  trophee: `
+    .########.
+    ##.####.##
+    #..####..#
+    ##.####.##
+    .########.
+    ...####...
+    ....##....
+    ....##....
+    ..######..
+    ..######..`,
+  coche: `
+    ..........
+    .........#
+    ........##
+    .......##.
+    #.....##..
+    ##...##...
+    .##.##....
+    ..###.....
+    ...#......
+    ..........`,
+  lecture: `
+    ..........
+    ..##......
+    ..###.....
+    ..#####...
+    ..######..
+    ..######..
+    ..#####...
+    ..###.....
+    ..##......
+    ..........`,
+  pause: `
+    ..........
+    ..##..##..
+    ..##..##..
+    ..##..##..
+    ..##..##..
+    ..##..##..
+    ..##..##..
+    ..##..##..
+    ..##..##..
+    ..........`,
+}
+
+/**
+ * Convertit un dessin en tracé SVG, en regroupant les pixels voisins d'une même ligne
+ */
+function versTrace(dessin: string) {
+  const lignes = dessin
+    .trim()
+    .split('\n')
+    .map((ligne) => ligne.trim())
+  let trace = ''
+
+  lignes.forEach((ligne, y) => {
+    let x = 0
+    while (x < ligne.length) {
+      if (ligne[x] !== '#') {
+        x++
+        continue
+      }
+      const debut = x
+      while (ligne[x] === '#') x++
+      trace += `M${debut} ${y}h${x - debut}v1h-${x - debut}z`
+    }
+  })
+
+  return trace
+}
+
+const TRACES: Record<string, string> = Object.fromEntries(
+  Object.entries(DESSINS).map(([nom, dessin]) => [nom, versTrace(dessin)])
+)
+</script>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const props = withDefaults(defineProps<{ nom: string; taille?: number }>(), { taille: 30 })
+
+const trace = computed(() => TRACES[props.nom] ?? TRACES.question)
+</script>
+
+<template>
+  <svg
+    viewBox="0 0 10 10"
+    :width="taille"
+    :height="taille"
+    fill="currentColor"
+    shape-rendering="crispEdges"
+    aria-hidden="true"
+  >
+    <path :d="trace" />
+  </svg>
+</template>

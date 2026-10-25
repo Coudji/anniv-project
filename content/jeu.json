@@ -2,6 +2,7 @@
   "categories": {
     "cat1": {
       "nom": "Catégorie 1",
+      "theme": { "couleur": "cyan", "icone": "oeil" },
       "questions": [
         {
           "type": "texte",
@@ -26,6 +27,7 @@
     },
     "cat2": {
       "nom": "Catégorie 2",
+      "theme": { "couleur": "jaune", "icone": "question" },
       "questions": [
         {
           "type": "choix",
@@ -37,6 +39,7 @@
     },
     "cat3": {
       "nom": "Catégorie 3",
+      "theme": { "couleur": "magenta", "icone": "buste" },
       "questions": [
         {
           "type": "choix",
@@ -47,7 +50,8 @@
       ]
     },
     "cat4": { 
-      "nom": "Catégorie 4", 
+      "nom": "Catégorie 4",
+      "theme": { "couleur": "vert", "icone": "marteau" },
       "questions": [        
         {
           "type": "liste",
@@ -60,7 +64,8 @@
       ] 
     },
     "cat5": { 
-      "nom": "Catégorie 5", 
+      "nom": "Catégorie 5",
+      "theme": { "couleur": "cyan", "icone": "manette" },
       "questions": [
         {
           "type": "serie",
@@ -76,9 +81,9 @@
         }
       ] 
     },
-    "cat6": { "nom": "Catégorie 6", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
-    "cat7": { "nom": "Catégorie 7", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
-    "cat8": { "nom": "Catégorie 8", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
-    "cat9": { "nom": "Épreuve finale", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] }
+    "cat6": { "nom": "Catégorie 6", "theme": { "couleur": "magenta", "icone": "casque" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat7": { "nom": "Catégorie 7", "theme": { "couleur": "jaune", "icone": "haut_parleur" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat8": { "nom": "Catégorie 8", "theme": { "couleur": "vert", "icone": "bulle" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat9": { "nom": "Épreuve finale", "theme": { "couleur": "jaune", "icone": "trophee" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] }
   }
 }

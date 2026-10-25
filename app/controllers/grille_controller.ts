@@ -1,5 +1,5 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { loadContent, type CategoryId } from '#services/content'
+import { loadContent, themeDe, type CategoryId } from '#services/content'
 import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
 import { oublierSerie } from '#services/series'
 
@@ -32,6 +32,7 @@ export default class GrilleController {
     const cases = ORDRE_GRILLE.map((id) => ({
       id,
       nom: content.categories[id].nom,
+      theme: themeDe(content.categories[id]),
       faites: player[id],
       total: content.categories[id].questions.length,
       terminee: estTerminee(player, id, content),

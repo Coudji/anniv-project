@@ -1,5 +1,11 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { CATEGORY_IDS, loadContent, type Category, type CategoryId } from '#services/content'
+import {
+  CATEGORY_IDS,
+  loadContent,
+  themeDe,
+  type Category,
+  type CategoryId,
+} from '#services/content'
 import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
 import {
   apresPourFront,
@@ -95,6 +101,7 @@ export default class CategoriesController {
       return ctx.inertia.render('categorie', {
         id,
         nom: categorie.nom,
+        theme: themeDe(categorie),
         numero: categorie.questions.length,
         total: categorie.questions.length,
         question: null,
@@ -109,6 +116,7 @@ export default class CategoriesController {
     return ctx.inertia.render('categorie', {
       id,
       nom: categorie.nom,
+      theme: themeDe(categorie),
       numero: player[id] + 1,
       total: categorie.questions.length,
       question: await this.questionPourFront(ctx, question, `${id}:${player[id]}`),

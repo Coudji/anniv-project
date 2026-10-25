@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { Form } from '@adonisjs/inertia/vue'
+import PixelIcone from '~/components/pixel_icone.vue'
 import type { QuestionFront, RetourFront } from '~/question'
 
 const props = defineProps<{
@@ -45,42 +46,98 @@ function supprimer(index: number) {
 </script>
 
 <template>
-  <Form v-slot="{ processing }" route="categories.repondre" :params="{ id: categorie }">
-    <p>{{ question.question }}</p>
+  <Form
+    v-slot="{ processing }"
+    route="categories.repondre"
+    :params="{ id: categorie }"
+    class="formulaire"
+  >
+    <p class="enonce">{{ question.question }}</p>
 
-    <div v-for="(champ, index) in champs" :key="champ.id" class="champ">
-      <input
-        v-model="champ.valeur"
-        name="reponse[]"
-        type="text"
-        autocomplete="off"
-        :readonly="champ.valide"
-        :class="{ 'champ--valide': champ.valide }"
-      />
-      <button
-        v-if="!champ.valide"
-        type="button"
-        :disabled="champs.length === 1"
-        @click="supprimer(index)"
-      >
-        −
-      </button>
+    <div class="champs">
+      <div v-for="(champ, index) in champs" :key="champ.id" class="ligne">
+        <input
+          v-model="champ.valeur"
+          name="reponse[]"
+          type="text"
+          autocomplete="off"
+          class="champ"
+          :class="{ 'champ--valide': champ.valide }"
+          :readonly="champ.valide"
+          :aria-label="`Élément ${index + 1}`"
+          placeholder="Un élément…"
+        />
+        <PixelIcone v-if="champ.valide" nom="coche" :taille="22" class="ligne__coche" />
+        <button
+          v-else
+          type="button"
+          class="ligne__retirer"
+          aria-label="Retirer ce champ"
+          :disabled="champs.length === 1"
+          @click="supprimer(index)"
+        >
+          −
+        </button>
+      </div>
     </div>
 
-    <button type="button" @click="ajouter">+ Ajouter un champ</button>
-    <button type="submit" :disabled="processing">Valider</button>
+    <button type="button" class="bouton bouton--secondaire" @click="ajouter">
+      + AJOUTER UN CHAMP
+    </button>
+    <button type="submit" class="bouton" :disabled="processing">VALIDER</button>
   </Form>
 </template>
 
 <style scoped>
-.champ {
+.champs {
   display: flex;
-  gap: 4px;
-  margin-bottom: 4px;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.champ--valide {
-  border-color: green;
-  background: rgb(0 128 0 / 10%);
+.ligne {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ligne .champ {
+  flex: 1;
+}
+
+.champ--valide,
+.champ--valide:focus {
+  background: rgba(77, 255, 154, 0.1);
+  box-shadow:
+    0 -4px 0 0 var(--juste),
+    0 4px 0 0 var(--juste),
+    -4px 0 0 0 var(--juste),
+    4px 0 0 0 var(--juste);
+}
+
+.ligne__coche {
+  flex: none;
+  margin: 0 11px;
+  color: var(--juste);
+}
+
+.ligne__retirer {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  color: var(--texte-doux);
+  background: transparent;
+  border: 2px solid var(--verrou);
+}
+
+.ligne__retirer:hover:not(:disabled) {
+  color: var(--texte);
+  border-color: var(--texte-doux);
+}
+
+.ligne__retirer:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
 }
 </style>
