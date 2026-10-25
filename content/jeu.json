@@ -17,8 +17,28 @@
         }
       ]
     },
-    "cat2": { "nom": "Catégorie 2", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
-    "cat3": { "nom": "Catégorie 3", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat2": {
+      "nom": "Catégorie 2",
+      "questions": [
+        {
+          "type": "choix",
+          "question": "Quel est le starter feu de la 1re génération ?",
+          "options": [{ "texte": "Bulbizarre" }, { "texte": "Salamèche" }, { "texte": "Carapuce" }],
+          "bonne": 1
+        }
+      ]
+    },
+    "cat3": {
+      "nom": "Catégorie 3",
+      "questions": [
+        {
+          "type": "choix",
+          "question": "Choisis la deuxième image",
+          "options": [{ "image": "test.jpg" }, { "image": "test.jpg" }, { "image": "test.jpg" }],
+          "bonne": 1
+        }
+      ]
+    },
     "cat4": { "nom": "Catégorie 4", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat5": { "nom": "Catégorie 5", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat6": { "nom": "Catégorie 6", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },

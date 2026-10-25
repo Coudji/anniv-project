@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import { defineAsyncComponent, type Component } from 'vue'
 import MediaDisplay from '~/components/media_display.vue'
+import type { QuestionFront } from '~/question'
 
 defineProps<{
   categorie: string
-  question: {
-    type: string
-    question: string
-    media: { type: 'image' | 'audio'; url: string } | null
-  }
+  question: QuestionFront
 }>()
 
 const mecaniques: Record<string, Component> = {
   texte: defineAsyncComponent(() => import('./mecaniques/texte.vue')),
+  choix: defineAsyncComponent(() => import('./mecaniques/choix.vue')),
 }
 </script>
 

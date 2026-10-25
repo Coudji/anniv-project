@@ -1,5 +1,5 @@
 import { distance } from 'fastest-levenshtein'
-import type { Media, Question, QuestionTexte } from '#services/content'
+import type { Media, Question, QuestionChoix, QuestionTexte } from '#services/content'
 
 /**
  * Minuscules, sans accents, espaces multiples réduits
@@ -32,6 +32,10 @@ function verifierTexte(question: QuestionTexte, reponse: string) {
   })
 }
 
+function verifierChoix(question: QuestionChoix, reponse: string) {
+  return reponse === String(question.bonne)
+}
+
 /**
  * Vérifie la réponse selon le type de la question
  */
@@ -39,6 +43,8 @@ export function verifierReponse(question: Question, reponse: string) {
   switch (question.type) {
     case 'texte':
       return verifierTexte(question, reponse)
+    case 'choix':
+      return verifierChoix(question, reponse)
   }
 }
 
@@ -59,6 +65,16 @@ export function questionPourFront(question: Question) {
         type: question.type,
         question: question.question,
         media: mediaPourFront(question.media),
+      }
+
+    case 'choix':
+      return {
+        type: question.type,
+        question: question.question,
+        media: mediaPourFront(question.media),
+        options: question.options.map((option) =>
+          'texte' in option ? { texte: option.texte } : { image: `/medias/${option.image}` }
+        ),
       }
   }
 }

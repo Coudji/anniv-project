@@ -3,17 +3,14 @@ import { ref, watch } from 'vue'
 import { Link } from '@adonisjs/inertia/vue'
 import FlashToasts from '~/components/flash_toasts.vue'
 import QuestionRenderer from '~/components/question_renderer.vue'
+import type { QuestionFront } from '../question'
 
 const props = defineProps<{
   id: string
   nom: string
   numero: number
   total: number
-  question: {
-    type: string
-    question: string
-    media: { type: 'image' | 'audio'; url: string } | null
-  } | null
+  question: QuestionFront | null
   resultat: 'bonne' | 'terminee' | null
 }>()
 

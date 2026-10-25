@@ -28,7 +28,17 @@ export interface QuestionTexte {
   tolerance?: number
 }
 
-export type Question = QuestionTexte
+export type OptionChoix = { texte: string } | { image: string }
+
+export interface QuestionChoix {
+  type: 'choix'
+  question: string
+  media?: Media
+  options: OptionChoix[]
+  bonne: number
+}
+
+export type Question = QuestionTexte | QuestionChoix
 
 export interface Category {
   nom: string
