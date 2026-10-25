@@ -83,7 +83,22 @@
     },
     "cat6": { "nom": "Catégorie 6", "theme": { "couleur": "magenta", "icone": "casque" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat7": { "nom": "Catégorie 7", "theme": { "couleur": "jaune", "icone": "haut_parleur" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
-    "cat8": { "nom": "Catégorie 8", "theme": { "couleur": "vert", "icone": "bulle" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat8": {
+      "nom": "Catégorie 8",
+      "theme": { "couleur": "vert", "icone": "bulle" },
+      "questions": [
+        {
+          "type": "texte",
+          "question": "Complète la réplique !",
+          "media": { "type": "video", "fichier": "jmj58.mp4", "fin": 27 },
+          "reponses": ["test"],
+          "apres": {
+            "medias": [{ "type": "video", "fichier": "jmj58.mp4" }]
+          }
+        },
+        { "type": "texte", "question": "Question test", "reponses": ["test"] }
+      ]
+    },
     "cat9": { "nom": "Épreuve finale", "theme": { "couleur": "jaune", "icone": "trophee" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] }
   }
 }
