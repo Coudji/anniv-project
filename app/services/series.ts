@@ -23,6 +23,8 @@ const CRITERES: Record<QuestionSerie['generateur'], Critere> = {
  */
 type Entree = [a: number, b: number, correct: boolean]
 
+export type HistoriqueSerie = Entree[]
+
 /**
  * État d'une série en cours, gardé dans la session.
  * `cle` identifie la question (catégorie + numéro) : si elle change, la série repart de zéro.
@@ -88,29 +90,30 @@ export async function etatSerie(session: Session, cle: string): Promise<EtatSeri
 
 /**
  * Enregistre une réponse : +1 si juste, -1 si faux (sans descendre sous 0).
- * Renvoie true quand l'objectif est atteint.
+ * Renvoie l'historique complet (dernière réponse comprise) quand l'objectif est atteint,
+ * null sinon.
  */
 export async function repondreSerie(
   session: Session,
   cle: string,
   question: QuestionSerie,
   reponse: unknown
-) {
+): Promise<HistoriqueSerie | null> {
   const etat = await etatSerie(session, cle)
-  if (!CHOIX.includes(reponse as Choix)) return false
+  if (!CHOIX.includes(reponse as Choix)) return null
 
   const correct = reponse === (await bonneReponse(etat.paire, question))
   etat.compteur = correct ? etat.compteur + 1 : Math.max(0, etat.compteur - 1)
+  etat.historique = [...etat.historique, [...etat.paire, correct] as Entree].slice(-HISTORIQUE_MAX)
 
   if (etat.compteur >= question.objectif) {
     session.forget(CLE_SESSION)
-    return true
+    return etat.historique
   }
 
-  etat.historique = [...etat.historique, [...etat.paire, correct] as Entree].slice(-HISTORIQUE_MAX)
   etat.paire = await tirerPaire()
   session.put(CLE_SESSION, etat)
-  return false
+  return null
 }
 
 /**
@@ -120,21 +123,24 @@ export function oublierSerie(session: Session) {
   session.forget(CLE_SESSION)
 }
 
+function fiche(liste: Map<number, Pokemon>, id: number) {
+  return { nom: liste.get(id)!.nom, image: imagePokemon(id) }
+}
+
 /**
- * Ce que le front affiche : la paire en cours (sans les valeurs) et l'historique (avec les valeurs)
+ * Les lignes du tableau, avec les valeurs révélées, la plus récente en premier
  */
-export async function seriePourFront(etat: EtatSerie, question: QuestionSerie) {
+export async function historiquePourFront(historique: HistoriqueSerie, question: QuestionSerie) {
   const liste = await chargerPokemons()
   const { valeur, unite } = CRITERES[question.generateur]
 
-  const fiche = (id: number) => ({ nom: liste.get(id)!.nom, image: imagePokemon(id) })
   const ficheAvecValeur = (id: number) => ({
-    ...fiche(id),
+    ...fiche(liste, id),
     valeur: `${(valeur(liste.get(id)!) / 10).toLocaleString('fr-FR')} ${unite}`,
   })
 
-  const historique = await Promise.all(
-    etat.historique.map(async ([a, b, correct]) => {
+  const lignes = await Promise.all(
+    historique.map(async ([a, b, correct]) => {
       const bonne = await bonneReponse([a, b], question)
       return {
         a: ficheAvecValeur(a),
@@ -145,11 +151,19 @@ export async function seriePourFront(etat: EtatSerie, question: QuestionSerie) {
     })
   )
 
+  return lignes.reverse()
+}
+
+/**
+ * Ce que le front affiche : la paire en cours (sans les valeurs) et l'historique (avec les valeurs)
+ */
+export async function seriePourFront(etat: EtatSerie, question: QuestionSerie) {
+  const liste = await chargerPokemons()
+
   return {
     compteur: etat.compteur,
     objectif: question.objectif,
-    paire: { a: fiche(etat.paire[0]), b: fiche(etat.paire[1]) },
-    // La réponse la plus récente en premier
-    historique: historique.reverse(),
+    paire: { a: fiche(liste, etat.paire[0]), b: fiche(liste, etat.paire[1]) },
+    historique: await historiquePourFront(etat.historique, question),
   }
 }

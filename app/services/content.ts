@@ -20,10 +20,19 @@ export interface Media {
   fichier: string
 }
 
+/**
+ * Contenu affiché après une bonne réponse : du texte et/ou des médias
+ */
+export interface Apres {
+  texte?: string
+  medias?: Media[]
+}
+
 export interface QuestionTexte {
   type: 'texte'
   question: string
   media?: Media
+  apres?: Apres
   reponses: string[]
   tolerance?: number
 }
@@ -34,6 +43,7 @@ export interface QuestionChoix {
   type: 'choix'
   question: string
   media?: Media
+  apres?: Apres
   options: OptionChoix[]
   bonne: number
 }
@@ -47,6 +57,7 @@ export interface QuestionListe {
   type: 'liste'
   question: string
   media?: Media
+  apres?: Apres
   elements: ElementListe[]
   tolerance?: number
 }
@@ -55,6 +66,7 @@ export interface QuestionSerie {
   type: 'serie'
   question: string
   media?: Media
+  apres?: Apres
   generateur: 'pokemon-poids' | 'pokemon-taille'
   objectif: number
 }

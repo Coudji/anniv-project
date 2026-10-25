@@ -1,11 +1,29 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { CATEGORY_IDS, loadContent, type CategoryId } from '#services/content'
+import { CATEGORY_IDS, loadContent, type Category, type CategoryId } from '#services/content'
 import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
-import { questionPourFront, verifierReponse, type Verification } from '#services/mecaniques'
-import { etatSerie, repondreSerie, seriePourFront } from '#services/series'
+import {
+  apresPourFront,
+  questionPourFront,
+  verifierReponse,
+  type Verification,
+} from '#services/mecaniques'
+import {
+  etatSerie,
+  historiquePourFront,
+  repondreSerie,
+  seriePourFront,
+  type HistoriqueSerie,
+} from '#services/series'
 import type { Question } from '#services/content'
 
 type Resultat = 'bonne' | 'terminee'
+
+/**
+ * Ce qui est gardé en session après une bonne réponse, pour l'écran de résultat :
+ * la position de la question résolue, et l'historique final pour une série.
+ * Le reste est reconstruit depuis le JSON (la session vit dans un cookie de taille limitée).
+ */
+type Resolue = { index: number; historique: HistoriqueSerie | null }
 
 function estCategorie(id: string): id is CategoryId {
   return (CATEGORY_IDS as readonly string[]).includes(id)
@@ -38,6 +56,26 @@ export default class CategoriesController {
     return { ...questionPourFront(question), serie: await seriePourFront(etat, question) }
   }
 
+  /**
+   * L'écran de résultat : la question résolue, le tableau final d'une série,
+   * et le contenu complémentaire
+   */
+  private async resoluePourFront({ session }: HttpContext, categorie: Category) {
+    const resolue = session.flashMessages.get('resolue') as Resolue | undefined
+    const question = resolue ? categorie.questions[resolue.index] : undefined
+    if (!resolue || !question) return null
+
+    return {
+      question: question.question,
+      media: questionPourFront(question).media,
+      serie:
+        question.type === 'serie' && resolue.historique
+          ? await historiquePourFront(resolue.historique, question)
+          : null,
+      apres: apresPourFront(question.apres),
+    }
+  }
+
   async show(ctx: HttpContext) {
     const etat = await this.charger(ctx)
     if (!etat) {
@@ -46,6 +84,7 @@ export default class CategoriesController {
 
     const { player, id, content, categorie } = etat
     const resultat = (ctx.session.flashMessages.get('resultat') as Resultat | undefined) ?? null
+    const resolue = await this.resoluePourFront(ctx, categorie)
 
     if (estTerminee(player, id, content)) {
       // Catégorie terminée : on n'affiche la page que juste après la dernière bonne réponse
@@ -61,6 +100,7 @@ export default class CategoriesController {
         question: null,
         resultat,
         retour: null,
+        resolue,
       })
     }
 
@@ -74,6 +114,7 @@ export default class CategoriesController {
       question: await this.questionPourFront(ctx, question, `${id}:${player[id]}`),
       resultat,
       retour: (ctx.session.flashMessages.get('retour') as Verification['retour']) ?? null,
+      resolue,
     })
   }
 
@@ -86,11 +127,12 @@ export default class CategoriesController {
     const { player, id, content, categorie } = etat
     const question = categorie.questions[player[id]]
     const reponse = ctx.request.input('reponse', '')
+    let historique: HistoriqueSerie | null = null
 
     if (question.type === 'serie') {
       // Série : la question n'est validée qu'une fois l'objectif atteint
-      const atteint = await repondreSerie(ctx.session, `${id}:${player[id]}`, question, reponse)
-      if (!atteint) {
+      historique = await repondreSerie(ctx.session, `${id}:${player[id]}`, question, reponse)
+      if (!historique) {
         return ctx.response.redirect().toRoute('categories.show', { id })
       }
     } else {
@@ -104,6 +146,9 @@ export default class CategoriesController {
         return ctx.response.redirect().toRoute('categories.show', { id })
       }
     }
+
+    const resolue: Resolue = { index: player[id], historique }
+    ctx.session.flash('resolue', resolue)
 
     player[id] += 1
     await player.save()

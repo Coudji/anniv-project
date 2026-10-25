@@ -2,8 +2,10 @@
 import { ref, watch } from 'vue'
 import { Link } from '@adonisjs/inertia/vue'
 import FlashToasts from '~/components/flash_toasts.vue'
+import HistoriqueSerie from '~/components/historique_serie.vue'
+import MediaDisplay from '~/components/media_display.vue'
 import QuestionRenderer from '~/components/question_renderer.vue'
-import type { QuestionFront, RetourFront } from '../question'
+import type { QuestionFront, ResolueFront, RetourFront } from '../question'
 
 const props = defineProps<{
   id: string
@@ -13,15 +15,16 @@ const props = defineProps<{
   question: QuestionFront | null
   resultat: 'bonne' | 'terminee' | null
   retour: RetourFront | null
+  resolue: ResolueFront | null
 }>()
 
-const afficherResultat = ref(props.resultat !== null)
+// L'écran de résultat reste affiché jusqu'au clic sur "Question suivante"
+const afficherResolue = ref(props.resolue !== null)
 
-// À chaque nouvelle réponse, on réaffiche l'écran de résultat s'il y en a un
 watch(
-  () => [props.numero, props.resultat],
-  () => {
-    afficherResultat.value = props.resultat !== null
+  () => props.resolue,
+  (resolue) => {
+    afficherResolue.value = resolue !== null
   }
 )
 </script>
@@ -32,14 +35,25 @@ watch(
 
     <h1>{{ nom }}</h1>
 
-    <div v-if="resultat === 'terminee'">
-      <p>Bonne réponse ! Catégorie terminée !</p>
-      <Link route="grille">Retour à la grille</Link>
-    </div>
+    <div v-if="resolue && (afficherResolue || !question)">
+      <p>{{ resolue.question }}</p>
+      <MediaDisplay v-if="resolue.media" :media="resolue.media" />
+      <HistoriqueSerie v-if="resolue.serie" :lignes="resolue.serie" />
 
-    <div v-else-if="afficherResultat">
-      <p>Bonne réponse !</p>
-      <button type="button" @click="afficherResultat = false">Question suivante</button>
+      <p class="bravo">{{ resolue.serie ? 'Série réussie !' : 'Bonne réponse !' }}</p>
+
+      <div v-if="resolue.apres" class="apres">
+        <p v-if="resolue.apres.texte" class="apres__texte">{{ resolue.apres.texte }}</p>
+        <MediaDisplay v-for="(media, index) in resolue.apres.medias" :key="index" :media="media" />
+      </div>
+
+      <button v-if="question" type="button" @click="afficherResolue = false">
+        Question suivante
+      </button>
+      <template v-else>
+        <p>Catégorie terminée !</p>
+        <Link route="grille">Retour à la grille</Link>
+      </template>
     </div>
 
     <div v-else-if="question">
@@ -50,3 +64,13 @@ watch(
     <FlashToasts />
   </div>
 </template>
+
+<style scoped>
+.bravo {
+  font-weight: bold;
+}
+
+.apres__texte {
+  white-space: pre-line;
+}
+</style>

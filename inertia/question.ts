@@ -39,3 +39,15 @@ export type SerieFront = {
   paire: { a: FichePokemon; b: FichePokemon }
   historique: LigneSerie[]
 }
+
+export type ApresFront = {
+  texte: string | null
+  medias: MediaFront[]
+}
+
+export type ResolueFront = {
+  question: string
+  media: MediaFront | null
+  serie: LigneSerie[] | null
+  apres: ApresFront | null
+}

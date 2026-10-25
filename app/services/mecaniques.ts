@@ -1,5 +1,6 @@
 import { distance } from 'fastest-levenshtein'
 import type {
+  Apres,
   Media,
   Question,
   QuestionChoix,
@@ -117,6 +118,18 @@ export function verifierReponse(question: Question, reponse: unknown): Verificat
  */
 function mediaPourFront(media?: Media) {
   return media ? { type: media.type, url: `/medias/${media.fichier}` } : null
+}
+
+/**
+ * Le contenu complémentaire, envoyé au front seulement après la bonne réponse
+ */
+export function apresPourFront(apres?: Apres) {
+  if (!apres) return null
+
+  return {
+    texte: apres.texte ?? null,
+    medias: (apres.medias ?? []).map((media) => mediaPourFront(media)!),
+  }
 }
 
 /**

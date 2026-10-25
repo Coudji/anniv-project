@@ -7,7 +7,14 @@
           "type": "texte",
           "question": "Question avec image",
           "media": { "type": "image", "fichier": "test.jpg" },
-          "reponses": ["test"]
+          "reponses": ["test"],
+          "apres": {
+            "texte": "Une info en plus\nsur deux lignes",
+            "medias": [
+              { "type": "image", "fichier": "test.jpg" },
+              { "type": "audio", "fichier": "test.mp3" }
+            ]
+          }
         },
         {
           "type": "texte",
