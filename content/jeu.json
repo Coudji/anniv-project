@@ -52,7 +52,23 @@
         }
       ] 
     },
-    "cat5": { "nom": "Catégorie 5", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat5": { 
+      "nom": "Catégorie 5", 
+      "questions": [
+        {
+          "type": "serie",
+          "question": "Lequel est le plus lourd ?",
+          "generateur": "pokemon-poids",
+          "objectif": 3
+        },
+        {
+          "type": "serie",
+          "question": "Lequel est le plus grand ?",
+          "generateur": "pokemon-taille",
+          "objectif": 3
+        }
+      ] 
+    },
     "cat6": { "nom": "Catégorie 6", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat7": { "nom": "Catégorie 7", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat8": { "nom": "Catégorie 8", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },

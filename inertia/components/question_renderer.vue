@@ -13,6 +13,7 @@ const mecaniques: Record<string, Component> = {
   texte: defineAsyncComponent(() => import('./mecaniques/texte.vue')),
   choix: defineAsyncComponent(() => import('./mecaniques/choix.vue')),
   liste: defineAsyncComponent(() => import('./mecaniques/liste.vue')),
+  serie: defineAsyncComponent(() => import('./mecaniques/serie.vue')),
 }
 </script>
 

@@ -51,7 +51,15 @@ export interface QuestionListe {
   tolerance?: number
 }
 
-export type Question = QuestionTexte | QuestionChoix | QuestionListe
+export interface QuestionSerie {
+  type: 'serie'
+  question: string
+  media?: Media
+  generateur: 'pokemon-poids' | 'pokemon-taille'
+  objectif: number
+}
+
+export type Question = QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie
 
 export interface Category {
   nom: string

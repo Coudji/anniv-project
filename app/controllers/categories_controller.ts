@@ -2,6 +2,8 @@ import type { HttpContext } from '@adonisjs/core/http'
 import { CATEGORY_IDS, loadContent, type CategoryId } from '#services/content'
 import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
 import { questionPourFront, verifierReponse, type Verification } from '#services/mecaniques'
+import { etatSerie, repondreSerie, seriePourFront } from '#services/series'
+import type { Question } from '#services/content'
 
 type Resultat = 'bonne' | 'terminee'
 
@@ -24,6 +26,16 @@ export default class CategoriesController {
     if (id === 'cat9' && !centralDebloque(player, content)) return null
 
     return { player, id, content, categorie: content.categories[id] }
+  }
+
+  /**
+   * La question telle que le front la voit, avec l'état de la série si c'en est une
+   */
+  private async questionPourFront({ session }: HttpContext, question: Question, cle: string) {
+    if (question.type !== 'serie') return questionPourFront(question)
+
+    const etat = await etatSerie(session, cle)
+    return { ...questionPourFront(question), serie: await seriePourFront(etat, question) }
   }
 
   async show(ctx: HttpContext) {
@@ -52,12 +64,14 @@ export default class CategoriesController {
       })
     }
 
+    const question = categorie.questions[player[id]]
+
     return ctx.inertia.render('categorie', {
       id,
       nom: categorie.nom,
       numero: player[id] + 1,
       total: categorie.questions.length,
-      question: questionPourFront(categorie.questions[player[id]]),
+      question: await this.questionPourFront(ctx, question, `${id}:${player[id]}`),
       resultat,
       retour: (ctx.session.flashMessages.get('retour') as Verification['retour']) ?? null,
     })
@@ -71,14 +85,24 @@ export default class CategoriesController {
 
     const { player, id, content, categorie } = etat
     const question = categorie.questions[player[id]]
-    const verification = verifierReponse(question, ctx.request.input('reponse', ''))
+    const reponse = ctx.request.input('reponse', '')
 
-    if (!verification.correct) {
-      ctx.session.flash('error', 'Mauvaise réponse')
-      if (verification.retour) {
-        ctx.session.flash('retour', verification.retour)
+    if (question.type === 'serie') {
+      // Série : la question n'est validée qu'une fois l'objectif atteint
+      const atteint = await repondreSerie(ctx.session, `${id}:${player[id]}`, question, reponse)
+      if (!atteint) {
+        return ctx.response.redirect().toRoute('categories.show', { id })
       }
-      return ctx.response.redirect().toRoute('categories.show', { id })
+    } else {
+      const verification = verifierReponse(question, reponse)
+
+      if (!verification.correct) {
+        ctx.session.flash('error', 'Mauvaise réponse')
+        if (verification.retour) {
+          ctx.session.flash('retour', verification.retour)
+        }
+        return ctx.response.redirect().toRoute('categories.show', { id })
+      }
     }
 
     player[id] += 1
