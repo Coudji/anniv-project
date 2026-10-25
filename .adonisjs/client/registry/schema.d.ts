@@ -20,4 +20,30 @@ export interface Registry {
       rawResponse: ExtractRawResponse<unknown>
     }
   }
+  'players.store': {
+    methods: ["POST"]
+    pattern: '/joueur'
+    types: {
+      body: ExtractBody<InferInput<(typeof import('#validators/player').pseudoValidator)>>
+      paramsTuple: []
+      params: {}
+      query: ExtractQuery<InferInput<(typeof import('#validators/player').pseudoValidator)>>
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/players_controller').default['store']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/players_controller').default['store']>>> | { status: 422; response: { errors: SimpleError[] } }
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/players_controller').default['store']>>> | { status: 422; response: { errors: SimpleError[] } }
+    }
+  }
+  'grille': {
+    methods: ["GET","HEAD"]
+    pattern: '/grille'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: unknown
+      errorResponse: unknown
+      rawResponse: ExtractRawResponse<unknown>
+    }
+  }
 }

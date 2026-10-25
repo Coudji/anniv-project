@@ -12,6 +12,18 @@ const routes = {
     tokens: [[0,"/"]],
     types: placeholder as Registry['accueil']['types'],
   },
+  'players.store': {
+    methods: ["POST"],
+    pattern: '/joueur',
+    tokens: [[0,"joueur"]],
+    types: placeholder as Registry['players.store']['types'],
+  },
+  'grille': {
+    methods: ["GET","HEAD"],
+    pattern: '/grille',
+    tokens: [[0,"grille"]],
+    types: placeholder as Registry['grille']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }

@@ -12,5 +12,6 @@ declare module '@adonisjs/inertia/types' {
     'accueil': ExtractProps<(typeof import('../../inertia/pages/accueil.vue'))['default']>
     'errors/not_found': ExtractProps<(typeof import('../../inertia/pages/errors/not_found.vue'))['default']>
     'errors/server_error': ExtractProps<(typeof import('../../inertia/pages/errors/server_error.vue'))['default']>
+    'grille': ExtractProps<(typeof import('../../inertia/pages/grille.vue'))['default']>
   }
 }
