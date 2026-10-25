@@ -3,7 +3,7 @@ import { ref, watch } from 'vue'
 import { Link } from '@adonisjs/inertia/vue'
 import FlashToasts from '~/components/flash_toasts.vue'
 import QuestionRenderer from '~/components/question_renderer.vue'
-import type { QuestionFront } from '../question'
+import type { QuestionFront, RetourFront } from '../question'
 
 const props = defineProps<{
   id: string
@@ -12,6 +12,7 @@ const props = defineProps<{
   total: number
   question: QuestionFront | null
   resultat: 'bonne' | 'terminee' | null
+  retour: RetourFront | null
 }>()
 
 const afficherResultat = ref(props.resultat !== null)
@@ -43,7 +44,7 @@ watch(
 
     <div v-else-if="question">
       <p>Question {{ numero }} / {{ total }}</p>
-      <QuestionRenderer :key="numero" :categorie="id" :question="question" />
+      <QuestionRenderer :key="numero" :categorie="id" :question="question" :retour="retour" />
     </div>
 
     <FlashToasts />

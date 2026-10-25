@@ -1,5 +1,20 @@
 import { distance } from 'fastest-levenshtein'
-import type { Media, Question, QuestionChoix, QuestionTexte } from '#services/content'
+import type {
+  Media,
+  Question,
+  QuestionChoix,
+  QuestionListe,
+  QuestionTexte,
+} from '#services/content'
+
+/**
+ * Résultat d'une vérification. `retour` contient des informations
+ * à renvoyer au front en cas d'erreur (pour la liste : les champs corrects)
+ */
+export interface Verification {
+  correct: boolean
+  retour?: { saisies: string[]; valides: boolean[] }
+}
 
 /**
  * Minuscules, sans accents, espaces multiples réduits
@@ -22,29 +37,75 @@ function toleranceParDefaut(attendue: string) {
   return 2
 }
 
-function verifierTexte(question: QuestionTexte, reponse: string) {
-  const donnee = normaliser(reponse)
+/**
+ * La saisie correspond-elle à l'une des réponses acceptées, à la tolérance près ?
+ */
+function correspond(saisie: string, acceptees: string[], tolerance?: number) {
+  const donnee = normaliser(saisie)
 
-  return question.reponses.some((acceptee) => {
+  return acceptees.some((acceptee) => {
     const attendue = normaliser(acceptee)
-    const tolerance = question.tolerance ?? toleranceParDefaut(attendue)
-    return distance(donnee, attendue) <= tolerance
+    return distance(donnee, attendue) <= (tolerance ?? toleranceParDefaut(attendue))
   })
 }
 
-function verifierChoix(question: QuestionChoix, reponse: string) {
-  return reponse === String(question.bonne)
+/**
+ * Sépare une quantité en tête de saisie : "3 lingots de fer", "3x fer", "3 x fer"
+ */
+function lireQuantite(saisie: string) {
+  const match = saisie.match(/^(\d+)\s*(?:x\s)?\s*(.+)$/i)
+  return match ? { quantite: Number(match[1]), nom: match[2] } : { quantite: null, nom: saisie }
+}
+
+function verifierTexte(question: QuestionTexte, reponse: unknown): Verification {
+  return { correct: correspond(String(reponse ?? ''), question.reponses, question.tolerance) }
+}
+
+function verifierChoix(question: QuestionChoix, reponse: unknown): Verification {
+  return { correct: String(reponse ?? '') === String(question.bonne) }
+}
+
+/**
+ * Chaque champ est associé au premier élément attendu, pas encore trouvé, qui lui correspond.
+ * C'est correct quand tous les éléments sont trouvés et qu'aucun champ rempli n'est faux.
+ */
+function verifierListe(question: QuestionListe, reponse: unknown): Verification {
+  const saisies = (Array.isArray(reponse) ? reponse : [reponse]).map((s) => String(s ?? '').trim())
+  const trouves = new Set<number>()
+
+  const valides = saisies.map((saisie) => {
+    if (!saisie) return false
+
+    const { quantite, nom } = lireQuantite(saisie)
+    const index = question.elements.findIndex(
+      (element, i) =>
+        !trouves.has(i) &&
+        (element.quantite === undefined || element.quantite === quantite) &&
+        correspond(nom, element.reponses, question.tolerance)
+    )
+
+    if (index === -1) return false
+    trouves.add(index)
+    return true
+  })
+
+  const correct =
+    trouves.size === question.elements.length && saisies.every((s, i) => !s || valides[i])
+
+  return { correct, retour: { saisies, valides } }
 }
 
 /**
  * Vérifie la réponse selon le type de la question
  */
-export function verifierReponse(question: Question, reponse: string) {
+export function verifierReponse(question: Question, reponse: unknown): Verification {
   switch (question.type) {
     case 'texte':
       return verifierTexte(question, reponse)
     case 'choix':
       return verifierChoix(question, reponse)
+    case 'liste':
+      return verifierListe(question, reponse)
   }
 }
 
@@ -61,6 +122,7 @@ function mediaPourFront(media?: Media) {
 export function questionPourFront(question: Question) {
   switch (question.type) {
     case 'texte':
+    case 'liste':
       return {
         type: question.type,
         question: question.question,

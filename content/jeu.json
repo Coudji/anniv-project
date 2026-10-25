@@ -39,7 +39,19 @@
         }
       ]
     },
-    "cat4": { "nom": "Catégorie 4", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
+    "cat4": { 
+      "nom": "Catégorie 4", 
+      "questions": [        
+        {
+          "type": "liste",
+          "question": "Ingrédients de la pioche en fer (avec les quantités, ex : 3 lingots de fer)",
+          "elements": [
+            { "reponses": ["lingot de fer", "lingots de fer"], "quantite": 3 },
+            { "reponses": ["baton", "batons", "stick", "sticks"], "quantite": 2 }
+          ]
+        }
+      ] 
+    },
     "cat5": { "nom": "Catégorie 5", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat6": { "nom": "Catégorie 6", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat7": { "nom": "Catégorie 7", "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },

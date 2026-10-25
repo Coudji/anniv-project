@@ -1,16 +1,21 @@
-export interface MediaFront {
+export type MediaFront = {
   type: 'image' | 'audio'
   url: string
 }
 
-export interface OptionFront {
+export type OptionFront = {
   texte?: string
   image?: string
 }
 
-export interface QuestionFront {
+export type QuestionFront = {
   type: string
   question: string
   media: MediaFront | null
   options?: OptionFront[]
+}
+
+export type RetourFront = {
+  saisies: string[]
+  valides: boolean[]
 }

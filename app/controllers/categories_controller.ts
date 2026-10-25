@@ -1,7 +1,7 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import { CATEGORY_IDS, loadContent, type CategoryId } from '#services/content'
 import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
-import { questionPourFront, verifierReponse } from '#services/mecaniques'
+import { questionPourFront, verifierReponse, type Verification } from '#services/mecaniques'
 
 type Resultat = 'bonne' | 'terminee'
 
@@ -48,6 +48,7 @@ export default class CategoriesController {
         total: categorie.questions.length,
         question: null,
         resultat,
+        retour: null,
       })
     }
 
@@ -58,6 +59,7 @@ export default class CategoriesController {
       total: categorie.questions.length,
       question: questionPourFront(categorie.questions[player[id]]),
       resultat,
+      retour: (ctx.session.flashMessages.get('retour') as Verification['retour']) ?? null,
     })
   }
 
@@ -69,10 +71,13 @@ export default class CategoriesController {
 
     const { player, id, content, categorie } = etat
     const question = categorie.questions[player[id]]
-    const reponse = String(ctx.request.input('reponse', ''))
+    const verification = verifierReponse(question, ctx.request.input('reponse', ''))
 
-    if (!verifierReponse(question, reponse)) {
+    if (!verification.correct) {
       ctx.session.flash('error', 'Mauvaise réponse')
+      if (verification.retour) {
+        ctx.session.flash('retour', verification.retour)
+      }
       return ctx.response.redirect().toRoute('categories.show', { id })
     }
 

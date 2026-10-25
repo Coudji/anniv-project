@@ -38,7 +38,20 @@ export interface QuestionChoix {
   bonne: number
 }
 
-export type Question = QuestionTexte | QuestionChoix
+export interface ElementListe {
+  reponses: string[]
+  quantite?: number
+}
+
+export interface QuestionListe {
+  type: 'liste'
+  question: string
+  media?: Media
+  elements: ElementListe[]
+  tolerance?: number
+}
+
+export type Question = QuestionTexte | QuestionChoix | QuestionListe
 
 export interface Category {
   nom: string
