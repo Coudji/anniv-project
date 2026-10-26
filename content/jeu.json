@@ -42,10 +42,50 @@
       "theme": { "couleur": "lime", "icone": "casque" },
       "questions": [
         {
+          "type": "texte",
+          "question": "De quel anime vient cet opening ?",
+          "media": { "type": "audio", "fichier": "kelzik/demonslayer-op1.mp3" },
+          "reponses": ["demon slayer", "kimetsu no yaiba"]
+        },
+        {
+          "type": "texte",
+          "question": "De quel anime vient cet opening ?",
+          "media": { "type": "audio", "fichier": "kelzik/gto-op1.mp3" },
+          "reponses": ["gto", "great teacher onizuka"]
+        },
+        {
+          "type": "texte",
+          "question": "De quel jeu vient cette musique ?",
+          "media": { "type": "audio", "fichier": "kelzik/metin2-selection.mp3" },
+          "reponses": ["metin2", "metin 2"]
+        },
+        {
+          "type": "texte",
+          "question": "De quel jeu vient cette musique ?",
+          "media": { "type": "audio", "fichier": "kelzik/wow-wod-light-in-the-darkness.mp3" },
+          "reponses": ["world of warcraft", "wow", "warcraft", "warlords of draenor"]
+        },
+        {
           "type": "choix",
-          "question": "Choisis la deuxième image",
-          "options": [{ "image": "test.jpg" }, { "image": "test.jpg" }, { "image": "test.jpg" }],
-          "bonne": 1
+          "question": "D'où vient cette musique de Dofus ?",
+          "media": { "type": "audio", "fichier": "kelzik/dofus-astrub.mp3" },
+          "options": [
+            { "texte": "Amakna" },
+            { "texte": "Bonta" },
+            { "texte": "Astrub" },
+            { "texte": "Brâkmar" },
+            { "texte": "Incarnam" }
+          ],
+          "bonne": 2
+        },
+        {
+          "type": "texte",
+          "question": "Qui a composé ce morceau ?",
+          "media": { "type": "audio", "fichier": "kelzik/mozart-symphonie40.mp3" },
+          "reponses": ["mozart", "wolfgang amadeus mozart"],
+          "apres": {
+            "texte": "Symphonie n° 40 en sol mineur de Mozart (1788).\nEt toi, tu te souviens de ton costume au carnaval ?"
+          }
         }
       ]
     },
