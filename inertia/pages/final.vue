@@ -66,8 +66,20 @@ function styleMorceau(n: number, echelle = 1) {
   }
 }
 
+/**
+ * Le dos de carte est presque identique une fois retourné (le logo est en double,
+ * tête-bêche) : un morceau est donc accepté dans sa case à l'endroit, ou à la place
+ * de son "jumeau" (le morceau opposé, tourné d'un demi-tour). Seul le centre,
+ * avec la Poké Ball, doit être à l'endroit.
+ */
+function bienPlace(n: number | null, i: number) {
+  if (n === null) return false
+  if (n === i && rotations.value[n] === 0) return true
+  return i !== 4 && n === 8 - i && rotations.value[n] === 2
+}
+
 function verifier() {
-  const resolu = emplacements.value.every((n, i) => n === i && rotations.value[i] === 0)
+  const resolu = emplacements.value.every((n, i) => bienPlace(n, i))
   if (!resolu) return
 
   phase.value = 'assemblage'
