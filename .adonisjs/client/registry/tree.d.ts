@@ -13,4 +13,11 @@ export interface ApiDefinition {
     show: typeof routes['categories.show']
     repondre: typeof routes['categories.repondre']
   }
+  triche: {
+    desactiver: typeof routes['triche.desactiver']
+    activer: typeof routes['triche.activer']
+    passer: typeof routes['triche.passer']
+    terminer: typeof routes['triche.terminer']
+    tout: typeof routes['triche.tout']
+  }
 }

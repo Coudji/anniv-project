@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Link, useRouter } from '@adonisjs/inertia/vue'
+import BarreTriche from '~/components/barre_triche.vue'
 import PixelIcone from '~/components/pixel_icone.vue'
 import { enPixel, varsTheme, type ThemeFront } from '../theme'
 
@@ -98,6 +99,8 @@ function reinitialiser() {
         TOUT RECOMMENCER
       </button>
     </div>
+
+    <BarreTriche />
   </main>
 </template>
 

@@ -23,8 +23,8 @@ export default class FinalController {
 
     return inertia.render('final', {
       cases,
-      dos: '/final/dos.webp',
-      face: '/final/face.webp',
+      dos: '/carte/dos.webp',
+      face: '/carte/face.webp',
     })
   }
 }

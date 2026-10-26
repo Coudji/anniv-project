@@ -8,4 +8,5 @@ export const controllers = {
   Final: () => import('#controllers/final_controller'),
   Grille: () => import('#controllers/grille_controller'),
   Players: () => import('#controllers/players_controller'),
+  Triche: () => import('#controllers/triche_controller'),
 }

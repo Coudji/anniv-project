@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { Link } from '@adonisjs/inertia/vue'
+import BarreTriche from '~/components/barre_triche.vue'
 import FlashToasts from '~/components/flash_toasts.vue'
 import HistoriqueSerie from '~/components/historique_serie.vue'
 import MediaDisplay from '~/components/media_display.vue'
@@ -94,6 +95,8 @@ const segments = computed(() =>
       <QuestionRenderer :key="numero" :categorie="id" :question="question" :retour="retour" />
     </section>
 
+    <BarreTriche v-if="question && !afficherResolue" :categorie="id" class="barre-triche" />
+
     <FlashToasts />
   </main>
 </template>
@@ -175,5 +178,8 @@ const segments = computed(() =>
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+.barre-triche {
+  margin-top: auto;
 }
 </style>

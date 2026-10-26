@@ -98,4 +98,69 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/categories_controller').default['repondre']>>>
     }
   }
+  'triche.desactiver': {
+    methods: ["GET","HEAD"]
+    pattern: '/triche/off'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['desactiver']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['desactiver']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['desactiver']>>>
+    }
+  }
+  'triche.activer': {
+    methods: ["GET","HEAD"]
+    pattern: '/triche/:code'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { code: ParamValue }
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['activer']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['activer']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['activer']>>>
+    }
+  }
+  'triche.passer': {
+    methods: ["POST"]
+    pattern: '/triche/passer/:id'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { id: ParamValue }
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['passer']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['passer']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['passer']>>>
+    }
+  }
+  'triche.terminer': {
+    methods: ["POST"]
+    pattern: '/triche/terminer/:id'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { id: ParamValue }
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['terminer']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['terminer']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['terminer']>>>
+    }
+  }
+  'triche.tout': {
+    methods: ["POST"]
+    pattern: '/triche/tout'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['tout']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['tout']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['tout']>>>
+    }
+  }
 }

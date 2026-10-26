@@ -15,6 +15,10 @@ export const CATEGORY_IDS = [
 
 export type CategoryId = (typeof CATEGORY_IDS)[number]
 
+export function estCategorie(id: string): id is CategoryId {
+  return (CATEGORY_IDS as readonly string[]).includes(id)
+}
+
 /**
  * Un média. Pour le son et la vidéo, `debut` et `fin` (en secondes) limitent
  * la lecture à un extrait, et `bips` masque des passages : [[debut, fin], ...]

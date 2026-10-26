@@ -1,11 +1,5 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import {
-  CATEGORY_IDS,
-  loadContent,
-  themeDe,
-  type Category,
-  type CategoryId,
-} from '#services/content'
+import { estCategorie, loadContent, themeDe, type Category } from '#services/content'
 import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
 import {
   apresPourFront,
@@ -30,10 +24,6 @@ type Resultat = 'bonne' | 'terminee'
  * Le reste est reconstruit depuis le JSON (la session vit dans un cookie de taille limitée).
  */
 type Resolue = { index: number; historique: HistoriqueSerie | null }
-
-function estCategorie(id: string): id is CategoryId {
-  return (CATEGORY_IDS as readonly string[]).includes(id)
-}
 
 export default class CategoriesController {
   /**

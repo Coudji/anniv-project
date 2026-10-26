@@ -23,4 +23,7 @@ export default await Env.create(new URL('../', import.meta.url), {
 
   // Session
   SESSION_DRIVER: Env.schema.enum(['cookie', 'memory', 'database'] as const),
+
+  // Code secret du mode triche (laisser vide pour le désactiver)
+  TRICHE_CODE: Env.schema.string.optional(),
 })

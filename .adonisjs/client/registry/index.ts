@@ -48,6 +48,36 @@ const routes = {
     tokens: [[0,"categorie"],[1,"id"]],
     types: placeholder as Registry['categories.repondre']['types'],
   },
+  'triche.desactiver': {
+    methods: ["GET","HEAD"],
+    pattern: '/triche/off',
+    tokens: [[0,"triche"],[0,"off"]],
+    types: placeholder as Registry['triche.desactiver']['types'],
+  },
+  'triche.activer': {
+    methods: ["GET","HEAD"],
+    pattern: '/triche/:code',
+    tokens: [[0,"triche"],[1,"code"]],
+    types: placeholder as Registry['triche.activer']['types'],
+  },
+  'triche.passer': {
+    methods: ["POST"],
+    pattern: '/triche/passer/:id',
+    tokens: [[0,"triche"],[0,"passer"],[1,"id"]],
+    types: placeholder as Registry['triche.passer']['types'],
+  },
+  'triche.terminer': {
+    methods: ["POST"],
+    pattern: '/triche/terminer/:id',
+    tokens: [[0,"triche"],[0,"terminer"],[1,"id"]],
+    types: placeholder as Registry['triche.terminer']['types'],
+  },
+  'triche.tout': {
+    methods: ["POST"],
+    pattern: '/triche/tout',
+    tokens: [[0,"triche"],[0,"tout"]],
+    types: placeholder as Registry['triche.tout']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }

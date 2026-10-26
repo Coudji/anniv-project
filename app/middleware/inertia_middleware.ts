@@ -12,7 +12,7 @@ export default class InertiaMiddleware extends BaseInertiaMiddleware {
      * In that case, we must always assume that HttpContext is not fully hydrated
      * with all the properties
      */
-    const { request } = ctx as Partial<HttpContext>
+    const { request, session } = ctx as Partial<HttpContext>
 
     const theme: 'light' | 'dark' =
       request?.plainCookie('app_theme', {
@@ -27,6 +27,7 @@ export default class InertiaMiddleware extends BaseInertiaMiddleware {
     return {
       errors: ctx.inertia.always(this.getValidationErrors(ctx)),
       preferences: ctx.inertia.always({ theme }),
+      triche: ctx.inertia.always(session?.get('triche') === true),
     }
   }
 
