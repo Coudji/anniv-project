@@ -72,7 +72,9 @@ const segments = computed(() =>
       </button>
       <template v-else>
         <p class="pixel fin">CATEGORIE TERMINEE !</p>
-        <Link route="grille" class="bouton bouton--lien">RETOUR A LA GRILLE</Link>
+        <Link route="grille" class="bouton bouton--lien">
+          {{ id === 'cat9' ? 'LA SUITE ▶' : 'RETOUR A LA GRILLE' }}
+        </Link>
       </template>
     </section>
 

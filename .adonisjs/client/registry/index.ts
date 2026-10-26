@@ -30,6 +30,12 @@ const routes = {
     tokens: [[0,"grille"]],
     types: placeholder as Registry['grille']['types'],
   },
+  'final': {
+    methods: ["GET","HEAD"],
+    pattern: '/final',
+    tokens: [[0,"final"]],
+    types: placeholder as Registry['final']['types'],
+  },
   'categories.show': {
     methods: ["GET","HEAD"],
     pattern: '/categorie/:id',

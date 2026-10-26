@@ -59,6 +59,19 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/grille_controller').default['show']>>>
     }
   }
+  'final': {
+    methods: ["GET","HEAD"]
+    pattern: '/final'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/final_controller').default['show']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/final_controller').default['show']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/final_controller').default['show']>>>
+    }
+  }
   'categories.show': {
     methods: ["GET","HEAD"]
     pattern: '/categorie/:id'

@@ -8,17 +8,20 @@ export type ScannedRoutes = {
     'players.store': { paramsTuple?: []; params?: {} }
     'players.reset': { paramsTuple?: []; params?: {} }
     'grille': { paramsTuple?: []; params?: {} }
+    'final': { paramsTuple?: []; params?: {} }
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'categories.repondre': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   GET: {
     'accueil': { paramsTuple?: []; params?: {} }
     'grille': { paramsTuple?: []; params?: {} }
+    'final': { paramsTuple?: []; params?: {} }
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   HEAD: {
     'accueil': { paramsTuple?: []; params?: {} }
     'grille': { paramsTuple?: []; params?: {} }
+    'final': { paramsTuple?: []; params?: {} }
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   POST: {

@@ -13,6 +13,7 @@ declare module '@adonisjs/inertia/types' {
     'categorie': ExtractProps<(typeof import('../../inertia/pages/categorie.vue'))['default']>
     'errors/not_found': ExtractProps<(typeof import('../../inertia/pages/errors/not_found.vue'))['default']>
     'errors/server_error': ExtractProps<(typeof import('../../inertia/pages/errors/server_error.vue'))['default']>
+    'final': ExtractProps<(typeof import('../../inertia/pages/final.vue'))['default']>
     'grille': ExtractProps<(typeof import('../../inertia/pages/grille.vue'))['default']>
   }
 }

@@ -8,6 +8,7 @@ export interface ApiDefinition {
     reset: typeof routes['players.reset']
   }
   grille: typeof routes['grille']
+  final: typeof routes['final']
   categories: {
     show: typeof routes['categories.show']
     repondre: typeof routes['categories.repondre']

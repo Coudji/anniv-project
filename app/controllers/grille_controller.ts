@@ -1,20 +1,13 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { loadContent, themeDe, type CategoryId } from '#services/content'
-import { centralDebloque, estTerminee, joueurEnSession } from '#services/progression'
+import { loadContent, themeDe } from '#services/content'
+import {
+  ORDRE_GRILLE,
+  centralDebloque,
+  estTerminee,
+  jeuTermine,
+  joueurEnSession,
+} from '#services/progression'
 import { oublierSerie } from '#services/series'
-
-// Ordre d'affichage dans la grille 3x3 : cat9 au centre
-const ORDRE_GRILLE: CategoryId[] = [
-  'cat1',
-  'cat2',
-  'cat3',
-  'cat4',
-  'cat9',
-  'cat5',
-  'cat6',
-  'cat7',
-  'cat8',
-]
 
 export default class GrilleController {
   async show({ session, response, inertia }: HttpContext) {
@@ -27,6 +20,12 @@ export default class GrilleController {
     oublierSerie(session)
 
     const content = await loadContent()
+
+    // Tout est terminé : place au grand final
+    if (jeuTermine(player, content)) {
+      return response.redirect().toRoute('final')
+    }
+
     const debloque = centralDebloque(player, content)
 
     const cases = ORDRE_GRILLE.map((id) => ({

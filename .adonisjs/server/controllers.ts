@@ -5,6 +5,7 @@
 
 export const controllers = {
   Categories: () => import('#controllers/categories_controller'),
+  Final: () => import('#controllers/final_controller'),
   Grille: () => import('#controllers/grille_controller'),
   Players: () => import('#controllers/players_controller'),
 }
