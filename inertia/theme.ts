@@ -38,6 +38,30 @@ const PALETTE: Record<string, { vif: string; attenue: string; halo: string; fond
     halo: 'rgba(255, 61, 71, 0.4)',
     fond: 'rgba(255, 61, 71, 0.12)',
   },
+  bleu: {
+    vif: '#5b8cff',
+    attenue: '#2f4a8f',
+    halo: 'rgba(91, 140, 255, 0.4)',
+    fond: 'rgba(91, 140, 255, 0.12)',
+  },
+  violet: {
+    vif: '#b07cff',
+    attenue: '#5e3f8f',
+    halo: 'rgba(176, 124, 255, 0.4)',
+    fond: 'rgba(176, 124, 255, 0.12)',
+  },
+  orange: {
+    vif: '#ff8f3d',
+    attenue: '#8f4c1f',
+    halo: 'rgba(255, 143, 61, 0.4)',
+    fond: 'rgba(255, 143, 61, 0.12)',
+  },
+  lime: {
+    vif: '#c8ff3d',
+    attenue: '#6b8a1f',
+    halo: 'rgba(200, 255, 61, 0.35)',
+    fond: 'rgba(200, 255, 61, 0.1)',
+  },
 }
 
 /**

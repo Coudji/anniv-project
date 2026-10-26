@@ -85,7 +85,7 @@ export type Question = QuestionTexte | QuestionChoix | QuestionListe | QuestionS
  * (les noms disponibles sont dans inertia/components/pixel_icone.vue)
  */
 export interface Theme {
-  couleur: 'cyan' | 'magenta' | 'jaune' | 'vert' | 'rouge'
+  couleur: 'cyan' | 'bleu' | 'violet' | 'magenta' | 'rouge' | 'orange' | 'jaune' | 'lime' | 'vert'
   icone: string
 }
 

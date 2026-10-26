@@ -2,7 +2,7 @@
   "categories": {
     "cat1": {
       "nom": "Kékecé ?",
-      "theme": { "couleur": "cyan", "icone": "oeil" },
+      "theme": { "couleur": "orange", "icone": "loupe" },
       "questions": [
         {
           "type": "texte",
@@ -39,7 +39,7 @@
     },
     "cat3": {
       "nom": "Kélzik ?",
-      "theme": { "couleur": "vert", "icone": "casque" },
+      "theme": { "couleur": "lime", "icone": "casque" },
       "questions": [
         {
           "type": "choix",
@@ -51,7 +51,7 @@
     },
     "cat4": {
       "nom": "Komenkifé ?",
-      "theme": { "couleur": "vert", "icone": "marteau" },
+      "theme": { "couleur": "bleu", "icone": "cle" },
       "questions": [
         {
           "type": "liste",
@@ -65,17 +65,17 @@
     },
     "cat5": {
       "nom": "Oukécé ?",
-      "theme": { "couleur": "cyan", "icone": "clap" },
+      "theme": { "couleur": "cyan", "icone": "carte" },
       "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
     },
     "cat6": {
       "nom": "Kélbét ?",
-      "theme": { "couleur": "jaune", "icone": "patte" },
+      "theme": { "couleur": "vert", "icone": "patte" },
       "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
     },
     "cat7": {
       "nom": "Pokékoi ?",
-      "theme": { "couleur": "rouge", "icone": "eclair" },
+      "theme": { "couleur": "rouge", "icone": "oeuf" },
       "questions": [
         {
           "type": "serie",
@@ -93,7 +93,7 @@
     },
     "cat8": {
       "nom": "Kékidi ?",
-      "theme": { "couleur": "vert", "icone": "bulle" },
+      "theme": { "couleur": "violet", "icone": "bulle" },
       "questions": [
         {
           "type": "texte",
