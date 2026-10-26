@@ -32,6 +32,12 @@ const PALETTE: Record<string, { vif: string; attenue: string; halo: string; fond
     halo: 'rgba(77, 255, 154, 0.35)',
     fond: 'rgba(77, 255, 154, 0.1)',
   },
+  rouge: {
+    vif: '#ff3d47',
+    attenue: '#8f2228',
+    halo: 'rgba(255, 61, 71, 0.4)',
+    fond: 'rgba(255, 61, 71, 0.12)',
+  },
 }
 
 /**

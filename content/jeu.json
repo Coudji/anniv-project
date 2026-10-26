@@ -1,7 +1,7 @@
 {
   "categories": {
     "cat1": {
-      "nom": "Catégorie 1",
+      "nom": "Kékecé ?",
       "theme": { "couleur": "cyan", "icone": "oeil" },
       "questions": [
         {
@@ -26,8 +26,8 @@
       ]
     },
     "cat2": {
-      "nom": "Catégorie 2",
-      "theme": { "couleur": "jaune", "icone": "question" },
+      "nom": "Kicéki ?",
+      "theme": { "couleur": "magenta", "icone": "buste" },
       "questions": [
         {
           "type": "choix",
@@ -38,8 +38,8 @@
       ]
     },
     "cat3": {
-      "nom": "Catégorie 3",
-      "theme": { "couleur": "magenta", "icone": "buste" },
+      "nom": "Kélzik ?",
+      "theme": { "couleur": "vert", "icone": "casque" },
       "questions": [
         {
           "type": "choix",
@@ -49,10 +49,10 @@
         }
       ]
     },
-    "cat4": { 
-      "nom": "Catégorie 4",
+    "cat4": {
+      "nom": "Komenkifé ?",
       "theme": { "couleur": "vert", "icone": "marteau" },
-      "questions": [        
+      "questions": [
         {
           "type": "liste",
           "question": "Ingrédients de la pioche en fer (avec les quantités, ex : 3 lingots de fer)",
@@ -61,11 +61,21 @@
             { "reponses": ["baton", "batons", "stick", "sticks"], "quantite": 2 }
           ]
         }
-      ] 
+      ]
     },
-    "cat5": { 
-      "nom": "Catégorie 5",
-      "theme": { "couleur": "cyan", "icone": "manette" },
+    "cat5": {
+      "nom": "Oukécé ?",
+      "theme": { "couleur": "cyan", "icone": "clap" },
+      "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
+    },
+    "cat6": {
+      "nom": "Kélbét ?",
+      "theme": { "couleur": "jaune", "icone": "patte" },
+      "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
+    },
+    "cat7": {
+      "nom": "Pokékoi ?",
+      "theme": { "couleur": "rouge", "icone": "eclair" },
       "questions": [
         {
           "type": "serie",
@@ -79,12 +89,10 @@
           "generateur": "pokemon-taille",
           "objectif": 3
         }
-      ] 
+      ]
     },
-    "cat6": { "nom": "Catégorie 6", "theme": { "couleur": "magenta", "icone": "casque" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
-    "cat7": { "nom": "Catégorie 7", "theme": { "couleur": "jaune", "icone": "haut_parleur" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] },
     "cat8": {
-      "nom": "Catégorie 8",
+      "nom": "Kékidi ?",
       "theme": { "couleur": "vert", "icone": "bulle" },
       "questions": [
         {
@@ -92,13 +100,15 @@
           "question": "Complète la réplique !",
           "media": { "type": "video", "fichier": "jmj58.mp4", "fin": 27 },
           "reponses": ["test"],
-          "apres": {
-            "medias": [{ "type": "video", "fichier": "jmj58.mp4" }]
-          }
+          "apres": { "medias": [{ "type": "video", "fichier": "jmj58.mp4" }] }
         },
         { "type": "texte", "question": "Question test", "reponses": ["test"] }
       ]
     },
-    "cat9": { "nom": "Épreuve finale", "theme": { "couleur": "jaune", "icone": "trophee" }, "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }] }
+    "cat9": {
+      "nom": "Kékiveu ?",
+      "theme": { "couleur": "jaune", "icone": "trophee" },
+      "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
+    }
   }
 }
