@@ -67,15 +67,17 @@ function styleMorceau(n: number, echelle = 1) {
 }
 
 /**
- * Le dos de carte est presque identique une fois retourné (le logo est en double,
- * tête-bêche) : un morceau est donc accepté dans sa case à l'endroit, ou à la place
- * de son "jumeau" (le morceau opposé, tourné d'un demi-tour). Seul le centre,
- * avec la Poké Ball, doit être à l'endroit.
+ * Le logo est en double tête-bêche sur le dos de carte : un coin retourné d'un
+ * demi-tour ressemble au coin opposé. Un coin est donc accepté à sa place à
+ * l'endroit, ou à la place de son "jumeau" (le coin opposé) tourné d'un demi-tour.
+ * Les autres morceaux (avec un bout de Poké Ball) doivent être exactement à leur place.
  */
+const COINS = [0, 2, 6, 8]
+
 function bienPlace(n: number | null, i: number) {
   if (n === null) return false
   if (n === i && rotations.value[n] === 0) return true
-  return i !== 4 && n === 8 - i && rotations.value[n] === 2
+  return COINS.includes(i) && n === 8 - i && rotations.value[n] === 2
 }
 
 function verifier() {
