@@ -8,6 +8,7 @@ import {
   joueurEnSession,
 } from '#services/progression'
 import { oublierSerie } from '#services/series'
+import { oublierFiche } from '#services/fiches'
 
 export default class GrilleController {
   async show({ session, response, inertia }: HttpContext) {
@@ -18,6 +19,7 @@ export default class GrilleController {
 
     // Revenir à la grille abandonne la série en cours
     oublierSerie(session)
+    oublierFiche(session)
 
     const content = await loadContent()
 

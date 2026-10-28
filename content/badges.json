@@ -6,7 +6,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Roche",
-      "type": "Roche",
+      "types": ["Roche"],
       "champions": [
         {
           "nom": "Pierre"
@@ -19,7 +19,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Cascade",
-      "type": "Eau",
+      "types": ["Eau"],
       "champions": [
         {
           "nom": "Ondine"
@@ -32,7 +32,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Foudre",
-      "type": "Électrik",
+      "types": ["Électrik"],
       "champions": [
         {
           "nom": "Major Bob"
@@ -45,7 +45,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Prisme",
-      "type": "Plante",
+      "types": ["Plante"],
       "champions": [
         {
           "nom": "Erika"
@@ -58,7 +58,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Âme",
-      "type": "Poison",
+      "types": ["Poison"],
       "champions": [
         {
           "nom": "Koga",
@@ -76,7 +76,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Marais",
-      "type": "Psy",
+      "types": ["Psy"],
       "champions": [
         {
           "nom": "Morgane"
@@ -89,7 +89,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Volcan",
-      "type": "Feu",
+      "types": ["Feu"],
       "champions": [
         {
           "nom": "Auguste"
@@ -102,7 +102,7 @@
       "region": "Kanto",
       "generation": 1,
       "badge": "Badge Terre",
-      "type": "Sol",
+      "types": ["Sol"],
       "champions": [
         {
           "nom": "Giovanni",
@@ -120,7 +120,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Zéphyr",
-      "type": "Vol",
+      "types": ["Vol"],
       "champions": [
         {
           "nom": "Albert"
@@ -133,7 +133,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Essaim",
-      "type": "Insecte",
+      "types": ["Insecte"],
       "champions": [
         {
           "nom": "Hector"
@@ -146,7 +146,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Plaine",
-      "type": "Normal",
+      "types": ["Normal"],
       "champions": [
         {
           "nom": "Blanche"
@@ -159,7 +159,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Brume",
-      "type": "Spectre",
+      "types": ["Spectre"],
       "champions": [
         {
           "nom": "Mortimer"
@@ -172,7 +172,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Choc",
-      "type": "Combat",
+      "types": ["Combat"],
       "champions": [
         {
           "nom": "Chuck"
@@ -185,7 +185,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Minéral",
-      "type": "Acier",
+      "types": ["Acier"],
       "champions": [
         {
           "nom": "Jasmine"
@@ -198,7 +198,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Glacier",
-      "type": "Glace",
+      "types": ["Glace"],
       "champions": [
         {
           "nom": "Frédo"
@@ -211,7 +211,7 @@
       "region": "Johto",
       "generation": 2,
       "badge": "Badge Lever",
-      "type": "Dragon",
+      "types": ["Dragon"],
       "champions": [
         {
           "nom": "Sandra"
@@ -224,7 +224,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Roche",
-      "type": "Roche",
+      "types": ["Roche"],
       "champions": [
         {
           "nom": "Roxanne"
@@ -238,7 +238,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Poing",
-      "type": "Combat",
+      "types": ["Combat"],
       "champions": [
         {
           "nom": "Bastien"
@@ -251,7 +251,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Dynamo",
-      "type": "Électrik",
+      "types": ["Électrik"],
       "champions": [
         {
           "nom": "Voltère"
@@ -264,7 +264,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Chaleur",
-      "type": "Feu",
+      "types": ["Feu"],
       "champions": [
         {
           "nom": "Adriane"
@@ -277,7 +277,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Balancier",
-      "type": "Normal",
+      "types": ["Normal"],
       "champions": [
         {
           "nom": "Norman"
@@ -290,7 +290,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Plume",
-      "type": "Vol",
+      "types": ["Vol"],
       "champions": [
         {
           "nom": "Alizée"
@@ -303,7 +303,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Esprit",
-      "type": "Psy",
+      "types": ["Psy"],
       "champions": [
         {
           "nom": "Lévy & Tatia"
@@ -316,7 +316,7 @@
       "region": "Hoenn",
       "generation": 3,
       "badge": "Badge Pluie",
-      "type": "Eau",
+      "types": ["Eau"],
       "champions": [
         {
           "nom": "Marc",
@@ -334,7 +334,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Charbon",
-      "type": "Roche",
+      "types": ["Roche"],
       "champions": [
         {
           "nom": "Pierrick"
@@ -347,7 +347,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Forêt",
-      "type": "Plante",
+      "types": ["Plante"],
       "champions": [
         {
           "nom": "Flo"
@@ -360,7 +360,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Pavé",
-      "type": "Combat",
+      "types": ["Combat"],
       "champions": [
         {
           "nom": "Mélina"
@@ -373,7 +373,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Palustre",
-      "type": "Eau",
+      "types": ["Eau"],
       "champions": [
         {
           "nom": "Lovis"
@@ -386,7 +386,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Fantôme",
-      "type": "Spectre",
+      "types": ["Spectre"],
       "champions": [
         {
           "nom": "Kiméra"
@@ -399,7 +399,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Mine",
-      "type": "Acier",
+      "types": ["Acier"],
       "champions": [
         {
           "nom": "Charles"
@@ -412,7 +412,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Glaçon",
-      "type": "Glace",
+      "types": ["Glace"],
       "champions": [
         {
           "nom": "Gladys"
@@ -425,7 +425,7 @@
       "region": "Sinnoh",
       "generation": 4,
       "badge": "Badge Phare",
-      "type": "Électrik",
+      "types": ["Électrik"],
       "champions": [
         {
           "nom": "Tanguy"
@@ -438,7 +438,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Triple",
-      "type": "Plante, Feu ou Eau (selon le starter choisi)",
+      "types": ["Plante", "Feu", "Eau"],
       "champions": [
         {
           "nom": "Rachid",
@@ -454,14 +454,14 @@
         }
       ],
       "villes": ["Ogoesse"],
-      "note": "NB seulement"
+      "note": "NB seulement. Le champion affronté, et donc le type, dépend du starter choisi."
     },
     {
       "image": "pokekoi/badges/34.png",
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Basique",
-      "type": "Normal",
+      "types": ["Normal"],
       "champions": [
         {
           "nom": "Aloé",
@@ -481,7 +481,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Toxique",
-      "type": "Poison",
+      "types": ["Poison"],
       "champions": [
         {
           "nom": "Strykna",
@@ -496,7 +496,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Élytre",
-      "type": "Insecte",
+      "types": ["Insecte"],
       "champions": [
         {
           "nom": "Artie"
@@ -509,7 +509,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Volt",
-      "type": "Électrik",
+      "types": ["Électrik"],
       "champions": [
         {
           "nom": "Inezia"
@@ -522,7 +522,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Sismique",
-      "type": "Sol",
+      "types": ["Sol"],
       "champions": [
         {
           "nom": "Bardane"
@@ -535,7 +535,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Jet",
-      "type": "Vol",
+      "types": ["Vol"],
       "champions": [
         {
           "nom": "Carolina"
@@ -548,7 +548,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Stalactite",
-      "type": "Glace",
+      "types": ["Glace"],
       "champions": [
         {
           "nom": "Zhu",
@@ -563,7 +563,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Mythe",
-      "type": "Dragon",
+      "types": ["Dragon"],
       "champions": [
         {
           "nom": "Watson",
@@ -581,7 +581,7 @@
       "region": "Unys",
       "generation": 5,
       "badge": "Badge Vague",
-      "type": "Eau",
+      "types": ["Eau"],
       "champions": [
         {
           "nom": "Amana",
@@ -596,7 +596,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Coléoptère",
-      "type": "Insecte",
+      "types": ["Insecte"],
       "champions": [
         {
           "nom": "Violette"
@@ -609,7 +609,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Mur",
-      "type": "Roche",
+      "types": ["Roche"],
       "champions": [
         {
           "nom": "Lino"
@@ -622,7 +622,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Lutte",
-      "type": "Combat",
+      "types": ["Combat"],
       "champions": [
         {
           "nom": "Cornélia"
@@ -635,7 +635,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Végétal",
-      "type": "Plante",
+      "types": ["Plante"],
       "champions": [
         {
           "nom": "Amaro"
@@ -648,7 +648,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Tension",
-      "type": "Électrik",
+      "types": ["Électrik"],
       "champions": [
         {
           "nom": "Lem"
@@ -661,7 +661,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Nymphe",
-      "type": "Fée",
+      "types": ["Fée"],
       "champions": [
         {
           "nom": "Valériane"
@@ -674,7 +674,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Psychisme",
-      "type": "Psy",
+      "types": ["Psy"],
       "champions": [
         {
           "nom": "Astera"
@@ -687,7 +687,7 @@
       "region": "Kalos",
       "generation": 6,
       "badge": "Badge Iceberg",
-      "type": "Glace",
+      "types": ["Glace"],
       "champions": [
         {
           "nom": "Urup"
@@ -700,7 +700,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Plante",
-      "type": "Plante",
+      "types": ["Plante"],
       "champions": [
         {
           "nom": "Percy"
@@ -713,7 +713,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Eau",
-      "type": "Eau",
+      "types": ["Eau"],
       "champions": [
         {
           "nom": "Donna"
@@ -726,7 +726,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Feu",
-      "type": "Feu",
+      "types": ["Feu"],
       "champions": [
         {
           "nom": "Kabu"
@@ -739,7 +739,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Combat",
-      "type": "Combat",
+      "types": ["Combat"],
       "champions": [
         {
           "nom": "Faïza",
@@ -754,7 +754,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Spectre",
-      "type": "Spectre",
+      "types": ["Spectre"],
       "champions": [
         {
           "nom": "Alistair",
@@ -769,7 +769,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Fée",
-      "type": "Fée",
+      "types": ["Fée"],
       "champions": [
         {
           "nom": "Sally"
@@ -782,7 +782,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Roche",
-      "type": "Roche",
+      "types": ["Roche"],
       "champions": [
         {
           "nom": "Chaz",
@@ -797,7 +797,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Glace",
-      "type": "Glace",
+      "types": ["Glace"],
       "champions": [
         {
           "nom": "Lona",
@@ -812,7 +812,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Ténèbres",
-      "type": "Ténèbres",
+      "types": ["Ténèbres"],
       "champions": [
         {
           "nom": "Peterson"
@@ -825,7 +825,7 @@
       "region": "Galar",
       "generation": 8,
       "badge": "Badge Dragon",
-      "type": "Dragon",
+      "types": ["Dragon"],
       "champions": [
         {
           "nom": "Roy"
@@ -838,7 +838,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Insecte",
-      "type": "Insecte",
+      "types": ["Insecte"],
       "champions": [
         {
           "nom": "Éra"
@@ -851,7 +851,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Plante",
-      "type": "Plante",
+      "types": ["Plante"],
       "champions": [
         {
           "nom": "Colza"
@@ -864,7 +864,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Électrik",
-      "type": "Électrik",
+      "types": ["Électrik"],
       "champions": [
         {
           "nom": "Mashynn"
@@ -877,7 +877,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Eau",
-      "type": "Eau",
+      "types": ["Eau"],
       "champions": [
         {
           "nom": "Kombu"
@@ -890,7 +890,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Normal",
-      "type": "Normal",
+      "types": ["Normal"],
       "champions": [
         {
           "nom": "Okuba"
@@ -903,7 +903,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Spectre",
-      "type": "Spectre",
+      "types": ["Spectre"],
       "champions": [
         {
           "nom": "Laïm"
@@ -916,7 +916,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Psy",
-      "type": "Psy",
+      "types": ["Psy"],
       "champions": [
         {
           "nom": "Tully"
@@ -929,7 +929,7 @@
       "region": "Paldea",
       "generation": 9,
       "badge": "Badge d'Arène Glace",
-      "type": "Glace",
+      "types": ["Glace"],
       "champions": [
         {
           "nom": "Grusha"

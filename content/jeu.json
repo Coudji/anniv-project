@@ -589,10 +589,7 @@
               "reponses": ["winterfell"]
             },
             {
-              "reponses": [
-                "game of thrones",
-                "house of the dragon"
-              ]
+              "reponses": ["game of thrones", "house of the dragon"]
             }
           ]
         },
@@ -860,6 +857,12 @@
           "question": "Lequel est le plus grand ?",
           "generateur": "pokemon-taille",
           "objectif": 3
+        },
+        {
+          "type": "fiche",
+          "question": "Complète la fiche de ce badge d'arène",
+          "generateur": "badges",
+          "objectif": 5
         }
       ]
     },

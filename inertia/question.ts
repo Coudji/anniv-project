@@ -18,6 +18,34 @@ export type QuestionFront = {
   options?: OptionFront[]
   multiple?: boolean
   serie?: SerieFront
+  fiche?: FicheFront
+}
+
+export type ChampFiche = 'visuel' | 'nom' | 'champion' | 'ville' | 'type'
+
+export type CorrectionFiche = {
+  correct: boolean
+  pivot: ChampFiche
+  image: string
+  nom: string
+  champions: string
+  villes: string
+  types: string
+}
+
+export type FicheFront = {
+  compteur: number
+  objectif: number
+  pivot: { champ: ChampFiche; texte: string | null; image: string | null }
+  champs: ChampFiche[]
+  options: {
+    visuel: { valeur: string; url: string }[]
+    nom: string[]
+    champion: string[]
+    ville: string[]
+    type: string[]
+  }
+  derniere: CorrectionFiche | null
 }
 
 export type RetourFront = {

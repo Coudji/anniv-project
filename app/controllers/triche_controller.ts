@@ -3,6 +3,7 @@ import env from '#start/env'
 import { CATEGORY_IDS, estCategorie, loadContent } from '#services/content'
 import { joueurEnSession } from '#services/progression'
 import { oublierSerie } from '#services/series'
+import { oublierFiche } from '#services/fiches'
 
 /**
  * Mode triche, pour les tests et en cas de souci le jour J.
@@ -43,6 +44,7 @@ export default class TricheController {
     player[id] = Math.min(player[id] + 1, total)
     await player.save()
     oublierSerie(ctx.session)
+    oublierFiche(ctx.session)
 
     if (player[id] >= total) {
       return ctx.response.redirect().toRoute('grille')
@@ -61,6 +63,7 @@ export default class TricheController {
       player[id] = categories[id].questions.length
       await player.save()
       oublierSerie(ctx.session)
+      oublierFiche(ctx.session)
     }
     return ctx.response.redirect().toRoute('grille')
   }
@@ -79,6 +82,7 @@ export default class TricheController {
       }
       await player.save()
       oublierSerie(ctx.session)
+      oublierFiche(ctx.session)
     }
     return ctx.response.redirect().toRoute('grille')
   }

@@ -14,6 +14,7 @@ import {
   seriePourFront,
   type HistoriqueSerie,
 } from '#services/series'
+import { etatFiche, fichePourFront, repondreFiche } from '#services/fiches'
 import type { Question } from '#services/content'
 
 type Resultat = 'bonne' | 'terminee'
@@ -43,13 +44,21 @@ export default class CategoriesController {
   }
 
   /**
-   * La question telle que le front la voit, avec l'état de la série si c'en est une
+   * La question telle que le front la voit, avec l'état de la série ou de la fiche
+   * si c'en est une
    */
   private async questionPourFront({ session }: HttpContext, question: Question, cle: string) {
-    if (question.type !== 'serie') return questionPourFront(question)
+    if (question.type === 'serie') {
+      const etat = await etatSerie(session, cle)
+      return { ...questionPourFront(question), serie: await seriePourFront(etat, question) }
+    }
 
-    const etat = await etatSerie(session, cle)
-    return { ...questionPourFront(question), serie: await seriePourFront(etat, question) }
+    if (question.type === 'fiche') {
+      const etat = await etatFiche(session, cle)
+      return { ...questionPourFront(question), fiche: await fichePourFront(etat, question) }
+    }
+
+    return questionPourFront(question)
   }
 
   /**
@@ -131,6 +140,19 @@ export default class CategoriesController {
       // Série : la question n'est validée qu'une fois l'objectif atteint
       historique = await repondreSerie(ctx.session, `${id}:${player[id]}`, question, reponse)
       if (!historique) {
+        return ctx.response.redirect().toRoute('categories.show', { id })
+      }
+    } else if (question.type === 'fiche') {
+      // Fiche : une nouvelle fiche à chaque réponse, validée une fois l'objectif atteint
+      const { fini, correct } = await repondreFiche(
+        ctx.session,
+        `${id}:${player[id]}`,
+        question,
+        reponse
+      )
+      if (!fini) {
+        if (correct === true) ctx.session.flash('success', 'Fiche juste !')
+        if (correct === false) ctx.session.flash('error', 'Fiche fausse')
         return ctx.response.redirect().toRoute('categories.show', { id })
       }
     } else {

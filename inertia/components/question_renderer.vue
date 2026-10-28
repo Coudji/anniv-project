@@ -14,6 +14,7 @@ const mecaniques: Record<string, Component> = {
   choix: defineAsyncComponent(() => import('./mecaniques/choix.vue')),
   liste: defineAsyncComponent(() => import('./mecaniques/liste.vue')),
   serie: defineAsyncComponent(() => import('./mecaniques/serie.vue')),
+  fiche: defineAsyncComponent(() => import('./mecaniques/fiche.vue')),
 }
 </script>
 

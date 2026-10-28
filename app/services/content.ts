@@ -91,7 +91,21 @@ export interface QuestionSerie {
   objectif: number
 }
 
-export type Question = QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie
+/**
+ * Fiche générée : une info de départ est affichée (visuel, nom, champion ou ville d'un badge)
+ * et il faut retrouver les autres. +1 par fiche juste, -1 par fiche fausse (sans descendre
+ * sous 0), et une nouvelle fiche à chaque réponse, jusqu'à l'objectif.
+ */
+export interface QuestionFiche {
+  type: 'fiche'
+  question: string
+  media?: Media
+  apres?: Apres
+  generateur: 'badges'
+  objectif: number
+}
+
+export type Question = QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie | QuestionFiche
 
 /**
  * Apparence d'une catégorie : une couleur de la palette et une icône pixel
