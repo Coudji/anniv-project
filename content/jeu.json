@@ -97,32 +97,8 @@
       },
       "questions": [
         {
-          "type": "liste",
-          "question": "Minecraft : les ingrédients du gâteau, avec les quantités (ex : 3 lingots de fer)",
-          "elements": [
-            {
-              "reponses": ["seau de lait", "seaux de lait", "lait", "milk bucket", "milk"],
-              "quantite": 3
-            },
-            {
-              "reponses": ["ble", "wheat"],
-              "quantite": 3
-            },
-            {
-              "reponses": ["sucre", "sugar"],
-              "quantite": 2
-            },
-            {
-              "reponses": ["oeuf", "oeufs", "œuf", "œufs", "egg"]
-            }
-          ],
-          "apres": {
-            "texte": "Les seaux de lait vides te sont rendus après le craft. Et un gâteau posé se mange en 7 parts !"
-          }
-        },
-        {
           "type": "choix",
-          "question": "Subnautica (le premier) : quelle est la recette de la batterie ?",
+          "question": "Subnautica (le premier) : quelle est la recette de la pile ?",
           "options": [
             {
               "texte": "1 champignon acide + 2 minerais de cuivre"
@@ -140,11 +116,74 @@
           "bonne": 2
         },
         {
+          "type": "choix",
+          "question": "Slime Rancher : comment obtient-on un largo ?",
+          "options": [
+            {
+              "texte": "En mettant deux slimes dans le même enclos"
+            },
+            {
+              "texte": "En faisant manger à un slime le plort d'un autre type"
+            },
+            {
+              "texte": "En mélangeant deux plorts dans l'extracteur"
+            },
+            {
+              "texte": "En donnant à un slime sa nourriture préférée"
+            }
+          ],
+          "bonne": 1
+        },
+        {
           "type": "texte",
           "question": "ARK : 5 narcobaies + 1 viande avariée dans le mortier et pilon, ça donne quoi ?",
           "reponses": ["narcotique", "narcotiques", "narcotic", "narcotics"],
           "apres": {
             "texte": "On le fait manger au dino assommé pour qu'il reste endormi pendant tout l'apprivoisement."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Minecraft : que fabrique cette recette ?",
+          "media": {
+            "type": "image",
+            "fichier": "komenkife/echanttablecraft.png"
+          },
+          "reponses": [
+            "table d'enchantement",
+            "table d'enchantements",
+            "table enchantement",
+            "enchanting table",
+            "enchantment table"
+          ],
+          "apres": {
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "komenkife/Enchanting_Table_animated_experience.gif"
+              }
+            ]
+          }
+        },
+        {
+          "type": "liste",
+          "question": "Le quatre-quarts doit son nom à ses 4 ingrédients, mis en quantités égales. Lesquels ?",
+          "elements": [
+            {
+              "reponses": ["beurre"]
+            },
+            {
+              "reponses": ["sucre"]
+            },
+            {
+              "reponses": ["farine"]
+            },
+            {
+              "reponses": ["oeuf", "oeufs", "œuf", "œufs"]
+            }
+          ],
+          "apres": {
+            "texte": "L'astuce de grand-mère : on pèse d'abord les œufs, puis on met le même poids de beurre, de sucre et de farine. Un gâteau qui ne demande aucune recette écrite !"
           }
         },
         {
@@ -177,83 +216,24 @@
         },
         {
           "type": "texte",
+          "question": "Slime Rancher : que devient un largo qui mange le plort d'un troisième type ?",
+          "reponses": ["tarr", "un tarr", "le tarr"],
+          "apres": {
+            "texte": "Le Tarr dévore tous les slimes et se multiplie à toute vitesse. Son point faible : l'eau, qui le fait fondre.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "komenkife/tarr.png"
+              }
+            ]
+          }
+        },
+        {
+          "type": "texte",
           "question": "World of Warcraft : quel métier taille des gemmes pour les sertir dans l'équipement ?",
           "reponses": ["joaillerie", "joaillier", "jewelcrafting"],
           "apres": {
             "texte": "La joaillerie est arrivée avec Burning Crusade, en même temps que les draeneï !"
-          }
-        },
-        {
-          "type": "choix",
-          "question": "Slime Rancher : comment obtient-on un largo ?",
-          "options": [
-            {
-              "texte": "En mettant deux slimes dans le même enclos"
-            },
-            {
-              "texte": "En faisant manger à un slime le plort d'un autre type"
-            },
-            {
-              "texte": "En mélangeant deux plorts dans l'extracteur"
-            },
-            {
-              "texte": "En donnant à un slime sa nourriture préférée"
-            }
-          ],
-          "bonne": 1
-        },
-        {
-          "type": "texte",
-          "question": "Slime Rancher : que devient un largo qui mange le plort d'un troisième type ?",
-          "reponses": ["tarr", "un tarr", "le tarr"],
-          "apres": {
-            "texte": "Le Tarr dévore tous les slimes et se multiplie à toute vitesse. Son point faible : l'eau, qui le fait fondre."
-          }
-        },
-        {
-          "type": "liste",
-          "question": "Le quatre-quarts doit son nom à ses 4 ingrédients, mis en quantités égales. Lesquels ?",
-          "elements": [
-            {
-              "reponses": ["beurre"]
-            },
-            {
-              "reponses": ["sucre"]
-            },
-            {
-              "reponses": ["farine"]
-            },
-            {
-              "reponses": ["oeuf", "oeufs", "œuf", "œufs"]
-            }
-          ],
-          "apres": {
-            "texte": "L'astuce de grand-mère : on pèse d'abord les œufs, puis on met le même poids de beurre, de sucre et de farine. Un gâteau qui ne demande aucune recette écrite !"
-          }
-        },
-        {
-          "type": "choix",
-          "question": "Lequel de ces ingrédients n'entre PAS dans une vraie carbonara à la romaine ?",
-          "options": [
-            {
-              "texte": "Guanciale (joue de porc)"
-            },
-            {
-              "texte": "Jaunes d'œufs"
-            },
-            {
-              "texte": "Pecorino romano"
-            },
-            {
-              "texte": "Poivre noir"
-            },
-            {
-              "texte": "Crème fraîche"
-            }
-          ],
-          "bonne": 4,
-          "apres": {
-            "texte": "Pas de crème dans la recette italienne : ce sont les jaunes d'œufs, le pecorino et un peu d'eau de cuisson des pâtes qui font la sauce crémeuse."
           }
         },
         {
@@ -282,6 +262,76 @@
           "bonne": 3,
           "apres": {
             "texte": "Le bézoard est une pierre tirée de l'estomac d'une chèvre, qui protège de la plupart des poisons. Dans Le Prince de sang-mêlé, Harry sauve Ron avec."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "My Time at Portia : du minerai de cuivre et du minerai d'étain dans le four, ça donne quoi ?",
+          "reponses": [
+            "barre de bronze",
+            "barres de bronze",
+            "lingot de bronze",
+            "bronze",
+            "bronze bar"
+          ]
+        },
+        {
+          "type": "choix",
+          "question": "Lequel de ces ingrédients n'entre PAS dans une vraie carbonara à la romaine ?",
+          "options": [
+            {
+              "texte": "Guanciale (joue de porc)"
+            },
+            {
+              "texte": "Jaunes d'œufs"
+            },
+            {
+              "texte": "Pecorino romano"
+            },
+            {
+              "texte": "Poivre noir"
+            },
+            {
+              "texte": "Crème fraîche"
+            }
+          ],
+          "bonne": 4,
+          "apres": {
+            "texte": "Pas de crème dans la recette italienne : ce sont les jaunes d'œufs, le pecorino et un peu d'eau de cuisson des pâtes qui font la sauce crémeuse."
+          }
+        },
+        {
+          "type": "liste",
+          "question": "Minecraft : les ingrédients de ce gâteau, avec les quantités (ex : 3 lingots de fer)",
+          "elements": [
+            {
+              "reponses": ["seau de lait", "seaux de lait", "lait", "milk bucket", "milk"],
+              "quantite": 3
+            },
+            {
+              "reponses": ["ble", "wheat"],
+              "quantite": 3
+            },
+            {
+              "reponses": ["sucre", "sugar"],
+              "quantite": 2
+            },
+            {
+              "reponses": ["oeuf", "oeufs", "œuf", "œufs", "egg"]
+            }
+          ],
+          "apres": {
+            "texte": "Les seaux de lait vides te sont rendus après le craft. Et un gâteau posé se mange en 7 parts !",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "komenkife/minecraftcake_reveal.png"
+              }
+            ]
+          },
+          "media": {
+            "type": "image",
+            "fichier": "komenkife/G_teau.webp"
           }
         }
       ]
