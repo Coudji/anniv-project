@@ -128,8 +128,9 @@ export function verifierReponse(question: Question, reponse: unknown): Verificat
       return verifierListe(question, reponse)
     case 'serie':
     case 'fiche':
-      // Les séries et les fiches sont gérées à part (services/series et services/fiches),
-      // car elles ont un état
+    case 'intro':
+      // Les séries, les fiches et les intros sont gérées à part (services/series,
+      // services/fiches et services/intros), car elles ont un état
       return { correct: false }
   }
 }
@@ -170,6 +171,7 @@ export function questionPourFront(question: Question) {
     case 'liste':
     case 'serie':
     case 'fiche':
+    case 'intro':
       return {
         type: question.type,
         question: question.question,

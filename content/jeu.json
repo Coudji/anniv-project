@@ -864,6 +864,10 @@
           "objectif": 3
         },
         {
+          "type": "intro",
+          "question": "De quel jeu vient cette intro ?"
+        },
+        {
           "type": "serie",
           "question": "Lequel est le plus grand ?",
           "generateur": "pokemon-taille",

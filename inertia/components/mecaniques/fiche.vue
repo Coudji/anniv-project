@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRouter } from '@adonisjs/inertia/vue'
+import ModaleChoix from '~/components/modale_choix.vue'
 import type { ChampFiche, QuestionFront } from '~/question'
 
 const props = defineProps<{
@@ -58,17 +59,6 @@ function choisir(champ: ChampFiche, valeur: string) {
   choix.value = { ...choix.value, [champ]: valeur }
   ouvert.value = null
 }
-
-function fermerAvecEchap(event: KeyboardEvent) {
-  if (event.key === 'Escape') ouvert.value = null
-}
-
-watch(ouvert, (champ) => {
-  if (champ) window.addEventListener('keydown', fermerAvecEchap)
-  else window.removeEventListener('keydown', fermerAvecEchap)
-})
-
-onBeforeUnmount(() => window.removeEventListener('keydown', fermerAvecEchap))
 
 function valider() {
   if (!complet.value) return
@@ -155,42 +145,15 @@ function valider() {
       </div>
     </div>
 
-    <div v-if="ouvert" class="modale" @click.self="ouvert = null">
-      <div class="cadre modale__panneau" role="dialog" :aria-label="LIBELLES[ouvert]">
-        <div class="modale__entete">
-          <span class="pixel modale__titre">{{ LIBELLES[ouvert].toUpperCase() }}</span>
-          <button type="button" class="modale__fermer" aria-label="Fermer" @click="ouvert = null">
-            ✕
-          </button>
-        </div>
-
-        <div v-if="ouvert === 'visuel'" class="modale__grille">
-          <button
-            v-for="option in fiche.options.visuel"
-            :key="option.valeur"
-            type="button"
-            class="vignette"
-            :class="{ 'vignette--choisie': choix.visuel === option.valeur }"
-            @click="choisir('visuel', option.valeur)"
-          >
-            <img :src="option.url" alt="" loading="lazy" />
-          </button>
-        </div>
-
-        <div v-else class="modale__liste">
-          <button
-            v-for="valeur in listeOuverte"
-            :key="valeur"
-            type="button"
-            class="ligne-choix"
-            :class="{ 'ligne-choix--choisie': choix[ouvert] === valeur }"
-            @click="choisir(ouvert, valeur)"
-          >
-            {{ valeur }}
-          </button>
-        </div>
-      </div>
-    </div>
+    <ModaleChoix
+      v-if="ouvert"
+      :titre="LIBELLES[ouvert]"
+      :valeurs="ouvert === 'visuel' ? undefined : listeOuverte"
+      :images="ouvert === 'visuel' ? fiche.options.visuel : undefined"
+      :choisie="choix[ouvert]"
+      @choisir="(valeur) => ouvert && choisir(ouvert, valeur)"
+      @fermer="ouvert = null"
+    />
   </div>
 </template>
 
@@ -344,108 +307,5 @@ function valider() {
 
 .correction__infos dd {
   margin: 0;
-}
-
-.modale {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  background: rgb(0 0 0 / 80%);
-}
-
-.modale__panneau {
-  width: min(520px, 100%);
-  max-height: 85vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.modale__entete {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px;
-  border-bottom: 2px solid var(--ligne);
-}
-
-.modale__titre {
-  color: var(--accent);
-}
-
-.modale__fermer {
-  width: 36px;
-  height: 36px;
-  font-size: 16px;
-  color: var(--texte-doux);
-  background: transparent;
-  border: 2px solid var(--verrou);
-  cursor: pointer;
-}
-
-.modale__fermer:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.modale__liste {
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-}
-
-.ligne-choix {
-  padding: 12px 14px;
-  font-size: 16px;
-  text-align: left;
-  color: var(--texte);
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--ligne);
-  cursor: pointer;
-}
-
-.ligne-choix:hover {
-  background: var(--accent-fond);
-}
-
-.ligne-choix--choisie {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.modale__grille {
-  overflow-y: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-  gap: 8px;
-  padding: 12px;
-}
-
-.vignette {
-  aspect-ratio: 1;
-  padding: 8px;
-  background: var(--panneau-sombre);
-  border: 2px solid var(--ligne);
-  cursor: pointer;
-}
-
-.vignette:hover {
-  border-color: var(--accent);
-}
-
-.vignette--choisie {
-  border-color: var(--accent);
-  background: var(--accent-fond);
-}
-
-.vignette img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 </style>

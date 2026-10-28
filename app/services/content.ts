@@ -105,7 +105,20 @@ export interface QuestionFiche {
   objectif: number
 }
 
-export type Question = QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie | QuestionFiche
+/**
+ * Intro au hasard (content/intros.json) : on entend la musique, il choisit le jeu dans
+ * la liste. Une erreur change seulement de musique ; une bonne réponse valide la question,
+ * et le résultat montre la vidéo de l'intro trouvée.
+ */
+export interface QuestionIntro {
+  type: 'intro'
+  question: string
+  media?: Media
+  apres?: Apres
+}
+
+export type Question =
+  QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie | QuestionFiche | QuestionIntro
 
 /**
  * Apparence d'une catégorie : une couleur de la palette et une icône pixel

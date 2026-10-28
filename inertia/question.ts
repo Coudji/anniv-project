@@ -19,6 +19,12 @@ export type QuestionFront = {
   multiple?: boolean
   serie?: SerieFront
   fiche?: FicheFront
+  intro?: IntroFront
+}
+
+export type IntroFront = {
+  audio: string
+  jeux: string[]
 }
 
 export type ChampFiche = 'visuel' | 'nom' | 'champion' | 'ville' | 'type'

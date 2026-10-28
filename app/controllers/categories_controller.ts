@@ -15,16 +15,18 @@ import {
   type HistoriqueSerie,
 } from '#services/series'
 import { etatFiche, fichePourFront, repondreFiche } from '#services/fiches'
+import { etatIntro, introPourFront, repondreIntro, videoIntro } from '#services/intros'
 import type { Question } from '#services/content'
 
 type Resultat = 'bonne' | 'terminee'
 
 /**
  * Ce qui est gardé en session après une bonne réponse, pour l'écran de résultat :
- * la position de la question résolue, et l'historique final pour une série.
+ * la position de la question résolue, l'historique final pour une série, et l'intro
+ * trouvée pour une question d'intro (sa vidéo s'affiche à la place du média).
  * Le reste est reconstruit depuis le JSON (la session vit dans un cookie de taille limitée).
  */
-type Resolue = { index: number; historique: HistoriqueSerie | null }
+type Resolue = { index: number; historique: HistoriqueSerie | null; intro?: number | null }
 
 export default class CategoriesController {
   /**
@@ -44,8 +46,8 @@ export default class CategoriesController {
   }
 
   /**
-   * La question telle que le front la voit, avec l'état de la série ou de la fiche
-   * si c'en est une
+   * La question telle que le front la voit, avec l'état de la série, de la fiche
+   * ou de l'intro si c'en est une
    */
   private async questionPourFront({ session }: HttpContext, question: Question, cle: string) {
     if (question.type === 'serie') {
@@ -56,6 +58,11 @@ export default class CategoriesController {
     if (question.type === 'fiche') {
       const etat = await etatFiche(session, cle)
       return { ...questionPourFront(question), fiche: await fichePourFront(etat, question) }
+    }
+
+    if (question.type === 'intro') {
+      const etat = await etatIntro(session, cle)
+      return { ...questionPourFront(question), intro: await introPourFront(etat) }
     }
 
     return questionPourFront(question)
@@ -72,7 +79,10 @@ export default class CategoriesController {
 
     return {
       question: question.question,
-      media: questionPourFront(question).media,
+      media:
+        question.type === 'intro' && typeof resolue.intro === 'number'
+          ? await videoIntro(resolue.intro)
+          : questionPourFront(question).media,
       serie:
         question.type === 'serie' && resolue.historique
           ? await historiquePourFront(resolue.historique, question)
@@ -135,6 +145,7 @@ export default class CategoriesController {
     const question = categorie.questions[player[id]]
     const reponse = ctx.request.input('reponse', '')
     let historique: HistoriqueSerie | null = null
+    let intro: number | null = null
 
     if (question.type === 'serie') {
       // Série : la question n'est validée qu'une fois l'objectif atteint
@@ -155,6 +166,14 @@ export default class CategoriesController {
         if (correct === false) ctx.session.flash('error', 'Fiche fausse')
         return ctx.response.redirect().toRoute('categories.show', { id })
       }
+    } else if (question.type === 'intro') {
+      // Intro : une erreur change seulement de musique, la bonne réponse valide la question
+      const { correct, trouvee } = await repondreIntro(ctx.session, `${id}:${player[id]}`, reponse)
+      if (!correct) {
+        if (correct === false) ctx.session.flash('error', 'Raté ! Nouvelle musique')
+        return ctx.response.redirect().toRoute('categories.show', { id })
+      }
+      intro = trouvee
     } else {
       const verification = verifierReponse(question, reponse)
 
@@ -167,7 +186,7 @@ export default class CategoriesController {
       }
     }
 
-    const resolue: Resolue = { index: player[id], historique }
+    const resolue: Resolue = { index: player[id], historique, intro }
     ctx.session.flash('resolue', resolue)
 
     player[id] += 1
