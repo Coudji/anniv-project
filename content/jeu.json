@@ -567,13 +567,7 @@
         {
           "type": "texte",
           "question": "Dans quel village les visages de quatre anciens dirigeants sont-ils taillés dans la roche ?",
-          "reponses": [
-            "konoha",
-            "konohagakure",
-            "village cache de la feuille",
-            "village de la feuille",
-            "la feuille"
-          ],
+          "reponses": ["konoha"],
           "apres": {
             "medias": [
               {
@@ -597,10 +591,6 @@
             {
               "reponses": [
                 "game of thrones",
-                "game of throne",
-                "got",
-                "trone de fer",
-                "le trone de fer",
                 "house of the dragon"
               ]
             }
@@ -660,7 +650,7 @@
         },
         {
           "type": "liste",
-          "question": "Donne le nom de cette ville et le manga dans lequel on la voit",
+          "question": "Dans quelle ville se situe cet endroit ? Et dans quel manga ?",
           "media": {
             "type": "image",
             "fichier": "oukece/lieu-06.webp"
