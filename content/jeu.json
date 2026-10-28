@@ -237,6 +237,14 @@
           }
         },
         {
+          "type": "texte",
+          "question": "Protocole de laboratoire : on disperse lentement un triglycéride liquide dans une phase aqueuse acidifiée, sous agitation mécanique, l'émulsion étant stabilisée par les phospholipides (lécithine) d'un vitellus d'oiseau. Qu'obtient-on ?",
+          "reponses": ["mayonnaise", "mayo", "de la mayonnaise"],
+          "apres": {
+            "texte": "De l'huile versée petit à petit sur un jaune d'œuf avec un peu de vinaigre ou de moutarde, en fouettant. La lécithine du jaune empêche l'huile et l'eau de se séparer."
+          }
+        },
+        {
           "type": "choix",
           "question": "Harry Potter : lequel de ces ingrédients n'entre PAS dans le Polynectar ?",
           "options": [
