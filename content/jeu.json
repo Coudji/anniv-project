@@ -560,7 +560,88 @@
     "cat5": {
       "nom": "Oukécé ?",
       "theme": { "couleur": "cyan", "icone": "carte" },
-      "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
+      "questions": [
+        {
+          "type": "texte",
+          "question": "Dans quel village les visages de quatre anciens dirigeants sont-ils taillés dans la roche ?",
+          "reponses": [
+            "konoha",
+            "konohagakure",
+            "village cache de la feuille",
+            "village de la feuille",
+            "la feuille"
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "oukece/lieu-01.webp" }] }
+        },
+        {
+          "type": "liste",
+          "question": "Donne le nom de ce lieu et la série dans laquelle on le voit",
+          "media": { "type": "image", "fichier": "oukece/lieu-02.webp" },
+          "elements": [
+            { "reponses": ["winterfell"] },
+            {
+              "reponses": [
+                "game of thrones",
+                "game of throne",
+                "got",
+                "trone de fer",
+                "le trone de fer",
+                "house of the dragon"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "question": "Comment s'appelle ce lieu ?",
+          "media": { "type": "image", "fichier": "oukece/lieu-03.webp" },
+          "reponses": ["central perk"],
+          "apres": { "medias": [{ "type": "image", "fichier": "oukece/lieu-03-reveal.webp" }] }
+        },
+        {
+          "type": "choix",
+          "question": "Jurassic Park (1993) : dans quel archipel le film a-t-il été tourné ?",
+          "media": { "type": "image", "fichier": "oukece/lieu-04.webp" },
+          "options": [
+            { "texte": "Les Galápagos" },
+            { "texte": "Hawaï" },
+            { "texte": "Les Seychelles" },
+            { "texte": "Les Canaries" }
+          ],
+          "bonne": 1,
+          "apres": {
+            "texte": "Surtout sur l'île de Kauai. Dans le film, Isla Nublar est une île imaginaire au large du Costa Rica."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Univers Marvel : quel est ce lieu ?",
+          "media": { "type": "image", "fichier": "oukece/lieu-05.webp" },
+          "reponses": ["asgard"]
+        },
+        {
+          "type": "liste",
+          "question": "Donne le nom de cette ville et le manga dans lequel on la voit",
+          "media": { "type": "image", "fichier": "oukece/lieu-06.webp" },
+          "elements": [{ "reponses": ["magnolia"] }, { "reponses": ["fairy tail"] }],
+          "apres": { "medias": [{ "type": "image", "fichier": "oukece/lieu-06-reveal.webp" }] }
+        },
+        {
+          "type": "texte",
+          "question": "World of Warcraft : comment s'appelle ce portail ?",
+          "media": { "type": "image", "fichier": "oukece/lieu-07.webp" },
+          "reponses": [
+            "porte des tenebres",
+            "la porte des tenebres",
+            "dark portal",
+            "portail des tenebres",
+            "portail noir"
+          ],
+          "apres": {
+            "texte": "Elle relie les Terres foudroyées à l'Outreterre : c'est par elle qu'on entre dans Burning Crusade, l'extension qui a ajouté les draeneï."
+          }
+        }
+      ]
     },
     "cat6": {
       "nom": "Kélbét ?",
@@ -763,7 +844,7 @@
           "media": {
             "type": "video",
             "fichier": "kekidi/video-02.mp4",
-            "bips": [[8.30, 8.75]],
+            "bips": [[8.3, 8.75]],
             "fin": 10.5
           },
           "reponses": ["la pipe"],
