@@ -125,22 +125,19 @@
           "question": "Subnautica (le premier) : quelle est la recette de la batterie ?",
           "options": [
             {
-              "texte": "2 batteries + 1 caoutchouc de silicone"
+              "texte": "1 champignon acide + 2 minerais de cuivre"
+            },
+            {
+              "texte": "2 champignons acides + 1 quartz"
             },
             {
               "texte": "2 champignons acides + 1 minerai de cuivre"
             },
             {
-              "texte": "2 quartz + 1 titane"
-            },
-            {
-              "texte": "1 minerai de cuivre + 1 lubrifiant"
+              "texte": "1 sel + 1 minerai de cuivre"
             }
           ],
-          "bonne": 1,
-          "apres": {
-            "texte": "Le piège : 2 batteries + 1 caoutchouc de silicone, c'est la cellule d'énergie, celle qui fait rouler le Seamoth."
-          }
+          "bonne": 2
         },
         {
           "type": "texte",
