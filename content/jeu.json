@@ -238,10 +238,10 @@
         },
         {
           "type": "texte",
-          "question": "Protocole de laboratoire : on disperse lentement un triglycéride liquide dans une phase aqueuse acidifiée, sous agitation mécanique, l'émulsion étant stabilisée par les phospholipides (lécithine) d'un vitellus d'oiseau. Qu'obtient-on ?",
-          "reponses": ["mayonnaise", "mayo", "de la mayonnaise"],
+          "question": "Protocole de laboratoire : dénaturation thermique des protéines d'ovalbumine par immersion dans un bain de H₂O à 100 °C pendant 9 minutes. Qu'obtient-on ?",
+          "reponses": ["oeuf dur", "oeufs durs", "œuf dur", "œufs durs"],
           "apres": {
-            "texte": "De l'huile versée petit à petit sur un jaune d'œuf avec un peu de vinaigre ou de moutarde, en fouettant. La lécithine du jaune empêche l'huile et l'eau de se séparer."
+            "texte": "3 minutes dans l'eau bouillante : un œuf à la coque. 6 minutes : un œuf mollet. 9 minutes : un œuf dur. Trop longtemps, le jaune s'entoure d'un anneau verdâtre."
           }
         },
         {
