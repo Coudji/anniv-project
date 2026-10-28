@@ -729,14 +729,15 @@
           "media": {
             "type": "video",
             "fichier": "kekidi/jmj58.mp4",
-            "fin": 27
+            "fin": 27.5
           },
           "reponses": ["test"],
           "apres": {
             "medias": [
               {
                 "type": "video",
-                "fichier": "kekidi/jmj58.mp4"
+                "fichier": "kekidi/jmj58.mp4",
+                "debut": 22
               }
             ]
           }
