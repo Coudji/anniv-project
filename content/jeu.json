@@ -117,7 +117,8 @@
           "question": "Quel animal croasse ?",
           "reponses": ["corbeau", "corneille", "freux"],
           "apres": {
-            "texte": "Le corbeau croasse… et la grenouille coasse. Une seule lettre de différence !"
+            "texte": "Le corbeau croasse… et la grenouille coasse. Une seule lettre de différence !",
+            "medias": [{ "type": "image", "fichier": "kelbet/corbeau.jpg" }]
           }
         },
         {
@@ -130,7 +131,11 @@
         {
           "type": "liste",
           "question": "Donne le nom de la femelle du sanglier, du cerf et du lièvre",
-          "elements": [{ "reponses": ["laie"] }, { "reponses": ["biche"] }, { "reponses": ["hase"] }]
+          "elements": [
+            { "reponses": ["laie"] },
+            { "reponses": ["biche"] },
+            { "reponses": ["hase"] }
+          ]
         },
         {
           "type": "texte",
@@ -145,6 +150,7 @@
         {
           "type": "choix",
           "question": "Vrai ou faux : le poulpe a trois cœurs.",
+          "media": { "type": "image", "fichier": "kelbet/poulpe.jpg" },
           "options": [{ "texte": "Vrai" }, { "texte": "Faux" }],
           "bonne": 0,
           "apres": {
@@ -161,6 +167,7 @@
         {
           "type": "choix",
           "question": "Combien de temps peut vivre un requin du Groenland ?",
+          "media": { "type": "image", "fichier": "kelbet/requin_groenland.jpg" },
           "options": [
             { "texte": "Environ 30 ans" },
             { "texte": "Environ 70 ans" },
@@ -182,7 +189,11 @@
             { "texte": "L'hippopotame" },
             { "texte": "La hyène" }
           ],
-          "bonne": 2
+          "bonne": 2,
+          "apres": {
+            "texte": "Le crocodile marin détient le record de la morsure la plus puissante jamais mesurée : environ 16 400 newtons, comme si une voiture de 1,7 tonne appuyait sur ses mâchoires. Un humain mord à environ 700 newtons, soit plus de 20 fois moins.\nLe requin blanc ferait peut-être mieux, mais personne n'a jamais pu mesurer sa morsure : elle a seulement été estimée par simulation.",
+            "medias": [{ "type": "image", "fichier": "kelbet/crocodile_marin.jpg" }]
+          }
         },
         {
           "type": "liste",
@@ -196,11 +207,14 @@
             { "reponses": ["whippet"] },
             { "reponses": ["watusi"] },
             { "reponses": ["weimaraner"] },
-            { "reponses": ["welsh corgi"] },
+            { "reponses": ["welsh corgi", "welsh"] },
             { "reponses": ["wyandotte"] },
             { "reponses": ["wels"] },
             { "reponses": ["wahoo"] }
-          ]
+          ],
+          "apres": {
+            "texte": "Les réponses acceptées :\n• Wapiti : grand cerf d'Amérique du Nord et d'Asie\n• Wombat : marsupial d'Australie (ses crottes sont cubiques !)\n• Wallaby : marsupial d'Australie, petit cousin du kangourou\n• Wallaroo : marsupial d'Australie, kangourou des collines\n• Whippet : race de chien, lévrier anglais\n• Watusi : race de vache d'Afrique de l'Est aux cornes géantes\n• Weimaraner : race de chien de chasse allemande (braque de Weimar)\n• Welsh corgi : race de chien du pays de Galles, celle de la reine Elizabeth II\n• Wyandotte : race de poule américaine\n• Wels : autre nom du silure glane, énorme poisson d'eau douce d'Europe\n• Wahoo : poisson des mers tropicales, un des plus rapides de l'océan"
+          }
         },
         {
           "type": "liste",
@@ -210,7 +224,11 @@
             { "reponses": ["echidne", "echidnes", "zaglosse"] }
           ],
           "apres": {
-            "texte": "Ce sont les monotrèmes : l'ornithorynque et les échidnés, qui vivent en Australie et en Nouvelle-Guinée."
+            "texte": "Ce sont les seuls mammifères au monde à pondre des œufs, et ils vivent tous en Australie et en Nouvelle-Guinée. Une fois sortis de l'œuf, les petits boivent quand même le lait de leur mère… qui n'a pas de tétines : le lait suinte directement de sa peau !",
+            "medias": [
+              { "type": "image", "fichier": "kelbet/ornithorynque.jpg" },
+              { "type": "image", "fichier": "kelbet/echidne.jpg" }
+            ]
           }
         }
       ]
