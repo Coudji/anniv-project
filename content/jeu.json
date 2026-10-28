@@ -731,7 +731,14 @@
             "fichier": "kekidi/jmj58.mp4",
             "fin": 27.5
           },
-          "reponses": ["test"],
+          "reponses": [
+            "un cinq ou un huit te delivrera",
+            "cinq ou un huit te delivrera",
+            "cinq ou huit te delivrera",
+            "un 5 ou un 8 te delivrera",
+            "5 ou un 8 te delivrera",
+            "5 ou 8 te delivrera"
+          ],
           "apres": {
             "medias": [
               {
@@ -756,6 +763,28 @@
             "asterix mission cleopatre",
             "mission cleopatre"
           ]
+        },
+        {
+          "type": "texte",
+          "question": "Qu'est-ce que Lenina Huxley dit sous le bip ?",
+          "media": {
+            "type": "video",
+            "fichier": "kekidi/video-02.mp4",
+            "bips": [[8.25, 9.15]]
+          },
+          "reponses": [
+            "on va lui faire la pipe a ce mec",
+            "lui faire la pipe a ce mec",
+            "faire la pipe a ce mec",
+            "la pipe a ce mec",
+            "on va lui faire la pipe",
+            "lui faire la pipe",
+            "faire la pipe",
+            "la pipe"
+          ],
+          "apres": {
+            "medias": [{ "type": "video", "fichier": "kekidi/video-02.mp4" }]
+          }
         },
         {
           "type": "texte",
