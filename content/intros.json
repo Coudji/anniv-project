@@ -1,0 +1,113 @@
+{
+  "_info": "Intros des jeux Pokémon (vidéo YouTube 'Pokémon Games - Evolution of Intros/Opening 1996-2023' fournie par Coudji, découpée avec ses timecodes). Numéros de fichiers mélangés pour ne pas trahir l'ordre. Légendes Arceus et Écarlate/Violet retirés (thème jugé pas intéressant). Durées en secondes.",
+  "intros": [
+    {
+      "jeu": "Rouge et Bleu",
+      "audio": "pokekoi/intros/intro-03.mp3",
+      "video": "pokekoi/intros/intro-03.mp4",
+      "duree": 72
+    },
+    {
+      "jeu": "Jaune",
+      "audio": "pokekoi/intros/intro-04.mp3",
+      "video": "pokekoi/intros/intro-04.mp4",
+      "duree": 87
+    },
+    {
+      "jeu": "Or et Argent",
+      "audio": "pokekoi/intros/intro-02.mp3",
+      "video": "pokekoi/intros/intro-02.mp4",
+      "duree": 137
+    },
+    {
+      "jeu": "Cristal",
+      "audio": "pokekoi/intros/intro-18.mp3",
+      "video": "pokekoi/intros/intro-18.mp4",
+      "duree": 125
+    },
+    {
+      "jeu": "Rubis et Saphir",
+      "audio": "pokekoi/intros/intro-06.mp3",
+      "video": "pokekoi/intros/intro-06.mp4",
+      "duree": 156
+    },
+    {
+      "jeu": "Rouge Feu et Vert Feuille",
+      "audio": "pokekoi/intros/intro-01.mp3",
+      "video": "pokekoi/intros/intro-01.mp4",
+      "duree": 72
+    },
+    {
+      "jeu": "Émeraude",
+      "audio": "pokekoi/intros/intro-10.mp3",
+      "video": "pokekoi/intros/intro-10.mp4",
+      "duree": 156
+    },
+    {
+      "jeu": "Diamant et Perle",
+      "audio": "pokekoi/intros/intro-08.mp3",
+      "video": "pokekoi/intros/intro-08.mp4",
+      "duree": 136
+    },
+    {
+      "jeu": "Platine",
+      "audio": "pokekoi/intros/intro-11.mp3",
+      "video": "pokekoi/intros/intro-11.mp4",
+      "duree": 123
+    },
+    {
+      "jeu": "HeartGold et SoulSilver",
+      "audio": "pokekoi/intros/intro-13.mp3",
+      "video": "pokekoi/intros/intro-13.mp4",
+      "duree": 146
+    },
+    {
+      "jeu": "Noir et Blanc",
+      "audio": "pokekoi/intros/intro-17.mp3",
+      "video": "pokekoi/intros/intro-17.mp4",
+      "duree": 158
+    },
+    {
+      "jeu": "Noir 2 et Blanc 2",
+      "audio": "pokekoi/intros/intro-07.mp3",
+      "video": "pokekoi/intros/intro-07.mp4",
+      "duree": 177
+    },
+    {
+      "jeu": "X et Y",
+      "audio": "pokekoi/intros/intro-12.mp3",
+      "video": "pokekoi/intros/intro-12.mp4",
+      "duree": 76
+    },
+    {
+      "jeu": "Rubis Oméga et Saphir Alpha",
+      "audio": "pokekoi/intros/intro-05.mp3",
+      "video": "pokekoi/intros/intro-05.mp4",
+      "duree": 167
+    },
+    {
+      "jeu": "Soleil et Lune",
+      "audio": "pokekoi/intros/intro-15.mp3",
+      "video": "pokekoi/intros/intro-15.mp4",
+      "duree": 107
+    },
+    {
+      "jeu": "Ultra-Soleil et Ultra-Lune",
+      "audio": "pokekoi/intros/intro-14.mp3",
+      "video": "pokekoi/intros/intro-14.mp4",
+      "duree": 91
+    },
+    {
+      "jeu": "Let's Go Pikachu et Évoli",
+      "audio": "pokekoi/intros/intro-09.mp3",
+      "video": "pokekoi/intros/intro-09.mp4",
+      "duree": 65
+    },
+    {
+      "jeu": "Épée et Bouclier",
+      "audio": "pokekoi/intros/intro-16.mp3",
+      "video": "pokekoi/intros/intro-16.mp4",
+      "duree": 87
+    }
+  ]
+}
