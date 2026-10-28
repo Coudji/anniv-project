@@ -95,11 +95,160 @@
       "questions": [
         {
           "type": "liste",
-          "question": "Ingrédients de la pioche en fer (avec les quantités, ex : 3 lingots de fer)",
+          "question": "Minecraft : les ingrédients du gâteau, avec les quantités (ex : 3 lingots de fer)",
           "elements": [
-            { "reponses": ["lingot de fer", "lingots de fer"], "quantite": 3 },
-            { "reponses": ["baton", "batons", "stick", "sticks"], "quantite": 2 }
+            {
+              "reponses": ["seau de lait", "seaux de lait", "lait", "milk bucket", "milk"],
+              "quantite": 3
+            },
+            { "reponses": ["ble", "wheat"], "quantite": 3 },
+            { "reponses": ["sucre", "sugar"], "quantite": 2 },
+            { "reponses": ["oeuf", "oeufs", "œuf", "œufs", "egg"] }
+          ],
+          "apres": {
+            "texte": "Les seaux de lait vides te sont rendus après le craft. Et un gâteau posé se mange en 7 parts !"
+          }
+        },
+        {
+          "type": "liste",
+          "question": "Subnautica (le premier) : les ingrédients d'une batterie, avec les quantités",
+          "elements": [
+            {
+              "reponses": [
+                "champignon acide",
+                "champignons acides",
+                "acid mushroom",
+                "acid mushrooms"
+              ],
+              "quantite": 2
+            },
+            { "reponses": ["minerai de cuivre", "cuivre", "copper ore", "copper"] }
           ]
+        },
+        {
+          "type": "liste",
+          "question": "ARK : les ingrédients d'un narcotique, avec les quantités",
+          "elements": [
+            {
+              "reponses": [
+                "narcobaie",
+                "narcobaies",
+                "baie narcotique",
+                "baies narcotiques",
+                "narcoberry",
+                "narcoberries"
+              ],
+              "quantite": 5
+            },
+            { "reponses": ["viande avariee", "viande pourrie", "spoiled meat"] }
+          ]
+        },
+        {
+          "type": "liste",
+          "question": "Palworld : les ingrédients d'une Sphère de Pal, avec les quantités",
+          "elements": [
+            {
+              "reponses": [
+                "fragment de paldium",
+                "fragments de paldium",
+                "paldium",
+                "paldium fragment"
+              ]
+            },
+            { "reponses": ["bois", "wood"], "quantite": 3 },
+            { "reponses": ["pierre", "pierres", "stone"], "quantite": 3 }
+          ]
+        },
+        {
+          "type": "liste",
+          "question": "World of Warcraft : cite au moins 5 métiers d'artisanat (ceux qui fabriquent des objets)",
+          "minimum": 5,
+          "elements": [
+            { "reponses": ["alchimie", "alchimiste", "alchemy"] },
+            { "reponses": ["forge", "forgeron", "blacksmithing"] },
+            { "reponses": ["enchantement", "enchanteur", "enchanting"] },
+            { "reponses": ["ingenierie", "ingenieur", "engineering"] },
+            { "reponses": ["calligraphie", "calligraphe", "inscription"] },
+            { "reponses": ["joaillerie", "joaillier", "jewelcrafting"] },
+            { "reponses": ["travail du cuir", "travailleur du cuir", "leatherworking"] },
+            { "reponses": ["couture", "tailleur", "tailoring"] },
+            { "reponses": ["cuisine", "cuisinier", "cooking"] }
+          ],
+          "apres": {
+            "texte": "Les réponses acceptées : alchimie, forge, enchantement, ingénierie, travail du cuir, couture, joaillerie (arrivée avec Burning Crusade, en même temps que les draeneï !), calligraphie (Wrath of the Lich King) et cuisine."
+          }
+        },
+        {
+          "type": "choix",
+          "question": "Slime Rancher : comment obtient-on un largo ?",
+          "options": [
+            { "texte": "En mettant deux slimes dans le même enclos" },
+            { "texte": "En faisant manger à un slime le plort d'un autre type" },
+            { "texte": "En mélangeant deux plorts dans l'extracteur" },
+            { "texte": "En donnant à un slime sa nourriture préférée" }
+          ],
+          "bonne": 1
+        },
+        {
+          "type": "texte",
+          "question": "Slime Rancher : que devient un largo qui mange le plort d'un troisième type ?",
+          "reponses": ["tarr", "un tarr", "le tarr"],
+          "apres": {
+            "texte": "Le Tarr dévore tous les slimes et se multiplie à toute vitesse. Son point faible : l'eau, qui le fait fondre."
+          }
+        },
+        {
+          "type": "liste",
+          "question": "Le quatre-quarts doit son nom à ses 4 ingrédients, mis en quantités égales. Lesquels ?",
+          "elements": [
+            { "reponses": ["beurre"] },
+            { "reponses": ["sucre"] },
+            { "reponses": ["farine"] },
+            { "reponses": ["oeuf", "oeufs", "œuf", "œufs"] }
+          ],
+          "apres": {
+            "texte": "L'astuce de grand-mère : on pèse d'abord les œufs, puis on met le même poids de beurre, de sucre et de farine. Un gâteau qui ne demande aucune recette écrite !"
+          }
+        },
+        {
+          "type": "liste",
+          "question": "Harry Potter : cite au moins 3 ingrédients du Polynectar",
+          "minimum": 3,
+          "elements": [
+            { "reponses": ["chrysope", "chrysopes", "lacewing", "lacewing flies"] },
+            { "reponses": ["sangsue", "sangsues", "leech", "leeches"] },
+            { "reponses": ["sisymbre", "sisymbrium", "fluxweed"] },
+            { "reponses": ["polygonum", "renouee", "knotgrass"] },
+            {
+              "reponses": [
+                "corne de bicorne",
+                "poudre de corne de bicorne",
+                "bicorne",
+                "bicorn horn"
+              ]
+            },
+            {
+              "reponses": [
+                "peau de serpent d'arbre",
+                "peau de serpent",
+                "serpent d'arbre",
+                "boomslang"
+              ]
+            },
+            {
+              "reponses": [
+                "cheveu",
+                "cheveux",
+                "poil",
+                "morceau de la personne",
+                "un bout de la personne",
+                "un cheveu de la personne"
+              ]
+            }
+          ],
+          "apres": {
+            "texte": "Il faut un mois pour le préparer (les chrysopes cuisent 21 jours) et on finit par un morceau de la personne à imiter, souvent un cheveu.\nDans La Chambre des secrets, Hermione croit prendre un cheveu de Millicent Bulstrode… mais c'était un poil de son chat. Elle passe des semaines à l'infirmerie avec une tête de chat !"
+          }
         }
       ]
     },
