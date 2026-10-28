@@ -118,6 +118,17 @@
       "theme": { "couleur": "rouge", "icone": "oeuf" },
       "questions": [
         {
+          "type": "choix",
+          "question": "Lequel est le vrai Ho-Oh ?",
+          "options": [
+            { "image": "pokekoi/hooh-1.webp" },
+            { "image": "pokekoi/hooh-2.webp" },
+            { "image": "pokekoi/hooh-3.webp" },
+            { "image": "pokekoi/hooh-4.webp" }
+          ],
+          "bonne": 2
+        },
+        {
           "type": "serie",
           "question": "Lequel est le plus lourd ?",
           "generateur": "pokemon-poids",
@@ -138,9 +149,9 @@
         {
           "type": "texte",
           "question": "Complète la réplique !",
-          "media": { "type": "video", "fichier": "jmj58.mp4", "fin": 27 },
+          "media": { "type": "video", "fichier": "kekidi/jmj58.mp4", "fin": 27 },
           "reponses": ["test"],
-          "apres": { "medias": [{ "type": "video", "fichier": "jmj58.mp4" }] }
+          "apres": { "medias": [{ "type": "video", "fichier": "kekidi/jmj58.mp4" }] }
         },
         { "type": "texte", "question": "Question test", "reponses": ["test"] }
       ]

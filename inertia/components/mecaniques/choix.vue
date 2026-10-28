@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { Form } from '@adonisjs/inertia/vue'
+import PixelIcone from '~/components/pixel_icone.vue'
 import type { QuestionFront } from '~/question'
 
 const props = defineProps<{
@@ -10,6 +11,9 @@ const props = defineProps<{
 
 // Options en images : en grille. Options en texte : une par ligne
 const enImages = computed(() => props.question.options?.some((option) => option.image) ?? false)
+
+// Image ouverte en grand (pour repérer les détails), sans changer la sélection
+const agrandie = ref<string | null>(null)
 </script>
 
 <template>
@@ -24,9 +28,23 @@ const enImages = computed(() => props.question.options?.some((option) => option.
     <div class="options" :class="{ 'options--images': enImages }">
       <label v-for="(option, index) in question.options" :key="index" class="cadre option">
         <input type="radio" name="reponse" :value="index" required class="option__radio" />
-        <img v-if="option.image" :src="option.image" alt="" class="option__image" />
+        <template v-if="option.image">
+          <img :src="option.image" alt="" class="option__image" />
+          <button
+            type="button"
+            class="option__zoom"
+            aria-label="Agrandir l'image"
+            @click.prevent="agrandie = option.image"
+          >
+            <PixelIcone nom="loupe" :taille="18" />
+          </button>
+        </template>
         <span v-else class="option__texte">{{ option.texte }}</span>
       </label>
+    </div>
+
+    <div v-if="agrandie" class="zoom" @click="agrandie = null">
+      <img :src="agrandie" alt="" />
     </div>
 
     <button type="submit" class="bouton" :disabled="processing">VALIDER</button>
@@ -42,7 +60,7 @@ const enImages = computed(() => props.question.options?.some((option) => option.
 
 .options--images {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .option {
@@ -55,6 +73,7 @@ const enImages = computed(() => props.question.options?.some((option) => option.
 }
 
 .options--images .option {
+  position: relative;
   flex-direction: column;
   padding: 10px;
 }
@@ -89,7 +108,42 @@ const enImages = computed(() => props.question.options?.some((option) => option.
 .option__image {
   display: block;
   width: 100%;
-  max-height: 200px;
+  max-height: 260px;
   object-fit: contain;
+}
+
+.option__zoom {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texte-doux);
+  background: var(--fond);
+  border: 2px solid var(--verrou);
+}
+
+.option__zoom:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 88%);
+  cursor: zoom-out;
+}
+
+.zoom img {
+  max-width: 95vw;
+  max-height: 95vh;
 }
 </style>
