@@ -5,23 +5,21 @@
       "theme": { "couleur": "orange", "icone": "loupe" },
       "questions": [
         {
-          "type": "texte",
-          "question": "Question avec image",
-          "media": { "type": "image", "fichier": "test.jpg" },
-          "reponses": ["test"],
-          "apres": {
-            "texte": "Une info en plus\nsur deux lignes",
-            "medias": [
-              { "type": "image", "fichier": "test.jpg" },
-              { "type": "audio", "fichier": "test.mp3" }
-            ]
-          }
-        },
-        {
-          "type": "texte",
-          "question": "Question avec son",
-          "media": { "type": "audio", "fichier": "test.mp3" },
-          "reponses": ["test"]
+          "type": "choix",
+          "question": "Une seule de ces Jinx est l'originale. Laquelle ?",
+          "options": [
+            { "image": "kekece/jinx-01.webp" },
+            { "image": "kekece/jinx-02.webp" },
+            { "image": "kekece/jinx-03.webp" },
+            { "image": "kekece/jinx-04.webp" },
+            { "image": "kekece/jinx-05.webp" },
+            { "image": "kekece/jinx-06.webp" },
+            { "image": "kekece/jinx-07.webp" },
+            { "image": "kekece/jinx-08.webp" },
+            { "image": "kekece/jinx-09.webp" },
+            { "image": "kekece/jinx-10.webp" }
+          ],
+          "bonne": 6
         }
       ]
     },
