@@ -18,7 +18,8 @@ export interface Verification {
 }
 
 /**
- * Minuscules, sans accents, espaces multiples réduits
+ * Minuscules, sans accents, espaces multiples réduits, sans article au début
+ * ("le corbeau", "l'échidné")
  */
 function normaliser(texte: string) {
   return texte
@@ -27,6 +28,7 @@ function normaliser(texte: string) {
     .toLowerCase()
     .trim()
     .replace(/\s+/g, ' ')
+    .replace(/^(?:(?:le|la|les|un|une|des|du) |l['’] ?)/, '')
 }
 
 /**
