@@ -871,7 +871,7 @@
         },
         {
           "type": "texte",
-          "question": "Combien de jeux compte la série principale Pokémon ? (chaque version compte : Rouge et Bleu = 2 jeux)",
+          "question": "Combien de jeux compte la série principale Pokémon ? (chaque version compte)",
           "reponses": ["38", "39", "trente-huit", "trente huit", "trente-neuf", "trente neuf"],
           "apres": {
             "texte": "38 jeux sortis en Europe, de Rouge et Bleu à Légendes Z-A (2025), Let's Go et Légendes Arceus compris. 39 en comptant Pokémon Vert, sorti seulement au Japon : les deux réponses sont acceptées.\nLa 10e génération, Vents et Vagues, n'est pas encore sortie."
