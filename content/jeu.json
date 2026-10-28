@@ -124,7 +124,8 @@
           "type": "texte",
           "question": "À quel animal appartient ce cri ?",
           "media": { "type": "audio", "fichier": "kelbet/cri.mp3" },
-          "reponses": ["renard", "renard roux"]
+          "reponses": ["renard", "renard roux"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelbet/renard.jpg" }] }
         },
         {
           "type": "liste",
@@ -137,7 +138,8 @@
           "media": { "type": "image", "fichier": "kelbet/bebe.jpg" },
           "reponses": ["tapir"],
           "apres": {
-            "texte": "Les bébés tapirs naissent avec des rayures et des taches qui les camouflent dans la forêt. Elles disparaissent en grandissant."
+            "texte": "Les bébés tapirs naissent avec des rayures et des taches qui les camouflent dans la forêt. Elles disparaissent en grandissant.",
+            "medias": [{ "type": "image", "fichier": "kelbet/actualite_naiss_tapir.jpg" }]
           }
         },
         {
@@ -152,8 +154,23 @@
         {
           "type": "texte",
           "question": "Quel animal se cache derrière ce gros plan ?",
-          "media": { "type": "image", "fichier": "kelbet/zoom.jpg" },
-          "reponses": ["chevre", "bouc"]
+          "media": { "type": "image", "fichier": "kelbet/zoom.png" },
+          "reponses": ["chevre", "bouc"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelbet/zoom_reveal.jpg" }] }
+        },
+        {
+          "type": "choix",
+          "question": "Combien de temps peut vivre un requin du Groenland ?",
+          "options": [
+            { "texte": "Environ 30 ans" },
+            { "texte": "Environ 70 ans" },
+            { "texte": "Environ 150 ans" },
+            { "texte": "Plus de 250 ans" }
+          ],
+          "bonne": 3,
+          "apres": {
+            "texte": "Une étude publiée en 2016 estime qu'il peut vivre près de 400 ans : c'est le vertébré à la plus grande longévité connue."
+          }
         },
         {
           "type": "choix",
@@ -187,15 +204,14 @@
         },
         {
           "type": "liste",
-          "question": "Nomme les animaux de cette scène (au moins 3)",
-          "minimum": 3,
-          "media": { "type": "video", "fichier": "kelbet/jumanji-troupeau.mp4" },
+          "question": "Cite les deux sortes de mammifères qui pondent des œufs",
           "elements": [
-            { "reponses": ["rhinoceros", "rhino"] },
-            { "reponses": ["elephant"] },
-            { "reponses": ["zebre"] },
-            { "reponses": ["pelican"] }
-          ]
+            { "reponses": ["ornithorynque"] },
+            { "reponses": ["echidne", "echidnes", "zaglosse"] }
+          ],
+          "apres": {
+            "texte": "Ce sont les monotrèmes : l'ornithorynque et les échidnés, qui vivent en Australie et en Nouvelle-Guinée."
+          }
         }
       ]
     },
