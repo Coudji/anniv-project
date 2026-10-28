@@ -238,7 +238,7 @@
         },
         {
           "type": "texte",
-          "question": "Protocole de laboratoire : dénaturation thermique des protéines d'ovalbumine par immersion dans un bain de H₂O à 100 °C pendant 9 minutes. Qu'obtient-on ?",
+          "question": "Qu'obtient-on lors d'une dénaturation thermique des protéines d'ovalbumine par immersion dans un bain de H₂O à 100 °C pendant 9 minutes.",
           "reponses": [
             "oeuf dur",
             "oeufs durs",
@@ -248,10 +248,7 @@
             "oeufs cuits durs",
             "œuf cuit dur",
             "œufs cuits durs"
-          ],
-          "apres": {
-            "texte": "3 minutes dans l'eau bouillante : un œuf à la coque. 6 minutes : un œuf mollet. 9 minutes : un œuf dur. Trop longtemps, le jaune s'entoure d'un anneau verdâtre."
-          }
+          ]
         },
         {
           "type": "choix",
