@@ -118,7 +118,7 @@
           "reponses": ["corbeau", "corneille", "freux"],
           "apres": {
             "texte": "Le corbeau croasse… et la grenouille coasse. Une seule lettre de différence !",
-            "medias": [{ "type": "image", "fichier": "kelbet/corbeau.jpg" }]
+            "medias": [{ "type": "image", "fichier": "kelbet/corbeau.png" }]
           }
         },
         {
@@ -150,7 +150,7 @@
         {
           "type": "choix",
           "question": "Vrai ou faux : le poulpe a trois cœurs.",
-          "media": { "type": "image", "fichier": "kelbet/poulpe.jpg" },
+          "media": { "type": "image", "fichier": "kelbet/poulpe.jpeg" },
           "options": [{ "texte": "Vrai" }, { "texte": "Faux" }],
           "bonne": 0,
           "apres": {
@@ -225,10 +225,7 @@
           ],
           "apres": {
             "texte": "Ce sont les seuls mammifères au monde à pondre des œufs, et ils vivent tous en Australie et en Nouvelle-Guinée. Une fois sortis de l'œuf, les petits boivent quand même le lait de leur mère… qui n'a pas de tétines : le lait suinte directement de sa peau !",
-            "medias": [
-              { "type": "image", "fichier": "kelbet/ornithorynque.jpg" },
-              { "type": "image", "fichier": "kelbet/echidne.jpg" }
-            ]
+            "medias": [{ "type": "image", "fichier": "kelbet/ornithorynque.png" }]
           }
         }
       ]
