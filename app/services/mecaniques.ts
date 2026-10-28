@@ -64,8 +64,23 @@ function verifierTexte(question: QuestionTexte, reponse: unknown): Verification 
   return { correct: correspond(String(reponse ?? ''), question.reponses, question.tolerance) }
 }
 
+/**
+ * Choix unique : l'index envoyé doit être le bon.
+ * Choix multiple : les index cochés doivent être exactement les bons, sans oubli ni en trop.
+ */
 function verifierChoix(question: QuestionChoix, reponse: unknown): Verification {
-  return { correct: String(reponse ?? '') === String(question.bonne) }
+  if (!Array.isArray(question.bonne)) {
+    return { correct: String(reponse ?? '') === String(question.bonne) }
+  }
+
+  const cochees = new Set(
+    (Array.isArray(reponse) ? reponse : [reponse]).map((r) => String(r ?? ''))
+  )
+  const bonnes = new Set(question.bonne.map(String))
+
+  return {
+    correct: cochees.size === bonnes.size && [...bonnes].every((index) => cochees.has(index)),
+  }
 }
 
 /**
@@ -163,6 +178,7 @@ export function questionPourFront(question: Question) {
         type: question.type,
         question: question.question,
         media: mediaPourFront(question.media),
+        multiple: Array.isArray(question.bonne),
         options: question.options.map((option) =>
           'texte' in option ? { texte: option.texte } : { image: `/medias/${option.image}` }
         ),

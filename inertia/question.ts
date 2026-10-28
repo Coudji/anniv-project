@@ -16,6 +16,7 @@ export type QuestionFront = {
   question: string
   media: MediaFront | null
   options?: OptionFront[]
+  multiple?: boolean
   serie?: SerieFront
 }
 

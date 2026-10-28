@@ -27,7 +27,14 @@ const agrandie = ref<string | null>(null)
 
     <div class="options" :class="{ 'options--images': enImages }">
       <label v-for="(option, index) in question.options" :key="index" class="cadre option">
-        <input type="radio" name="reponse" :value="index" required class="option__radio" />
+        <input
+          v-if="question.multiple"
+          type="checkbox"
+          name="reponse[]"
+          :value="index"
+          class="option__radio"
+        />
+        <input v-else type="radio" name="reponse" :value="index" required class="option__radio" />
         <template v-if="option.image">
           <img :src="option.image" alt="" class="option__image" />
           <button

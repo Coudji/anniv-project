@@ -31,9 +31,46 @@
         {
           "type": "texte",
           "question": "Qu'est-ce qui se cache derrière cette silhouette ?",
+          "media": { "type": "image", "fichier": "kekece/ombre-04.webp" },
+          "reponses": ["vegeta", "prince vegeta"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kekece/ombre-04-reveal.webp" }] }
+        },
+        {
+          "type": "texte",
+          "question": "Comment s'appelle cet objet ?",
+          "media": { "type": "image", "fichier": "kekece/objet-01.webp" },
+          "reponses": ["speculum"]
+        },
+        {
+          "type": "texte",
+          "question": "Qu'est-ce qui se cache derrière cette silhouette ?",
           "media": { "type": "image", "fichier": "kekece/ombre-02.webp" },
           "reponses": ["phanpy"],
           "apres": { "medias": [{ "type": "image", "fichier": "kekece/ombre-02-reveal.webp" }] }
+        },
+        {
+          "type": "choix",
+          "question": "Dofus : coche tous les Dofus primordiaux, et seulement eux",
+          "options": [
+            { "texte": "Dofus Cawotte" },
+            { "texte": "Dofus Émeraude" },
+            { "texte": "Dofus Vulbis" },
+            { "texte": "Dofus Ocre" },
+            { "texte": "Dofus Kaliptus" },
+            { "texte": "Dofus Pourpre" },
+            { "texte": "Dofus des Glaces" },
+            { "texte": "Dofus Ivoire" },
+            { "texte": "Dokoko" },
+            { "texte": "Dofus Turquoise" },
+            { "texte": "Dofawa" },
+            { "texte": "Dofus Argenté" },
+            { "texte": "Dofus Ébène" },
+            { "texte": "Dolmanax" }
+          ],
+          "bonne": [1, 3, 5, 7, 9, 12],
+          "apres": {
+            "texte": "Les six Dofus primordiaux sont les œufs des six dragons originels : Émeraude (air), Pourpre (feu), Turquoise (eau), Ocre (terre), Ivoire et Ébène."
+          }
         },
         {
           "type": "texte",

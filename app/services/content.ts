@@ -56,7 +56,11 @@ export interface QuestionChoix {
   media?: Media
   apres?: Apres
   options: OptionChoix[]
-  bonne: number
+  /**
+   * Index de la bonne option, ou liste des index pour une sélection multiple
+   * (il faut alors cocher toutes les bonnes et aucune autre)
+   */
+  bonne: number | number[]
 }
 
 export interface ElementListe {
