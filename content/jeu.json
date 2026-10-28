@@ -111,7 +111,93 @@
     "cat6": {
       "nom": "Kélbét ?",
       "theme": { "couleur": "vert", "icone": "patte" },
-      "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
+      "questions": [
+        {
+          "type": "texte",
+          "question": "Quel animal croasse ?",
+          "reponses": ["corbeau", "corneille", "freux"],
+          "apres": {
+            "texte": "Le corbeau croasse… et la grenouille coasse. Une seule lettre de différence !"
+          }
+        },
+        {
+          "type": "texte",
+          "question": "À quel animal appartient ce cri ?",
+          "media": { "type": "audio", "fichier": "kelbet/cri.mp3" },
+          "reponses": ["renard", "renard roux"]
+        },
+        {
+          "type": "liste",
+          "question": "Donne le nom de la femelle du sanglier, du cerf et du lièvre",
+          "elements": [{ "reponses": ["laie"] }, { "reponses": ["biche"] }, { "reponses": ["hase"] }]
+        },
+        {
+          "type": "texte",
+          "question": "À quel animal appartient ce bébé ?",
+          "media": { "type": "image", "fichier": "kelbet/bebe.jpg" },
+          "reponses": ["tapir"],
+          "apres": {
+            "texte": "Les bébés tapirs naissent avec des rayures et des taches qui les camouflent dans la forêt. Elles disparaissent en grandissant."
+          }
+        },
+        {
+          "type": "choix",
+          "question": "Vrai ou faux : le poulpe a trois cœurs.",
+          "options": [{ "texte": "Vrai" }, { "texte": "Faux" }],
+          "bonne": 0,
+          "apres": {
+            "texte": "Deux cœurs envoient le sang vers les branchies, le troisième vers le reste du corps."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Quel animal se cache derrière ce gros plan ?",
+          "media": { "type": "image", "fichier": "kelbet/zoom.jpg" },
+          "reponses": ["chevre", "bouc"]
+        },
+        {
+          "type": "choix",
+          "question": "Quel animal a la morsure la plus puissante ?",
+          "options": [
+            { "texte": "Le lion" },
+            { "texte": "Le requin blanc" },
+            { "texte": "Le crocodile marin" },
+            { "texte": "L'hippopotame" },
+            { "texte": "La hyène" }
+          ],
+          "bonne": 2
+        },
+        {
+          "type": "liste",
+          "question": "Cite au moins 3 animaux dont le nom commence par W",
+          "minimum": 3,
+          "elements": [
+            { "reponses": ["wapiti"] },
+            { "reponses": ["wombat"] },
+            { "reponses": ["wallaby"] },
+            { "reponses": ["wallaroo"] },
+            { "reponses": ["whippet"] },
+            { "reponses": ["watusi"] },
+            { "reponses": ["weimaraner"] },
+            { "reponses": ["welsh corgi"] },
+            { "reponses": ["wyandotte"] },
+            { "reponses": ["wels"] },
+            { "reponses": ["wahoo"] }
+          ]
+        },
+        {
+          "type": "liste",
+          "question": "Nomme les animaux de cette scène (au moins 3)",
+          "minimum": 3,
+          "media": { "type": "video", "fichier": "kelbet/jumanji-troupeau.mp4" },
+          "elements": [
+            { "reponses": ["rhinoceros", "rhino"] },
+            { "reponses": ["elephant"] },
+            { "reponses": ["zebre"] },
+            { "reponses": ["pelican"] }
+          ]
+        }
+      ]
     },
     "cat7": {
       "nom": "Pokékoi ?",

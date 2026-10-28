@@ -91,7 +91,9 @@ function verifierListe(question: QuestionListe, reponse: unknown): Verification 
   })
 
   const correct =
-    trouves.size === question.elements.length && saisies.every((s, i) => !s || valides[i])
+    question.minimum !== undefined
+      ? trouves.size >= question.minimum
+      : trouves.size === question.elements.length && saisies.every((s, i) => !s || valides[i])
 
   return { correct, retour: { saisies, valides } }
 }

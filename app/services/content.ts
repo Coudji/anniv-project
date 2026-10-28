@@ -71,6 +71,11 @@ export interface QuestionListe {
   apres?: Apres
   elements: ElementListe[]
   tolerance?: number
+  /**
+   * Si présent : il suffit de trouver ce nombre d'éléments parmi la liste
+   * ("cite au moins 3…"), et les mauvaises réponses ne bloquent pas
+   */
+  minimum?: number
 }
 
 export interface QuestionSerie {
