@@ -1,0 +1,986 @@
+{
+  "_info": "Référence interne des badges d'arène (non lue par le jeu). Images : public/medias/<image>, issues du dépôt PokeAPI/sprites. Noms français : Poképédia (pages Badge, Ligue de Kalos, Ligue de Galar, Ligue de Paldea), recoupés avec Pokébip et Pokémon Trash. Sigles des jeux : RB = Rouge/Bleu, J = Jaune, OA = Or/Argent, C = Cristal, RFVF = Rouge Feu/Vert Feuille, HGSS = HeartGold/SoulSilver, LGPE = Let's Go Pikachu/Évoli, RS = Rubis/Saphir, E = Émeraude, ROSA = Rubis Oméga/Saphir Alpha, NB = Noir/Blanc, N2B2 = Noir 2/Blanc 2.",
+  "badges": [
+    {
+      "image": "pokekoi/badges/1.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Roche",
+      "type": "Roche",
+      "champions": [
+        {
+          "nom": "Pierre"
+        }
+      ],
+      "villes": ["Argenta"]
+    },
+    {
+      "image": "pokekoi/badges/2.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Cascade",
+      "type": "Eau",
+      "champions": [
+        {
+          "nom": "Ondine"
+        }
+      ],
+      "villes": ["Azuria"]
+    },
+    {
+      "image": "pokekoi/badges/3.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Foudre",
+      "type": "Électrik",
+      "champions": [
+        {
+          "nom": "Major Bob"
+        }
+      ],
+      "villes": ["Carmin sur Mer"]
+    },
+    {
+      "image": "pokekoi/badges/4.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Prisme",
+      "type": "Plante",
+      "champions": [
+        {
+          "nom": "Erika"
+        }
+      ],
+      "villes": ["Céladopole"]
+    },
+    {
+      "image": "pokekoi/badges/5.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Âme",
+      "type": "Poison",
+      "champions": [
+        {
+          "nom": "Koga",
+          "jeux": "RB, J, RFVF, LGPE"
+        },
+        {
+          "nom": "Jeannine",
+          "jeux": "OA, C, HGSS"
+        }
+      ],
+      "villes": ["Parmanie"]
+    },
+    {
+      "image": "pokekoi/badges/6.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Marais",
+      "type": "Psy",
+      "champions": [
+        {
+          "nom": "Morgane"
+        }
+      ],
+      "villes": ["Safrania"]
+    },
+    {
+      "image": "pokekoi/badges/7.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Volcan",
+      "type": "Feu",
+      "champions": [
+        {
+          "nom": "Auguste"
+        }
+      ],
+      "villes": ["Cramois'Île"]
+    },
+    {
+      "image": "pokekoi/badges/8.png",
+      "region": "Kanto",
+      "generation": 1,
+      "badge": "Badge Terre",
+      "type": "Sol",
+      "champions": [
+        {
+          "nom": "Giovanni",
+          "jeux": "RB, J, RFVF, LGPE"
+        },
+        {
+          "nom": "Blue",
+          "jeux": "OA, C, HGSS"
+        }
+      ],
+      "villes": ["Jadielle"]
+    },
+    {
+      "image": "pokekoi/badges/9.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Zéphyr",
+      "type": "Vol",
+      "champions": [
+        {
+          "nom": "Albert"
+        }
+      ],
+      "villes": ["Mauville"]
+    },
+    {
+      "image": "pokekoi/badges/10.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Essaim",
+      "type": "Insecte",
+      "champions": [
+        {
+          "nom": "Hector"
+        }
+      ],
+      "villes": ["Écorcia"]
+    },
+    {
+      "image": "pokekoi/badges/11.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Plaine",
+      "type": "Normal",
+      "champions": [
+        {
+          "nom": "Blanche"
+        }
+      ],
+      "villes": ["Doublonville"]
+    },
+    {
+      "image": "pokekoi/badges/12.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Brume",
+      "type": "Spectre",
+      "champions": [
+        {
+          "nom": "Mortimer"
+        }
+      ],
+      "villes": ["Rosalia"]
+    },
+    {
+      "image": "pokekoi/badges/13.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Choc",
+      "type": "Combat",
+      "champions": [
+        {
+          "nom": "Chuck"
+        }
+      ],
+      "villes": ["Irisia"]
+    },
+    {
+      "image": "pokekoi/badges/14.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Minéral",
+      "type": "Acier",
+      "champions": [
+        {
+          "nom": "Jasmine"
+        }
+      ],
+      "villes": ["Oliville"]
+    },
+    {
+      "image": "pokekoi/badges/15.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Glacier",
+      "type": "Glace",
+      "champions": [
+        {
+          "nom": "Frédo"
+        }
+      ],
+      "villes": ["Acajou"]
+    },
+    {
+      "image": "pokekoi/badges/16.png",
+      "region": "Johto",
+      "generation": 2,
+      "badge": "Badge Lever",
+      "type": "Dragon",
+      "champions": [
+        {
+          "nom": "Sandra"
+        }
+      ],
+      "villes": ["Ébènelle"]
+    },
+    {
+      "image": "pokekoi/badges/17.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Roche",
+      "type": "Roche",
+      "champions": [
+        {
+          "nom": "Roxanne"
+        }
+      ],
+      "villes": ["Mérouville"],
+      "note": "Même nom que le badge de Pierre à Kanto"
+    },
+    {
+      "image": "pokekoi/badges/18.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Poing",
+      "type": "Combat",
+      "champions": [
+        {
+          "nom": "Bastien"
+        }
+      ],
+      "villes": ["Myokara"]
+    },
+    {
+      "image": "pokekoi/badges/19.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Dynamo",
+      "type": "Électrik",
+      "champions": [
+        {
+          "nom": "Voltère"
+        }
+      ],
+      "villes": ["Lavandia"]
+    },
+    {
+      "image": "pokekoi/badges/20.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Chaleur",
+      "type": "Feu",
+      "champions": [
+        {
+          "nom": "Adriane"
+        }
+      ],
+      "villes": ["Vermilava"]
+    },
+    {
+      "image": "pokekoi/badges/21.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Balancier",
+      "type": "Normal",
+      "champions": [
+        {
+          "nom": "Norman"
+        }
+      ],
+      "villes": ["Clémenti-Ville"]
+    },
+    {
+      "image": "pokekoi/badges/22.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Plume",
+      "type": "Vol",
+      "champions": [
+        {
+          "nom": "Alizée"
+        }
+      ],
+      "villes": ["Cimetronelle"]
+    },
+    {
+      "image": "pokekoi/badges/23.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Esprit",
+      "type": "Psy",
+      "champions": [
+        {
+          "nom": "Lévy & Tatia"
+        }
+      ],
+      "villes": ["Algatia"]
+    },
+    {
+      "image": "pokekoi/badges/24.png",
+      "region": "Hoenn",
+      "generation": 3,
+      "badge": "Badge Pluie",
+      "type": "Eau",
+      "champions": [
+        {
+          "nom": "Marc",
+          "jeux": "RS, ROSA"
+        },
+        {
+          "nom": "Juan",
+          "jeux": "E"
+        }
+      ],
+      "villes": ["Atalanopolis"]
+    },
+    {
+      "image": "pokekoi/badges/25.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Charbon",
+      "type": "Roche",
+      "champions": [
+        {
+          "nom": "Pierrick"
+        }
+      ],
+      "villes": ["Charbourg"]
+    },
+    {
+      "image": "pokekoi/badges/26.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Forêt",
+      "type": "Plante",
+      "champions": [
+        {
+          "nom": "Flo"
+        }
+      ],
+      "villes": ["Vestigion"]
+    },
+    {
+      "image": "pokekoi/badges/27.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Pavé",
+      "type": "Combat",
+      "champions": [
+        {
+          "nom": "Mélina"
+        }
+      ],
+      "villes": ["Voilaroc"]
+    },
+    {
+      "image": "pokekoi/badges/28.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Palustre",
+      "type": "Eau",
+      "champions": [
+        {
+          "nom": "Lovis"
+        }
+      ],
+      "villes": ["Verchamps"]
+    },
+    {
+      "image": "pokekoi/badges/29.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Fantôme",
+      "type": "Spectre",
+      "champions": [
+        {
+          "nom": "Kiméra"
+        }
+      ],
+      "villes": ["Unionpolis"]
+    },
+    {
+      "image": "pokekoi/badges/30.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Mine",
+      "type": "Acier",
+      "champions": [
+        {
+          "nom": "Charles"
+        }
+      ],
+      "villes": ["Joliberges"]
+    },
+    {
+      "image": "pokekoi/badges/31.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Glaçon",
+      "type": "Glace",
+      "champions": [
+        {
+          "nom": "Gladys"
+        }
+      ],
+      "villes": ["Frimapic"]
+    },
+    {
+      "image": "pokekoi/badges/32.png",
+      "region": "Sinnoh",
+      "generation": 4,
+      "badge": "Badge Phare",
+      "type": "Électrik",
+      "champions": [
+        {
+          "nom": "Tanguy"
+        }
+      ],
+      "villes": ["Rivamar"]
+    },
+    {
+      "image": "pokekoi/badges/33.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Triple",
+      "type": "Plante, Feu ou Eau (selon le starter choisi)",
+      "champions": [
+        {
+          "nom": "Rachid",
+          "jeux": "NB"
+        },
+        {
+          "nom": "Armando",
+          "jeux": "NB"
+        },
+        {
+          "nom": "Noa",
+          "jeux": "NB"
+        }
+      ],
+      "villes": ["Ogoesse"],
+      "note": "NB seulement"
+    },
+    {
+      "image": "pokekoi/badges/34.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Basique",
+      "type": "Normal",
+      "champions": [
+        {
+          "nom": "Aloé",
+          "jeux": "NB",
+          "ville": "Maillard"
+        },
+        {
+          "nom": "Tcheren",
+          "jeux": "N2B2",
+          "ville": "Pavonnay"
+        }
+      ],
+      "villes": ["Maillard", "Pavonnay"]
+    },
+    {
+      "image": "pokekoi/badges/35.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Toxique",
+      "type": "Poison",
+      "champions": [
+        {
+          "nom": "Strykna",
+          "jeux": "N2B2"
+        }
+      ],
+      "villes": ["Ondes-sur-Mer"],
+      "note": "N2B2 seulement"
+    },
+    {
+      "image": "pokekoi/badges/36.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Élytre",
+      "type": "Insecte",
+      "champions": [
+        {
+          "nom": "Artie"
+        }
+      ],
+      "villes": ["Volucité"]
+    },
+    {
+      "image": "pokekoi/badges/37.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Volt",
+      "type": "Électrik",
+      "champions": [
+        {
+          "nom": "Inezia"
+        }
+      ],
+      "villes": ["Méanville"]
+    },
+    {
+      "image": "pokekoi/badges/38.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Sismique",
+      "type": "Sol",
+      "champions": [
+        {
+          "nom": "Bardane"
+        }
+      ],
+      "villes": ["Port Yoneuve"]
+    },
+    {
+      "image": "pokekoi/badges/39.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Jet",
+      "type": "Vol",
+      "champions": [
+        {
+          "nom": "Carolina"
+        }
+      ],
+      "villes": ["Parsemille"]
+    },
+    {
+      "image": "pokekoi/badges/40.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Stalactite",
+      "type": "Glace",
+      "champions": [
+        {
+          "nom": "Zhu",
+          "jeux": "NB"
+        }
+      ],
+      "villes": ["Flocombe"],
+      "note": "NB seulement"
+    },
+    {
+      "image": "pokekoi/badges/41.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Mythe",
+      "type": "Dragon",
+      "champions": [
+        {
+          "nom": "Watson",
+          "jeux": "N, N2B2"
+        },
+        {
+          "nom": "Iris",
+          "jeux": "B"
+        }
+      ],
+      "villes": ["Janusia"]
+    },
+    {
+      "image": "pokekoi/badges/42.png",
+      "region": "Unys",
+      "generation": 5,
+      "badge": "Badge Vague",
+      "type": "Eau",
+      "champions": [
+        {
+          "nom": "Amana",
+          "jeux": "N2B2"
+        }
+      ],
+      "villes": ["Papeloa"],
+      "note": "N2B2 seulement"
+    },
+    {
+      "image": "pokekoi/badges/43.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Coléoptère",
+      "type": "Insecte",
+      "champions": [
+        {
+          "nom": "Violette"
+        }
+      ],
+      "villes": ["Neuvartault"]
+    },
+    {
+      "image": "pokekoi/badges/44.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Mur",
+      "type": "Roche",
+      "champions": [
+        {
+          "nom": "Lino"
+        }
+      ],
+      "villes": ["Relifac-le-Haut"]
+    },
+    {
+      "image": "pokekoi/badges/45.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Lutte",
+      "type": "Combat",
+      "champions": [
+        {
+          "nom": "Cornélia"
+        }
+      ],
+      "villes": ["Yantreizh"]
+    },
+    {
+      "image": "pokekoi/badges/46.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Végétal",
+      "type": "Plante",
+      "champions": [
+        {
+          "nom": "Amaro"
+        }
+      ],
+      "villes": ["Port Tempères"]
+    },
+    {
+      "image": "pokekoi/badges/47.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Tension",
+      "type": "Électrik",
+      "champions": [
+        {
+          "nom": "Lem"
+        }
+      ],
+      "villes": ["Illumis"]
+    },
+    {
+      "image": "pokekoi/badges/48.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Nymphe",
+      "type": "Fée",
+      "champions": [
+        {
+          "nom": "Valériane"
+        }
+      ],
+      "villes": ["Romant-sous-Bois"]
+    },
+    {
+      "image": "pokekoi/badges/49.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Psychisme",
+      "type": "Psy",
+      "champions": [
+        {
+          "nom": "Astera"
+        }
+      ],
+      "villes": ["Flusselles"]
+    },
+    {
+      "image": "pokekoi/badges/50.png",
+      "region": "Kalos",
+      "generation": 6,
+      "badge": "Badge Iceberg",
+      "type": "Glace",
+      "champions": [
+        {
+          "nom": "Urup"
+        }
+      ],
+      "villes": ["Auffrac-les-Congères"]
+    },
+    {
+      "image": "pokekoi/badges/51.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Plante",
+      "type": "Plante",
+      "champions": [
+        {
+          "nom": "Percy"
+        }
+      ],
+      "villes": ["Greenbury"]
+    },
+    {
+      "image": "pokekoi/badges/52.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Eau",
+      "type": "Eau",
+      "champions": [
+        {
+          "nom": "Donna"
+        }
+      ],
+      "villes": ["Skifford"]
+    },
+    {
+      "image": "pokekoi/badges/53.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Feu",
+      "type": "Feu",
+      "champions": [
+        {
+          "nom": "Kabu"
+        }
+      ],
+      "villes": ["Motorby"]
+    },
+    {
+      "image": "pokekoi/badges/54.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Combat",
+      "type": "Combat",
+      "champions": [
+        {
+          "nom": "Faïza",
+          "jeux": "Épée"
+        }
+      ],
+      "villes": ["Old Chister"],
+      "note": "Épée seulement (même arène qu'Alistair dans Bouclier)"
+    },
+    {
+      "image": "pokekoi/badges/55.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Spectre",
+      "type": "Spectre",
+      "champions": [
+        {
+          "nom": "Alistair",
+          "jeux": "Bouclier"
+        }
+      ],
+      "villes": ["Old Chister"],
+      "note": "Bouclier seulement"
+    },
+    {
+      "image": "pokekoi/badges/56.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Fée",
+      "type": "Fée",
+      "champions": [
+        {
+          "nom": "Sally"
+        }
+      ],
+      "villes": ["Corrifey"]
+    },
+    {
+      "image": "pokekoi/badges/57.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Roche",
+      "type": "Roche",
+      "champions": [
+        {
+          "nom": "Chaz",
+          "jeux": "Épée"
+        }
+      ],
+      "villes": ["Ludester"],
+      "note": "Épée seulement (même arène que Lona dans Bouclier)"
+    },
+    {
+      "image": "pokekoi/badges/58.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Glace",
+      "type": "Glace",
+      "champions": [
+        {
+          "nom": "Lona",
+          "jeux": "Bouclier"
+        }
+      ],
+      "villes": ["Ludester"],
+      "note": "Bouclier seulement"
+    },
+    {
+      "image": "pokekoi/badges/59.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Ténèbres",
+      "type": "Ténèbres",
+      "champions": [
+        {
+          "nom": "Peterson"
+        }
+      ],
+      "villes": ["Smashings"]
+    },
+    {
+      "image": "pokekoi/badges/60.png",
+      "region": "Galar",
+      "generation": 8,
+      "badge": "Badge Dragon",
+      "type": "Dragon",
+      "champions": [
+        {
+          "nom": "Roy"
+        }
+      ],
+      "villes": ["Kickenham"]
+    },
+    {
+      "image": "pokekoi/badges/61.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/62.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/63.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/64.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/65.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/66.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/67.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/68.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/69.png",
+      "region": null,
+      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
+    },
+    {
+      "image": "pokekoi/badges/70.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Insecte",
+      "type": "Insecte",
+      "champions": [
+        {
+          "nom": "Éra"
+        }
+      ],
+      "villes": ["Sevaro"]
+    },
+    {
+      "image": "pokekoi/badges/71.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Plante",
+      "type": "Plante",
+      "champions": [
+        {
+          "nom": "Colza"
+        }
+      ],
+      "villes": ["Cuencia"]
+    },
+    {
+      "image": "pokekoi/badges/72.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Électrik",
+      "type": "Électrik",
+      "champions": [
+        {
+          "nom": "Mashynn"
+        }
+      ],
+      "villes": ["Levalendura"]
+    },
+    {
+      "image": "pokekoi/badges/73.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Eau",
+      "type": "Eau",
+      "champions": [
+        {
+          "nom": "Kombu"
+        }
+      ],
+      "villes": ["Jarramanca"]
+    },
+    {
+      "image": "pokekoi/badges/74.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Normal",
+      "type": "Normal",
+      "champions": [
+        {
+          "nom": "Okuba"
+        }
+      ],
+      "villes": ["Mezclamora"]
+    },
+    {
+      "image": "pokekoi/badges/75.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Spectre",
+      "type": "Spectre",
+      "champions": [
+        {
+          "nom": "Laïm"
+        }
+      ],
+      "villes": ["Frigao"]
+    },
+    {
+      "image": "pokekoi/badges/76.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Psy",
+      "type": "Psy",
+      "champions": [
+        {
+          "nom": "Tully"
+        }
+      ],
+      "villes": ["Alforneira"]
+    },
+    {
+      "image": "pokekoi/badges/77.png",
+      "region": "Paldea",
+      "generation": 9,
+      "badge": "Badge d'Arène Glace",
+      "type": "Glace",
+      "champions": [
+        {
+          "nom": "Grusha"
+        }
+      ],
+      "villes": ["Mont Nappé"]
+    }
+  ]
+}
