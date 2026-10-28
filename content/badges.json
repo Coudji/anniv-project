@@ -1,5 +1,5 @@
 {
-  "_info": "Référence interne des badges d'arène (non lue par le jeu). Images : public/medias/<image>, issues du dépôt PokeAPI/sprites. Noms français : Poképédia (pages Badge, Ligue de Kalos, Ligue de Galar, Ligue de Paldea), recoupés avec Pokébip et Pokémon Trash. Sigles des jeux : RB = Rouge/Bleu, J = Jaune, OA = Or/Argent, C = Cristal, RFVF = Rouge Feu/Vert Feuille, HGSS = HeartGold/SoulSilver, LGPE = Let's Go Pikachu/Évoli, RS = Rubis/Saphir, E = Émeraude, ROSA = Rubis Oméga/Saphir Alpha, NB = Noir/Blanc, N2B2 = Noir 2/Blanc 2.",
+  "_info": "Référence interne des badges d'arène (non lue par le jeu). Images : public/medias/<image>, issues du dépôt PokeAPI/sprites. Noms français : Poképédia (pages Badge, Ligue de Kalos, Ligue de Galar, Ligue de Paldea), recoupés avec Pokébip, Pokémon Trash et les captures des tableaux de Poképédia envoyées par Coudji. Les images 61 à 69 du dossier (non identifiées) sont volontairement ignorées. Sigles des jeux : RB = Rouge/Bleu, J = Jaune, OA = Or/Argent, C = Cristal, RFVF = Rouge Feu/Vert Feuille, HGSS = HeartGold/SoulSilver, LGPE = Let's Go Pikachu/Évoli, RS = Rubis/Saphir, E = Émeraude, ROSA = Rubis Oméga/Saphir Alpha, NB = Noir/Blanc, N2B2 = Noir 2/Blanc 2.",
   "badges": [
     {
       "image": "pokekoi/badges/1.png",
@@ -832,51 +832,6 @@
         }
       ],
       "villes": ["Kickenham"]
-    },
-    {
-      "image": "pokekoi/badges/61.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/62.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/63.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/64.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/65.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/66.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/67.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/68.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
-    },
-    {
-      "image": "pokekoi/badges/69.png",
-      "region": null,
-      "note": "Non identifié : ajouté à PokéAPI en octobre 2022, avant la sortie d'Écarlate/Violet. 66 à 69 ressemblent aux badges de l'Archipel Orange (dessin animé), à confirmer."
     },
     {
       "image": "pokekoi/badges/70.png",
