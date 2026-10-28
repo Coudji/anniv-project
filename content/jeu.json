@@ -5,6 +5,13 @@
       "theme": { "couleur": "orange", "icone": "loupe" },
       "questions": [
         {
+          "type": "texte",
+          "question": "Qu'est-ce qui se cache derrière cette silhouette ?",
+          "media": { "type": "image", "fichier": "kekece/ombre-01.webp" },
+          "reponses": ["vogue merry", "going merry", "merry"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kekece/ombre-01-reveal.webp" }] }
+        },
+        {
           "type": "choix",
           "question": "Une seule de ces Jinx est l'originale. Laquelle ?",
           "options": [
@@ -20,6 +27,29 @@
             { "image": "kekece/jinx-10.webp" }
           ],
           "bonne": 6
+        },
+        {
+          "type": "texte",
+          "question": "Qu'est-ce qui se cache derrière cette silhouette ?",
+          "media": { "type": "image", "fichier": "kekece/ombre-02.webp" },
+          "reponses": ["phanpy"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kekece/ombre-02-reveal.webp" }] }
+        },
+        {
+          "type": "texte",
+          "question": "Qu'est-ce qui se cache derrière cette silhouette ?",
+          "media": { "type": "image", "fichier": "kekece/ombre-03.webp" },
+          "reponses": [
+            "boules de cristal",
+            "boule de cristal",
+            "les 7 boules de cristal",
+            "7 boules de cristal",
+            "sept boules de cristal",
+            "dragon balls",
+            "dragon ball",
+            "dragon ball z"
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "kekece/ombre-03-reveal.webp" }] }
         }
       ]
     },
