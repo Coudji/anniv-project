@@ -248,7 +248,7 @@
             "medias": [
               {
                 "type": "image",
-                "fichier": "test.jpg"
+                "fichier": "kiceki/image-03.webp"
               }
             ]
           }
@@ -258,35 +258,20 @@
           "question": "Qui je recherche ?",
           "media": {
             "type": "image",
-            "fichier": "test.jpg"
+            "fichier": "kiceki/image-01.webp"
           },
           "options": [
             {
-              "texte": "Cersei Lannister"
-            },
-            {
-              "texte": "Emilia (Re:Zero)"
-            },
-            {
               "texte": "Lois Lane"
-            },
-            {
-              "texte": "Arya Stark"
             },
             {
               "texte": "Hermione Granger"
             },
             {
-              "texte": "Daenerys Targaryen"
-            },
-            {
-              "texte": "Rem (Re:Zero)"
-            },
-            {
               "texte": "Lara Croft"
             },
             {
-              "texte": "Sansa Stark"
+              "texte": "Daenerys Targaryen"
             },
             {
               "texte": "Wonder Woman"
@@ -295,12 +280,33 @@
               "texte": "Leia Organa"
             },
             {
+              "texte": "Katniss Everdeen"
+            },
+            {
               "texte": "Elsa"
+            },
+            {
+              "texte": "Ellen Ripley"
+            },
+            {
+              "texte": "Black Widow"
+            },
+            {
+              "texte": "Buffy Summers"
+            },
+            {
+              "texte": "Mulan"
             }
           ],
-          "bonne": 5,
+          "bonne": 3,
           "apres": {
-            "texte": "Emilia (Re:Zero) + Clark Kent (Superman) = Emilia Clarke, l'actrice qui joue Daenerys Targaryen dans Game of Thrones."
+            "texte": "Emilia (Re:Zero) + Clark Kent (Superman) = Emilia Clarke, l'actrice qui joue Daenerys Targaryen dans Game of Thrones.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "kiceki/image-02.webp"
+              }
+            ]
           }
         },
         {
@@ -312,7 +318,7 @@
             "medias": [
               {
                 "type": "image",
-                "fichier": "test.jpg"
+                "fichier": "kiceki/image-04.webp"
               }
             ]
           }
@@ -358,9 +364,17 @@
           "question": "De quel film vient cette musique ?",
           "media": {
             "type": "audio",
-            "fichier": "test.mp3"
+            "fichier": "kelzik/audio-01.mp3"
           },
-          "reponses": ["60 secondes chrono"]
+          "reponses": ["60 secondes chrono"],
+          "apres": {
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "kelzik/image-01.webp"
+              }
+            ]
+          }
         },
         {
           "type": "texte",
@@ -376,11 +390,21 @@
           "question": "De quelle série vient ce générique ?",
           "media": {
             "type": "audio",
-            "fichier": "test.mp3"
+            "fichier": "kelzik/audio-02.mp3"
           },
           "reponses": ["scrubs"],
           "apres": {
-            "texte": "Le générique de Scrubs, c'est « Superman » du groupe Lazlo Bane."
+            "texte": "Le générique de Scrubs, c'est « Superman » du groupe Lazlo Bane.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "kelzik/image-02.webp"
+              },
+              {
+                "type": "video",
+                "fichier": "kelzik/video-01.mp4"
+              }
+            ]
           }
         },
         {
@@ -1065,7 +1089,7 @@
           "question": "Complète la réplique : « Moi, Eikichi Onizuka, … »",
           "media": {
             "type": "image",
-            "fichier": "test.jpg"
+            "fichier": "kekidi/image-02.webp"
           },
           "reponses": [
             "22 ans, célibataire et libre comme l'air",
@@ -1075,30 +1099,34 @@
         },
         {
           "type": "choix",
-          "question": "Qui a dit : « Il faut beaucoup de courage pour affronter ses ennemis, mais il en faut beaucoup plus pour tenir tête à ses amis. » ?",
+          "question": "Complète la réplique de Dumbledore : « Il faut beaucoup de courage pour… »",
           "options": [
             {
-              "texte": "Gandalf"
+              "texte": "… affronter ses peurs, mais il en faut beaucoup plus pour les avouer à ses amis."
             },
             {
-              "texte": "Maître Yoda"
+              "texte": "… affronter ses ennemis, mais il en faut encore plus pour leur pardonner."
             },
             {
-              "texte": "Albus Dumbledore"
+              "texte": "… tenir tête à ses amis, mais il en faut beaucoup plus pour affronter ses ennemis."
             },
             {
-              "texte": "Oncle Ben"
+              "texte": "… affronter ses ennemis, mais il en faut beaucoup plus pour tenir tête à ses amis."
             },
             {
-              "texte": "Mufasa"
+              "texte": "… affronter la mort, mais il en faut beaucoup plus pour affronter la vie."
             },
             {
-              "texte": "Minerva McGonagall"
+              "texte": "… affronter ses ennemis, mais il en faut beaucoup plus pour affronter la vérité."
             }
           ],
-          "bonne": 2,
+          "bonne": 3,
           "apres": {
             "texte": "Dumbledore, à la fin du premier Harry Potter. Il donne 10 points à Neville pour avoir tenu tête à Harry, Ron et Hermione, et ces points font gagner la Coupe des Quatre Maisons à Gryffondor."
+          },
+          "media": {
+            "type": "image",
+            "fichier": "kekidi/image-03.webp"
           }
         },
         {
@@ -1125,7 +1153,7 @@
           "question": "All Might a deux répliques fétiches. Lesquelles ?",
           "media": {
             "type": "image",
-            "fichier": "test.jpg"
+            "fichier": "kekidi/image-04.webp"
           },
           "elements": [
             {
