@@ -242,9 +242,9 @@
         {
           "type": "texte",
           "question": "Qui a dépensé sans compter ?",
-          "reponses": ["john hammond", "jhon hammond", "hammond", "romain en convention", "romain"],
+          "reponses": ["john hammond", "romain en convention"],
           "apres": {
-            "texte": "John Hammond, le créateur de Jurassic Park. Il répète « J'ai dépensé sans compter » cinq fois dans le film.\nEt oui : « Romain en convention » était aussi une réponse acceptée.",
+            "texte": "John Hammond, le créateur de Jurassic Park. Il répète « J'ai dépensé sans compter » cinq fois dans le film.\n« Romain en convention » était aussi une réponse acceptée 😂.",
             "medias": [
               {
                 "type": "image",
@@ -360,12 +360,7 @@
             "type": "audio",
             "fichier": "test.mp3"
           },
-          "reponses": [
-            "60 secondes chrono",
-            "soixante secondes chrono",
-            "gone in 60 seconds",
-            "gone in sixty seconds"
-          ]
+          "reponses": ["60 secondes chrono"]
         },
         {
           "type": "texte",
@@ -374,7 +369,7 @@
             "type": "audio",
             "fichier": "kelzik/wow-wod-light-in-the-darkness.mp3"
           },
-          "reponses": ["world of warcraft", "wow", "warcraft", "warlords of draenor"]
+          "reponses": ["world of warcraft", "wow"]
         },
         {
           "type": "texte",
@@ -1075,7 +1070,7 @@
           "reponses": [
             "22 ans, célibataire et libre comme l'air",
             "vingt-deux ans, célibataire et libre comme l'air",
-            "22 ans celibataire libre comme l'air"
+            "22 ans celibataire et libre comme l'air"
           ]
         },
         {
@@ -1134,22 +1129,12 @@
           },
           "elements": [
             {
-              "reponses": [
-                "la cavalerie est là",
-                "car la cavalerie est là",
-                "tout va bien car la cavalerie est là",
-                "tout va bien pourquoi car la cavalerie est là",
-                "je suis là",
-                "tout va bien car je suis là"
-              ]
+              "reponses": ["la cavalerie est là"]
             },
             {
               "reponses": ["plus ultra"]
             }
-          ],
-          "apres": {
-            "texte": "« Tout va bien ! Pourquoi ? Car la cavalerie est là ! » et « Plus Ultra ! », la devise de l'école Yuei."
-          }
+          ]
         },
         {
           "type": "texte",
