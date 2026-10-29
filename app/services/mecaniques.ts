@@ -18,14 +18,16 @@ export interface Verification {
 }
 
 /**
- * Minuscules, sans accents, espaces multiples réduits, sans article au début
- * ("le corbeau", "l'échidné")
+ * Minuscules, sans accents, sans ponctuation (! ? . , ; : « » " …), espaces multiples
+ * réduits, sans article au début ("le corbeau", "l'échidné").
+ * Les apostrophes et les tirets sont gardés ("l'air", "trente-huit").
  */
 function normaliser(texte: string) {
   return texte
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
+    .replace(/[!?.,;:«»"“”…]/g, ' ')
     .trim()
     .replace(/\s+/g, ' ')
     .replace(/^(?:(?:le|la|les|un|une|des|du) |l['’] ?)/, '')

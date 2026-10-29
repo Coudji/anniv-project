@@ -234,61 +234,193 @@
     },
     "cat2": {
       "nom": "Kicéki ?",
-      "theme": { "couleur": "magenta", "icone": "buste" },
+      "theme": {
+        "couleur": "magenta",
+        "icone": "buste"
+      },
       "questions": [
         {
+          "type": "texte",
+          "question": "Qui a dépensé sans compter ?",
+          "reponses": ["john hammond", "jhon hammond", "hammond", "romain en convention", "romain"],
+          "apres": {
+            "texte": "John Hammond, le créateur de Jurassic Park. Il répète « J'ai dépensé sans compter » cinq fois dans le film.\nEt oui : « Romain en convention » était aussi une réponse acceptée.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "test.jpg"
+              }
+            ]
+          }
+        },
+        {
           "type": "choix",
-          "question": "Quel est le starter feu de la 1re génération ?",
-          "options": [{ "texte": "Bulbizarre" }, { "texte": "Salamèche" }, { "texte": "Carapuce" }],
-          "bonne": 1
+          "question": "Qui je recherche ?",
+          "media": {
+            "type": "image",
+            "fichier": "test.jpg"
+          },
+          "options": [
+            {
+              "texte": "Cersei Lannister"
+            },
+            {
+              "texte": "Emilia (Re:Zero)"
+            },
+            {
+              "texte": "Lois Lane"
+            },
+            {
+              "texte": "Arya Stark"
+            },
+            {
+              "texte": "Hermione Granger"
+            },
+            {
+              "texte": "Daenerys Targaryen"
+            },
+            {
+              "texte": "Rem (Re:Zero)"
+            },
+            {
+              "texte": "Lara Croft"
+            },
+            {
+              "texte": "Sansa Stark"
+            },
+            {
+              "texte": "Wonder Woman"
+            },
+            {
+              "texte": "Leia Organa"
+            },
+            {
+              "texte": "Elsa"
+            }
+          ],
+          "bonne": 5,
+          "apres": {
+            "texte": "Emilia (Re:Zero) + Clark Kent (Superman) = Emilia Clarke, l'actrice qui joue Daenerys Targaryen dans Game of Thrones."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Qui suis-je ? Mage de rang S, je pars en mission pendant des années. Quand je rentre, les habitants réorganisent la ville pour me laisser un chemin dégagé, parce que ma magie brise tout ce que je touche, murs compris. J'ai perdu un bras et une jambe face à un dragon noir. Et ma fille ne lâche jamais son tonneau de bière.",
+          "reponses": ["gildarts", "gildarts clive"],
+          "apres": {
+            "texte": "Gildarts Clive, l'as de Fairy Tail et père de Cana. Sa magie, Crash, désagrège tout ce qu'elle touche. Son bras et sa jambe, il les a perdus face à Acnologia.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "test.jpg"
+              }
+            ]
+          }
         }
       ]
     },
     "cat3": {
       "nom": "Kélzik ?",
-      "theme": { "couleur": "lime", "icone": "casque" },
+      "theme": {
+        "couleur": "lime",
+        "icone": "casque"
+      },
       "questions": [
         {
           "type": "texte",
           "question": "De quel anime vient cet opening ?",
-          "media": { "type": "audio", "fichier": "kelzik/demonslayer-op1.mp3" },
+          "media": {
+            "type": "audio",
+            "fichier": "kelzik/demonslayer-op1.mp3"
+          },
           "reponses": ["demon slayer", "kimetsu no yaiba"]
         },
         {
           "type": "texte",
           "question": "De quel anime vient cet opening ?",
-          "media": { "type": "audio", "fichier": "kelzik/gto-op1.mp3" },
+          "media": {
+            "type": "audio",
+            "fichier": "kelzik/gto-op1.mp3"
+          },
           "reponses": ["gto", "great teacher onizuka"]
         },
         {
           "type": "texte",
           "question": "De quel jeu vient cette musique ?",
-          "media": { "type": "audio", "fichier": "kelzik/metin2-selection.mp3" },
+          "media": {
+            "type": "audio",
+            "fichier": "kelzik/metin2-selection.mp3"
+          },
           "reponses": ["metin2", "metin 2"]
         },
         {
           "type": "texte",
+          "question": "De quel film vient cette musique ?",
+          "media": {
+            "type": "audio",
+            "fichier": "test.mp3"
+          },
+          "reponses": [
+            "60 secondes chrono",
+            "soixante secondes chrono",
+            "gone in 60 seconds",
+            "gone in sixty seconds"
+          ]
+        },
+        {
+          "type": "texte",
           "question": "De quel jeu vient cette musique ?",
-          "media": { "type": "audio", "fichier": "kelzik/wow-wod-light-in-the-darkness.mp3" },
+          "media": {
+            "type": "audio",
+            "fichier": "kelzik/wow-wod-light-in-the-darkness.mp3"
+          },
           "reponses": ["world of warcraft", "wow", "warcraft", "warlords of draenor"]
+        },
+        {
+          "type": "texte",
+          "question": "De quelle série vient ce générique ?",
+          "media": {
+            "type": "audio",
+            "fichier": "test.mp3"
+          },
+          "reponses": ["scrubs"],
+          "apres": {
+            "texte": "Le générique de Scrubs, c'est « Superman » du groupe Lazlo Bane."
+          }
         },
         {
           "type": "choix",
           "question": "D'où vient cette musique de Dofus ?",
-          "media": { "type": "audio", "fichier": "kelzik/dofus-astrub.mp3" },
+          "media": {
+            "type": "audio",
+            "fichier": "kelzik/dofus-astrub.mp3"
+          },
           "options": [
-            { "texte": "Amakna" },
-            { "texte": "Bonta" },
-            { "texte": "Astrub" },
-            { "texte": "Brâkmar" },
-            { "texte": "Incarnam" }
+            {
+              "texte": "Amakna"
+            },
+            {
+              "texte": "Bonta"
+            },
+            {
+              "texte": "Astrub"
+            },
+            {
+              "texte": "Brâkmar"
+            },
+            {
+              "texte": "Incarnam"
+            }
           ],
           "bonne": 2
         },
         {
           "type": "texte",
           "question": "Qui a composé ce morceau ?",
-          "media": { "type": "audio", "fichier": "kelzik/mozart-symphonie40.mp3" },
+          "media": {
+            "type": "audio",
+            "fichier": "kelzik/mozart-symphonie40.mp3"
+          },
           "reponses": ["mozart", "wolfgang amadeus mozart"],
           "apres": {
             "texte": "Symphonie n° 40 en sol mineur de Mozart (1788).\nEt toi, tu te souviens de ton costume au carnaval ?"
@@ -935,6 +1067,47 @@
         },
         {
           "type": "texte",
+          "question": "Complète la réplique : « Moi, Eikichi Onizuka, … »",
+          "media": {
+            "type": "image",
+            "fichier": "test.jpg"
+          },
+          "reponses": [
+            "22 ans, célibataire et libre comme l'air",
+            "vingt-deux ans, célibataire et libre comme l'air",
+            "22 ans celibataire libre comme l'air"
+          ]
+        },
+        {
+          "type": "choix",
+          "question": "Qui a dit : « Il faut beaucoup de courage pour affronter ses ennemis, mais il en faut beaucoup plus pour tenir tête à ses amis. » ?",
+          "options": [
+            {
+              "texte": "Gandalf"
+            },
+            {
+              "texte": "Maître Yoda"
+            },
+            {
+              "texte": "Albus Dumbledore"
+            },
+            {
+              "texte": "Oncle Ben"
+            },
+            {
+              "texte": "Mufasa"
+            },
+            {
+              "texte": "Minerva McGonagall"
+            }
+          ],
+          "bonne": 2,
+          "apres": {
+            "texte": "Dumbledore, à la fin du premier Harry Potter. Il donne 10 points à Neville pour avoir tenu tête à Harry, Ron et Hermione, et ces points font gagner la Coupe des Quatre Maisons à Gryffondor."
+          }
+        },
+        {
+          "type": "texte",
           "question": "Qu'est-ce que Lenina Huxley dit sous le bip ?",
           "media": {
             "type": "video",
@@ -944,7 +1117,38 @@
           },
           "reponses": ["la pipe"],
           "apres": {
-            "medias": [{ "type": "video", "fichier": "kekidi/video-02.mp4" }]
+            "medias": [
+              {
+                "type": "video",
+                "fichier": "kekidi/video-02.mp4"
+              }
+            ]
+          }
+        },
+        {
+          "type": "liste",
+          "question": "All Might a deux répliques fétiches. Lesquelles ?",
+          "media": {
+            "type": "image",
+            "fichier": "test.jpg"
+          },
+          "elements": [
+            {
+              "reponses": [
+                "la cavalerie est là",
+                "car la cavalerie est là",
+                "tout va bien car la cavalerie est là",
+                "tout va bien pourquoi car la cavalerie est là",
+                "je suis là",
+                "tout va bien car je suis là"
+              ]
+            },
+            {
+              "reponses": ["plus ultra"]
+            }
+          ],
+          "apres": {
+            "texte": "« Tout va bien ! Pourquoi ? Car la cavalerie est là ! » et « Plus Ultra ! », la devise de l'école Yuei."
           }
         },
         {
