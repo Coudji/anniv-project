@@ -1338,6 +1338,21 @@
         },
         {
           "type": "texte",
+          "question": "De quel film vient cette réplique ?",
+          "media": { "type": "video", "fichier": "kekidi/video-03.mp4" },
+          "reponses": ["men in black", "mib", "men in black 1"]
+        },
+        {
+          "type": "texte",
+          "question": "Même film, un peu plus tard : complète la réplique ! « Tu connais la différence entre toi et moi ? … »",
+          "media": { "type": "video", "fichier": "kekidi/video-04.mp4", "fin": 15.3 },
+          "reponses": ["moi j'ai la classe", "j'ai la classe", "c'est que moi j'ai la classe"],
+          "apres": {
+            "medias": [{ "type": "video", "fichier": "kekidi/video-04.mp4", "debut": 10 }]
+          }
+        },
+        {
+          "type": "texte",
           "question": "Quelle réplique est prononcée à ce moment du film ? Indice : il s'appelle Pierre.",
           "media": {
             "type": "image",
