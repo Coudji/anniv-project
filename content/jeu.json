@@ -1339,8 +1339,9 @@
         {
           "type": "texte",
           "question": "De quel film vient cette réplique ?",
-          "media": { "type": "video", "fichier": "kekidi/video-03.mp4" },
-          "reponses": ["men in black", "mib", "men in black 1"]
+          "media": { "type": "audio", "fichier": "kekidi/video-03.mp4" },
+          "reponses": ["men in black", "mib", "men in black 1"],
+          "apres": { "medias": [{ "type": "video", "fichier": "kekidi/video-03.mp4" }] }
         },
         {
           "type": "texte",
