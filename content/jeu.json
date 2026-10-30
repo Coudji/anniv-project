@@ -345,7 +345,6 @@
           "type": "liste",
           "question": "Qui sont les personnages sur cette affiche ? (prénom et nom de famille)",
           "media": { "type": "image", "fichier": "kiceki/image-11.webp" },
-          "tolerance": 0,
           "elements": [
             { "reponses": ["sheldon cooper"] },
             { "reponses": ["leonard hofstadter"] },
