@@ -114,6 +114,15 @@
           }
         },
         {
+          "type": "texte",
+          "question": "Quel est le nom de ce bateau ?",
+          "media": { "type": "image", "fichier": "kekece/image-01.webp" },
+          "reponses": ["mercator", "le mercator"],
+          "apres": {
+            "texte": "Le Mercator, trois-mâts école belge lancé en 1932 en Écosse. Lors d'une expédition en 1934, il est allé sur l'île de Pâques et en a rapporté une statue moaï offerte à la Belgique. Il est amarré à Ostende depuis 1964."
+          }
+        },
+        {
           "type": "choix",
           "question": "Dofus : coche tous les Dofus primordiaux, et seulement eux",
           "options": [
