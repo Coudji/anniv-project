@@ -1337,6 +1337,38 @@
           }
         },
         {
+          "type": "choix",
+          "question": "Kaamelott : coche toutes les répliques qui ne sont PAS de Perceval",
+          "options": [
+            { "texte": "Sire, Sire ! On en a gros !" },
+            {
+              "texte": "Si Joseph d'Arimathie a pas été trop con, vous pouvez être sûr que le Graal, c'est un bocal à anchois."
+            },
+            { "texte": "Dans la vie, j'avais deux ennemis : le vocabulaire et les épinards." },
+            { "texte": "Elle est où la poulette ?" },
+            { "texte": "Les framboises sont perchées sur le tabouret de mon grand-père." },
+            { "texte": "C'est pas moi qu'explique mal, c'est les autres qui sont cons !" },
+            { "texte": "J'voudrais pas faire ma raclette, mais la soirée s'annonce pas super." },
+            { "texte": "Ça prouve que j'ai de l'ubiquité..." },
+            { "texte": "C'est pas faux." },
+            {
+              "texte": "J'irai me coucher quand vous m'aurez juré qu'il n'y a pas dans cette forêt d'animal plus dangereux que le lapin adulte !"
+            },
+            {
+              "texte": "Vous, vous avez une idée derrière la main, j'en mettrais ma tête au feu !"
+            },
+            { "texte": "Moi j'ai appris à lire, ben je souhaite ça à personne." },
+            { "texte": "Le gras, c'est la vie." },
+            { "texte": "C'qui compte, c'est les valeurs !" },
+            { "texte": "En plus j'sais pas lire." },
+            { "texte": "Dans le Languedoc, ils m'appellent Provençal." }
+          ],
+          "bonne": [3, 9, 11, 12],
+          "apres": {
+            "texte": "« Le gras, c'est la vie » : Karadoc. « Elle est où la poulette ? » : Kadoc. « Moi j'ai appris à lire… » : Léodagan. « … le lapin adulte » : Bohort. Toutes les autres sont bien de Perceval."
+          }
+        },
+        {
           "type": "liste",
           "question": "All Might a deux répliques fétiches. Lesquelles ?",
           "media": {
