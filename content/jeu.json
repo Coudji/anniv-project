@@ -483,6 +483,13 @@
         },
         {
           "type": "texte",
+          "question": "De quel film vient cette chanson ?",
+          "media": { "type": "audio", "fichier": "kelzik/audio-04.mp3" },
+          "reponses": ["mulan"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelzik/image-04.webp" }] }
+        },
+        {
+          "type": "texte",
           "question": "De quel jeu vient cette musique ?",
           "media": {
             "type": "audio",
@@ -563,6 +570,16 @@
             }
           ],
           "bonne": 2
+        },
+        {
+          "type": "texte",
+          "question": "De quel film vient cette musique ?",
+          "media": { "type": "audio", "fichier": "kelzik/audio-03.mp3" },
+          "reponses": ["sherlock holmes", "sherlock"],
+          "apres": {
+            "texte": "Sherlock Holmes (2009), de Guy Ritchie, avec Robert Downey Jr. et Jude Law. Musique de Hans Zimmer.",
+            "medias": [{ "type": "image", "fichier": "kelzik/image-03.webp" }]
+          }
         },
         {
           "type": "texte",
