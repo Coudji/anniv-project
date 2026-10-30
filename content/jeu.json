@@ -1340,30 +1340,42 @@
           "type": "choix",
           "question": "Kaamelott : coche toutes les répliques qui ne sont PAS de Perceval",
           "options": [
-            { "texte": "Sire, Sire ! On en a gros !" },
             {
-              "texte": "Si Joseph d'Arimathie a pas été trop con, vous pouvez être sûr que le Graal, c'est un bocal à anchois."
+              "texte": "C’est pour ça : j’lis jamais rien. C’est un vrai piège à cons c’t’histoire-là. En plus j’sais pas lire."
             },
-            { "texte": "Dans la vie, j'avais deux ennemis : le vocabulaire et les épinards." },
-            { "texte": "Elle est où la poulette ?" },
-            { "texte": "Les framboises sont perchées sur le tabouret de mon grand-père." },
-            { "texte": "C'est pas moi qu'explique mal, c'est les autres qui sont cons !" },
-            { "texte": "J'voudrais pas faire ma raclette, mais la soirée s'annonce pas super." },
-            { "texte": "Ça prouve que j'ai de l'ubiquité..." },
-            { "texte": "C'est pas faux." },
+            { "texte": "C’est pas faux." },
+            {
+              "texte": "De toutes façons, les réunions de la Table Ronde c’est deux fois par mois. Donc, si le mec il dit après-demain à partir de dans deux jours, suivant s’il le dit à la fin du mois, ça reporte."
+            },
+            {
+              "texte": "Je vous ai vu une fois dans une carriole, tirée par un cheval. Enfin, la carriole tirée par un cheval."
+            },
+            {
+              "texte": "En plus je connais une technique pour tuer trois hommes en un coup rien qu’avec des feuilles mortes ! Alors là, vous êtes deux, vous avez bien de la chance."
+            },
             {
               "texte": "J'irai me coucher quand vous m'aurez juré qu'il n'y a pas dans cette forêt d'animal plus dangereux que le lapin adulte !"
             },
-            {
-              "texte": "Vous, vous avez une idée derrière la main, j'en mettrais ma tête au feu !"
-            },
-            { "texte": "Moi j'ai appris à lire, ben je souhaite ça à personne." },
             { "texte": "Le gras, c'est la vie." },
-            { "texte": "C'qui compte, c'est les valeurs !" },
-            { "texte": "En plus j'sais pas lire." },
-            { "texte": "Dans le Languedoc, ils m'appellent Provençal." }
+            {
+              "texte": "Alors là, c'est Ashton, lui c'est Rutz, lui c'est Pierce, l'autre derrière c'est Pierce aussi, j'ai jamais compris pourquoi, et lui euh, j'crois qu'il a pas d'prénom, tout le monde l'appelle Connard..."
+            },
+            { "texte": "Elle est où la poulette ?" },
+            { "texte": "Putain, en plein dans sa mouille !" },
+            { "texte": "C'est pas moi qu'explique mal, c'est les autres qui sont cons !" },
+            {
+              "texte": "Faut arrêter ces conneries de nord et de sud ! Une fois pour toutes, le nord, suivant comment on est tourné, ça change tout !"
+            },
+            {
+              "texte": "Une fois, à une exécution, je m'approche d'une fille. Pour rigoler, je lui fais : « Vous êtes de la famille du pendu ? »... C'était sa sœur. Bonjour l'approche !"
+            },
+            { "texte": "Sire, Sire ! On en a gros !" },
+            {
+              "texte": "Dans le Languedoc, ils m'appellent Provençal. Mais c'est moi qui m'suis gouré en disant mon nom. Sinon, en Bretagne, c'est le Gros Faisan au sud, et au nord, c'est juste Ducon .."
+            },
+            { "texte": "Moi j'ai appris à lire, ben je souhaite ça à personne." }
           ],
-          "bonne": [3, 9, 11, 12],
+          "bonne": [5, 6, 8, 15],
           "apres": {
             "texte": "« Le gras, c'est la vie » : Karadoc. « Elle est où la poulette ? » : Kadoc. « Moi j'ai appris à lire… » : Léodagan. « … le lapin adulte » : Bohort. Toutes les autres sont bien de Perceval."
           }
