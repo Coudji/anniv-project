@@ -844,6 +844,25 @@
           }
         },
         {
+          "type": "choix",
+          "question": "Gilderoy Lockhart lâche des lutins de Cornouailles en plein cours. Mais au fait, où se trouvent les Cornouailles ?",
+          "media": { "type": "video", "fichier": "oukece/video-01.mp4" },
+          "options": [
+            { "image": "oukece/carte-01.webp" },
+            { "image": "oukece/carte-02.webp" },
+            { "image": "oukece/carte-03.webp" },
+            { "image": "oukece/carte-04.webp" },
+            { "image": "oukece/carte-05.webp" },
+            { "image": "oukece/carte-06.webp" },
+            { "image": "oukece/carte-07.webp" },
+            { "image": "oukece/carte-08.webp" }
+          ],
+          "bonne": 1,
+          "apres": {
+            "texte": "Les Cornouailles (Cornwall), c'est la pointe sud-ouest de l'Angleterre. Le Devon, juste à côté, était le piège."
+          }
+        },
+        {
           "type": "liste",
           "question": "Donne le nom de ce lieu et la série dans laquelle on le voit",
           "media": {
