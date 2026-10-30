@@ -281,11 +281,41 @@
           "question": "Qui est ce personnage ?",
           "media": {
             "type": "image",
-            "fichier": "test.jpg"
+            "fichier": "kiceki/image-07.webp"
           },
           "reponses": ["totoro"],
           "apres": {
             "texte": "Totoro, de Mon voisin Totoro. C'est la mascotte du Studio Ghibli."
+          }
+        },
+        {
+          "type": "choix",
+          "question": "Dans les films Harry Potter, qui a tenu l'épée de Gryffondor en main ?",
+          "options": [
+            { "texte": "Viktor Krum" },
+            { "texte": "Filius Flitwick" },
+            { "texte": "Dolores Ombrage" },
+            { "texte": "Fleur Delacour" },
+            { "texte": "Molly Weasley" },
+            { "texte": "Cedric Diggory" },
+            { "texte": "Kingsley Shacklebolt" },
+            { "texte": "Neville Londubat" },
+            { "texte": "Horace Slughorn" },
+            { "texte": "Harry Potter" },
+            { "texte": "Fred Weasley" },
+            { "texte": "Remus Lupin" },
+            { "texte": "Argus Rusard" },
+            { "texte": "Arthur Weasley" },
+            { "texte": "Gilderoy Lockhart" },
+            { "texte": "Gripsec" },
+            { "texte": "Ron Weasley" },
+            { "texte": "Sibylle Trelawney" },
+            { "texte": "Sirius Black" },
+            { "texte": "Cho Chang" }
+          ],
+          "bonne": [7, 9, 15, 16],
+          "apres": {
+            "texte": "Harry la sort du Choixpeau pour tuer le Basilic (La Chambre des secrets). Ron la repêche dans l'étang gelé et détruit le médaillon (Les Reliques de la Mort, partie 1). Gripsec la récupère en échange de son aide à Gringotts, puis s'enfuit avec (partie 2). Neville la sort à son tour du Choixpeau et tranche la tête de Nagini (partie 2)."
           }
         },
         {
@@ -307,14 +337,14 @@
           "question": "Qui se cache derrière ce gros plan ?",
           "media": {
             "type": "image",
-            "fichier": "test.jpg"
+            "fichier": "kiceki/image-08.webp"
           },
           "reponses": ["ryuk"],
           "apres": {
             "medias": [
               {
                 "type": "image",
-                "fichier": "test.jpg"
+                "fichier": "kiceki/image-09.webp"
               }
             ]
           }
