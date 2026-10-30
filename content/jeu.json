@@ -956,6 +956,16 @@
         },
         {
           "type": "texte",
+          "question": "Dans l'univers de Harry Potter, dans quelle rue se déroule cette scène ?",
+          "media": { "type": "video", "fichier": "oukece/video-02.mp4", "debut": 5 },
+          "reponses": ["privet drive", "4 privet drive"],
+          "apres": {
+            "texte": "Privet Drive : Harry grandit chez les Dursley, au 4, Privet Drive, à Little Whinging.",
+            "medias": [{ "type": "video", "fichier": "oukece/video-02.mp4", "fin": 4.5 }]
+          }
+        },
+        {
+          "type": "texte",
           "question": "Univers Marvel : quel est ce lieu ?",
           "media": {
             "type": "image",
