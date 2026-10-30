@@ -254,6 +254,29 @@
           }
         },
         {
+          "type": "texte",
+          "question": "Qui est-ce ?",
+          "media": {
+            "type": "image",
+            "fichier": "kiceki/image-05.webp"
+          },
+          "reponses": ["orihime inoue", "orihime", "inoue orihime"],
+          "apres": {
+            "texte": "Orihime Inoue, de Bleach.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "kiceki/image-06.webp"
+              }
+            ]
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Qui est l'auteur de One Piece ?",
+          "reponses": ["eiichiro oda", "eiichirō oda", "oda"]
+        },
+        {
           "type": "choix",
           "question": "Qui je recherche ?",
           "media": {
@@ -1015,8 +1038,46 @@
           "objectif": 3
         },
         {
+          "type": "texte",
+          "question": "Qui a créé Pokémon ?",
+          "reponses": ["satoshi tajiri", "tajiri"],
+          "apres": {
+            "texte": "Satoshi Tajiri. En japonais, Sacha s'appelle Satoshi, en son honneur."
+          }
+        },
+        {
           "type": "intro",
           "question": "De quel jeu vient cette intro ?"
+        },
+        {
+          "type": "liste",
+          "question": "Cite les 8 évolutions d'Évoli",
+          "elements": [
+            {
+              "reponses": ["aquali"]
+            },
+            {
+              "reponses": ["voltali"]
+            },
+            {
+              "reponses": ["pyroli"]
+            },
+            {
+              "reponses": ["mentali"]
+            },
+            {
+              "reponses": ["noctali"]
+            },
+            {
+              "reponses": ["phyllali"]
+            },
+            {
+              "reponses": ["givrali"]
+            },
+            {
+              "reponses": ["nymphali"]
+            }
+          ]
         },
         {
           "type": "serie",
