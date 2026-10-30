@@ -277,6 +277,49 @@
           "reponses": ["eiichiro oda", "eiichirō oda", "oda"]
         },
         {
+          "type": "texte",
+          "question": "Qui est ce personnage ?",
+          "media": {
+            "type": "image",
+            "fichier": "test.jpg"
+          },
+          "reponses": ["totoro"],
+          "apres": {
+            "texte": "Totoro, de Mon voisin Totoro. C'est la mascotte du Studio Ghibli."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Qui suis-je ? Mage de rang S, je pars en mission pendant des années. Quand je rentre, les habitants réorganisent la ville pour me laisser un chemin dégagé, parce que ma magie brise tout ce que je touche, murs compris. J'ai perdu un bras et une jambe face à un dragon noir. Et ma fille ne lâche jamais son tonneau de bière.",
+          "reponses": ["gildarts", "gildarts clive"],
+          "apres": {
+            "texte": "Gildarts Clive, l'as de Fairy Tail et père de Cana. Sa magie, Crash, désagrège tout ce qu'elle touche. Son bras et sa jambe, il les a perdus face à Acnologia.",
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "kiceki/image-04.webp"
+              }
+            ]
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Qui se cache derrière ce gros plan ?",
+          "media": {
+            "type": "image",
+            "fichier": "test.jpg"
+          },
+          "reponses": ["ryuk"],
+          "apres": {
+            "medias": [
+              {
+                "type": "image",
+                "fichier": "test.jpg"
+              }
+            ]
+          }
+        },
+        {
           "type": "choix",
           "question": "Qui je recherche ?",
           "media": {
@@ -328,20 +371,6 @@
               {
                 "type": "image",
                 "fichier": "kiceki/image-02.webp"
-              }
-            ]
-          }
-        },
-        {
-          "type": "texte",
-          "question": "Qui suis-je ? Mage de rang S, je pars en mission pendant des années. Quand je rentre, les habitants réorganisent la ville pour me laisser un chemin dégagé, parce que ma magie brise tout ce que je touche, murs compris. J'ai perdu un bras et une jambe face à un dragon noir. Et ma fille ne lâche jamais son tonneau de bière.",
-          "reponses": ["gildarts", "gildarts clive"],
-          "apres": {
-            "texte": "Gildarts Clive, l'as de Fairy Tail et père de Cana. Sa magie, Crash, désagrège tout ce qu'elle touche. Son bras et sa jambe, il les a perdus face à Acnologia.",
-            "medias": [
-              {
-                "type": "image",
-                "fichier": "kiceki/image-04.webp"
               }
             ]
           }
