@@ -220,7 +220,7 @@
           "type": "texte",
           "question": "Comment s'appelle l'objet posé sur ce miroir ?",
           "media": { "type": "image", "fichier": "kekece/objet-02.webp" },
-          "reponses": ["disque d'euler", "euler's disk", "euler disk", "disque euler"],
+          "reponses": ["disque d'euler"],
           "apres": { "medias": [{ "type": "video", "fichier": "kekece/video-01.mp4" }] }
         },
         {
