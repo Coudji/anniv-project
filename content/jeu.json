@@ -929,6 +929,15 @@
           }
         },
         {
+          "type": "texte",
+          "question": "Subnautica : sur quelle planète ce vaisseau s'écrase-t-il ?",
+          "media": { "type": "image", "fichier": "oukece/lieu-08.webp" },
+          "reponses": ["4546b", "planete 4546b"],
+          "apres": {
+            "texte": "La planète 4546B, presque entièrement recouverte d'eau. Le vaisseau qui s'y écrase, c'est l'Aurora."
+          }
+        },
+        {
           "type": "choix",
           "question": "Jurassic Park (1993) : dans quel archipel le film a-t-il été tourné ?",
           "media": {
