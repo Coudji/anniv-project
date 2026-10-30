@@ -278,6 +278,14 @@
         },
         {
           "type": "texte",
+          "question": "Qui suis-je ? Petite fille de 6 ans, je passe mes journées à la bibliothèque. Mon père vend des voitures trafiquées et ma mère ne pense qu'au bingo. Pour me venger, j'ai collé le chapeau de mon père sur sa tête. Et quand je me mets en colère, les objets bougent tout seuls.",
+          "reponses": ["matilda", "matilda wormwood"],
+          "apres": {
+            "texte": "Matilda (1996), réalisé par Danny DeVito, qui joue aussi son père. Le film est adapté du roman de Roald Dahl."
+          }
+        },
+        {
+          "type": "texte",
           "question": "Qui est ce personnage ?",
           "media": {
             "type": "image",
