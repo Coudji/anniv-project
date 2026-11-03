@@ -126,94 +126,39 @@
           "type": "choix",
           "question": "Dofus : coche tous les Dofus primordiaux, et seulement eux",
           "options": [
-            {
-              "texte": "Dofus Blanc"
-            },
-            {
-              "texte": "Dofus Cacao"
-            },
-            {
-              "texte": "Dofus Nébuleux"
-            },
-            {
-              "texte": "Dofus Ébène"
-            },
-            {
-              "texte": "Dofus Ocre"
-            },
-            {
-              "texte": "Dofus Vulbis"
-            },
-            {
-              "texte": "Dofus Ivoire"
-            },
-            {
-              "texte": "Dofus des Glaces"
-            },
-            {
-              "texte": "Dokille"
-            },
-            {
-              "texte": "Dolmanax"
-            },
-            {
-              "texte": "Dofus Abyssal"
-            },
-            {
-              "texte": "Dofus Noir"
-            },
-            {
-              "texte": "Dofus Pourpre"
-            },
-            {
-              "texte": "Dofus Émeraude"
-            },
-            {
-              "texte": "Dofus Cawotte"
-            },
-            {
-              "texte": "Dofus Argenté"
-            },
-            {
-              "texte": "Dofus Argenté Scintillant"
-            },
-            {
-              "texte": "Dofus Kaliptus"
-            },
-            {
-              "texte": "Dofus Forgelave"
-            },
-            {
-              "texte": "Dofus des Veilleurs"
-            },
-            {
-              "texte": "Dokoko"
-            },
-            {
-              "texte": "Dofus Dorigami"
-            },
-            {
-              "texte": "Dofus Turquoise"
-            },
-            {
-              "texte": "Dofus Domakuro"
-            },
-            {
-              "texte": "Dofus Sopalin"
-            },
-            {
-              "texte": "Dotruche"
-            },
-            {
-              "texte": "Dofus Tacheté"
-            },
-            {
-              "texte": "Dofawa"
-            }
+            { "texte": "Dofus Blanc" },
+            { "texte": "Dofus Cacao" },
+            { "texte": "Dofus Nébuleux" },
+            { "texte": "Dofus Ébène" },
+            { "texte": "Dofus Ocre" },
+            { "texte": "Dofus Vulbis" },
+            { "texte": "Dofus Ivoire" },
+            { "texte": "Dofus des Glaces" },
+            { "texte": "Dokille" },
+            { "texte": "Dolmanax" },
+            { "texte": "Dofus Abyssal" },
+            { "texte": "Dofus Noir" },
+            { "texte": "Dofus Pourpre" },
+            { "texte": "Dofus Émeraude" },
+            { "texte": "Dofus Cawotte" },
+            { "texte": "Dofus Argenté" },
+            { "texte": "Dofus Argenté Scintillant" },
+            { "texte": "Dofus Kaliptus" },
+            { "texte": "Dofus Forgelave" },
+            { "texte": "Dofus des Veilleurs" },
+            { "texte": "Dokoko" },
+            { "texte": "Dofus Dorigami" },
+            { "texte": "Dofus Turquoise" },
+            { "texte": "Dofus Domakuro" },
+            { "texte": "Dofus Sopalin" },
+            { "texte": "Dotruche" },
+            { "texte": "Dofus Tacheté" },
+            { "texte": "Dofawa" }
           ],
           "bonne": [3, 4, 6, 12, 13, 22],
           "apres": {
-            "texte": "Les six Dofus primordiaux sont les œufs des six dragons originels : Émeraude (air), Pourpre (feu), Turquoise (eau), Ocre (terre), Ivoire et Ébène."
+            "texte": "Les six Dofus primordiaux sont les œufs des six dragons originels : Émeraude (air), Pourpre (feu), Turquoise (eau), Ocre (terre), Ivoire et Ébène.",
+            "medias": [{ "type": "image", "fichier": "kekece/image-02.webp" }]
           }
         },
         {
@@ -290,7 +235,8 @@
         {
           "type": "texte",
           "question": "Qui est l'auteur de One Piece ?",
-          "reponses": ["eiichiro oda", "eiichirō oda", "oda"]
+          "reponses": ["eiichiro oda", "eiichirō oda", "oda"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kiceki/image-12.webp" }] }
         },
         {
           "type": "texte",
@@ -316,6 +262,7 @@
         {
           "type": "choix",
           "question": "Dans les films Harry Potter, qui a tenu l'épée de Gryffondor en main ?",
+          "media": { "type": "image", "fichier": "kiceki/image-13.webp" },
           "options": [
             { "texte": "Viktor Krum" },
             { "texte": "Filius Flitwick" },
@@ -466,20 +413,16 @@
         {
           "type": "texte",
           "question": "De quel anime vient cet opening ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kelzik/demonslayer-op1.mp3"
-          },
-          "reponses": ["demon slayer", "kimetsu no yaiba"]
+          "media": { "type": "audio", "fichier": "kelzik/demonslayer-op1.mp3" },
+          "reponses": ["demon slayer", "kimetsu no yaiba"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelzik/image-07.webp" }] }
         },
         {
           "type": "texte",
           "question": "De quel anime vient cet opening ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kelzik/gto-op1.mp3"
-          },
-          "reponses": ["gto", "great teacher onizuka"]
+          "media": { "type": "audio", "fichier": "kelzik/gto-op1.mp3" },
+          "reponses": ["gto", "great teacher onizuka"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelzik/image-08.webp" }] }
         },
         {
           "type": "texte",
@@ -491,11 +434,9 @@
         {
           "type": "texte",
           "question": "De quel jeu vient cette musique ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kelzik/metin2-selection.mp3"
-          },
-          "reponses": ["metin2", "metin 2"]
+          "media": { "type": "audio", "fichier": "kelzik/metin2-selection.mp3" },
+          "reponses": ["metin2", "metin 2"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelzik/image-09.webp" }] }
         },
         {
           "type": "texte",
@@ -517,11 +458,9 @@
         {
           "type": "texte",
           "question": "De quel jeu vient cette musique ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kelzik/wow-wod-light-in-the-darkness.mp3"
-          },
-          "reponses": ["world of warcraft", "wow"]
+          "media": { "type": "audio", "fichier": "kelzik/wow-wod-light-in-the-darkness.mp3" },
+          "reponses": ["world of warcraft", "wow"],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelzik/image-10.webp" }] }
         },
         {
           "type": "texte",
@@ -548,28 +487,16 @@
         {
           "type": "choix",
           "question": "D'où vient cette musique de Dofus ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kelzik/dofus-astrub.mp3"
-          },
+          "media": { "type": "audio", "fichier": "kelzik/dofus-astrub.mp3" },
           "options": [
-            {
-              "texte": "Amakna"
-            },
-            {
-              "texte": "Bonta"
-            },
-            {
-              "texte": "Astrub"
-            },
-            {
-              "texte": "Brâkmar"
-            },
-            {
-              "texte": "Incarnam"
-            }
+            { "texte": "Amakna" },
+            { "texte": "Bonta" },
+            { "texte": "Astrub" },
+            { "texte": "Brâkmar" },
+            { "texte": "Incarnam" }
           ],
-          "bonne": 2
+          "bonne": 2,
+          "apres": { "medias": [{ "type": "image", "fichier": "kelzik/image-05.webp" }] }
         },
         {
           "type": "texte",
@@ -584,13 +511,11 @@
         {
           "type": "texte",
           "question": "Qui a composé ce morceau ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kelzik/mozart-symphonie40.mp3"
-          },
+          "media": { "type": "audio", "fichier": "kelzik/mozart-symphonie40.mp3" },
           "reponses": ["mozart", "wolfgang amadeus mozart"],
           "apres": {
-            "texte": "Symphonie n° 40 en sol mineur de Mozart (1788).\nEt toi, tu te souviens de ton costume au carnaval ?"
+            "texte": "Symphonie n° 40 en sol mineur de Mozart (1788).\nEt toi, tu te souviens de ton costume au carnaval ?",
+            "medias": [{ "type": "image", "fichier": "kelzik/image-06.webp" }]
           }
         }
       ]
@@ -604,39 +529,13 @@
       "questions": [
         {
           "type": "choix",
-          "question": "Subnautica (le premier) : quelle est la recette de la pile ?",
-          "options": [
-            {
-              "texte": "1 champignon acide + 2 minerais de cuivre"
-            },
-            {
-              "texte": "2 champignons acides + 1 quartz"
-            },
-            {
-              "texte": "2 champignons acides + 1 minerai de cuivre"
-            },
-            {
-              "texte": "1 sel + 1 minerai de cuivre"
-            }
-          ],
-          "bonne": 2
-        },
-        {
-          "type": "choix",
           "question": "Slime Rancher : comment obtient-on un largo ?",
+          "media": { "type": "image", "fichier": "komenkife/image-01.webp" },
           "options": [
-            {
-              "texte": "En mettant deux slimes dans le même enclos"
-            },
-            {
-              "texte": "En faisant manger à un slime le plort d'un autre type"
-            },
-            {
-              "texte": "En mélangeant deux plorts dans l'extracteur"
-            },
-            {
-              "texte": "En donnant à un slime sa nourriture préférée"
-            }
+            { "texte": "En mettant deux slimes dans le même enclos" },
+            { "texte": "En faisant manger à un slime le plort d'un autre type" },
+            { "texte": "En mélangeant deux plorts dans l'extracteur" },
+            { "texte": "En donnant à un slime sa nourriture préférée" }
           ],
           "bonne": 1
         },
@@ -645,7 +544,8 @@
           "question": "ARK : 5 narcobaies + 1 viande avariée dans le mortier et pilon, ça donne quoi ?",
           "reponses": ["narcotique", "narcotiques", "narcotic", "narcotics"],
           "apres": {
-            "texte": "On le fait manger au dino assommé pour qu'il reste endormi pendant tout l'apprivoisement."
+            "texte": "On le fait manger au dino assommé pour qu'il reste endormi pendant tout l'apprivoisement.",
+            "medias": [{ "type": "image", "fichier": "komenkife/image-02.webp" }]
           }
         },
         {
@@ -674,19 +574,12 @@
         {
           "type": "liste",
           "question": "Le quatre-quarts doit son nom à ses 4 ingrédients, mis en quantités égales. Lesquels ?",
+          "media": { "type": "image", "fichier": "komenkife/image-03.webp" },
           "elements": [
-            {
-              "reponses": ["beurre"]
-            },
-            {
-              "reponses": ["sucre"]
-            },
-            {
-              "reponses": ["farine"]
-            },
-            {
-              "reponses": ["oeuf", "oeufs", "œuf", "œufs"]
-            }
+            { "reponses": ["beurre"] },
+            { "reponses": ["sucre"] },
+            { "reponses": ["farine"] },
+            { "reponses": ["oeuf", "oeufs", "œuf", "œufs"] }
           ],
           "apres": {
             "texte": "L'astuce de grand-mère : on pèse d'abord les œufs, puis on met le même poids de beurre, de sucre et de farine. Un gâteau qui ne demande aucune recette écrite !"
@@ -695,25 +588,14 @@
         {
           "type": "choix",
           "question": "Palworld : on mélange les ingrédients de toutes les sphères (de la Sphère de Pal à la Légendaire). Lequel n'entre dans AUCUNE recette de sphère ?",
+          "media": { "type": "image", "fichier": "komenkife/image-04.webp" },
           "options": [
-            {
-              "texte": "Fragment de Paldium"
-            },
-            {
-              "texte": "Ciment"
-            },
-            {
-              "texte": "Fibre de carbone"
-            },
-            {
-              "texte": "Charbon"
-            },
-            {
-              "texte": "Lingot raffiné"
-            },
-            {
-              "texte": "Bois"
-            }
+            { "texte": "Fragment de Paldium" },
+            { "texte": "Ciment" },
+            { "texte": "Fibre de carbone" },
+            { "texte": "Charbon" },
+            { "texte": "Lingot raffiné" },
+            { "texte": "Bois" }
           ],
           "bonne": 3,
           "apres": {
@@ -739,7 +621,8 @@
           "question": "World of Warcraft : quel métier taille des gemmes pour les sertir dans l'équipement ?",
           "reponses": ["joaillerie", "joaillier", "jewelcrafting"],
           "apres": {
-            "texte": "La joaillerie est arrivée avec Burning Crusade, en même temps que les draeneï !"
+            "texte": "La joaillerie est arrivée avec Burning Crusade, en même temps que les draeneï !",
+            "medias": [{ "type": "image", "fichier": "komenkife/image-05.webp" }]
           }
         },
         {
@@ -754,30 +637,20 @@
             "oeufs cuits durs",
             "œuf cuit dur",
             "œufs cuits durs"
-          ]
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "komenkife/image-06.webp" }] }
         },
         {
           "type": "choix",
           "question": "Harry Potter : lequel de ces ingrédients n'entre PAS dans le Polynectar ?",
+          "media": { "type": "image", "fichier": "komenkife/image-07.webp" },
           "options": [
-            {
-              "texte": "Chrysopes"
-            },
-            {
-              "texte": "Sangsues"
-            },
-            {
-              "texte": "Corne de bicorne en poudre"
-            },
-            {
-              "texte": "Bézoard"
-            },
-            {
-              "texte": "Peau de serpent d'arbre du Cap"
-            },
-            {
-              "texte": "Polygonum"
-            }
+            { "texte": "Chrysopes" },
+            { "texte": "Sangsues" },
+            { "texte": "Corne de bicorne en poudre" },
+            { "texte": "Bézoard" },
+            { "texte": "Peau de serpent d'arbre du Cap" },
+            { "texte": "Polygonum" }
           ],
           "bonne": 3,
           "apres": {
@@ -793,27 +666,19 @@
             "lingot de bronze",
             "bronze",
             "bronze bar"
-          ]
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "komenkife/image-08.webp" }] }
         },
         {
           "type": "choix",
           "question": "Lequel de ces ingrédients n'entre PAS dans une vraie carbonara à la romaine ?",
+          "media": { "type": "image", "fichier": "komenkife/image-09.webp" },
           "options": [
-            {
-              "texte": "Guanciale (joue de porc)"
-            },
-            {
-              "texte": "Jaunes d'œufs"
-            },
-            {
-              "texte": "Pecorino romano"
-            },
-            {
-              "texte": "Poivre noir"
-            },
-            {
-              "texte": "Crème fraîche"
-            }
+            { "texte": "Guanciale (joue de porc)" },
+            { "texte": "Jaunes d'œufs" },
+            { "texte": "Pecorino romano" },
+            { "texte": "Poivre noir" },
+            { "texte": "Crème fraîche" }
           ],
           "bonne": 4,
           "apres": {
@@ -1071,7 +936,8 @@
             { "reponses": ["laie"] },
             { "reponses": ["biche"] },
             { "reponses": ["hase"] }
-          ]
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "kelbet/image-01.webp" }] }
         },
         {
           "type": "texte",
@@ -1134,6 +1000,7 @@
         {
           "type": "liste",
           "question": "Cite au moins 3 animaux dont le nom commence par W",
+          "media": { "type": "image", "fichier": "kelbet/image-02.webp" },
           "minimum": 3,
           "elements": [
             { "reponses": ["wapiti"] },
@@ -1149,7 +1016,8 @@
             { "reponses": ["wahoo"] }
           ],
           "apres": {
-            "texte": "Les réponses acceptées :\n• Wapiti : grand cerf d'Amérique du Nord et d'Asie\n• Wombat : marsupial d'Australie (ses crottes sont cubiques !)\n• Wallaby : marsupial d'Australie, petit cousin du kangourou\n• Wallaroo : marsupial d'Australie, kangourou des collines\n• Whippet : race de chien, lévrier anglais\n• Watusi : race de vache d'Afrique de l'Est aux cornes géantes\n• Weimaraner : race de chien de chasse allemande (braque de Weimar)\n• Welsh corgi : race de chien du pays de Galles, celle de la reine Elizabeth II\n• Wyandotte : race de poule américaine\n• Wels : autre nom du silure glane, énorme poisson d'eau douce d'Europe\n• Wahoo : poisson des mers tropicales, un des plus rapides de l'océan"
+            "texte": "Les réponses acceptées :\n• Wapiti : grand cerf d'Amérique du Nord et d'Asie\n• Wombat : marsupial d'Australie (ses crottes sont cubiques !)\n• Wallaby : marsupial d'Australie, petit cousin du kangourou\n• Wallaroo : marsupial d'Australie, kangourou des collines\n• Whippet : race de chien, lévrier anglais\n• Watusi : race de vache d'Afrique de l'Est aux cornes géantes\n• Weimaraner : race de chien de chasse allemande (braque de Weimar)\n• Welsh corgi : race de chien du pays de Galles, celle de la reine Elizabeth II\n• Wyandotte : race de poule américaine\n• Wels : autre nom du silure glane, énorme poisson d'eau douce d'Europe\n• Wahoo : poisson des mers tropicales, un des plus rapides de l'océan",
+            "medias": [{ "type": "image", "fichier": "kelbet/image-03.webp" }]
           }
         },
         {
@@ -1203,7 +1071,8 @@
           "question": "Qui a créé Pokémon ?",
           "reponses": ["satoshi tajiri", "tajiri"],
           "apres": {
-            "texte": "Satoshi Tajiri. En japonais, Sacha s'appelle Satoshi, en son honneur."
+            "texte": "Satoshi Tajiri. En japonais, Sacha s'appelle Satoshi, en son honneur.",
+            "medias": [{ "type": "image", "fichier": "pokekoi/image-01.webp" }]
           }
         },
         {
@@ -1213,32 +1082,18 @@
         {
           "type": "liste",
           "question": "Cite les 8 évolutions d'Évoli",
+          "media": { "type": "image", "fichier": "pokekoi/image-02.webp" },
           "elements": [
-            {
-              "reponses": ["aquali"]
-            },
-            {
-              "reponses": ["voltali"]
-            },
-            {
-              "reponses": ["pyroli"]
-            },
-            {
-              "reponses": ["mentali"]
-            },
-            {
-              "reponses": ["noctali"]
-            },
-            {
-              "reponses": ["phyllali"]
-            },
-            {
-              "reponses": ["givrali"]
-            },
-            {
-              "reponses": ["nymphali"]
-            }
-          ]
+            { "reponses": ["aquali"] },
+            { "reponses": ["voltali"] },
+            { "reponses": ["pyroli"] },
+            { "reponses": ["mentali"] },
+            { "reponses": ["noctali"] },
+            { "reponses": ["phyllali"] },
+            { "reponses": ["givrali"] },
+            { "reponses": ["nymphali"] }
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "pokekoi/image-03.webp" }] }
         },
         {
           "type": "serie",
@@ -1251,7 +1106,8 @@
           "question": "Combien de jeux compte la série principale Pokémon ? (chaque version compte)",
           "reponses": ["38", "39", "trente-huit", "trente huit", "trente-neuf", "trente neuf"],
           "apres": {
-            "texte": "38 jeux sortis en Europe, de Rouge et Bleu à Légendes Z-A (2025), Let's Go et Légendes Arceus compris. 39 en comptant Pokémon Vert, sorti seulement au Japon : les deux réponses sont acceptées.\nLa 10e génération, Vents et Vagues, n'est pas encore sortie."
+            "texte": "38 jeux sortis en Europe, de Rouge et Bleu à Légendes Z-A (2025), Let's Go et Légendes Arceus compris. 39 en comptant Pokémon Vert, sorti seulement au Japon : les deux réponses sont acceptées.\nLa 10e génération, Vents et Vagues, n'est pas encore sortie.",
+            "medias": [{ "type": "image", "fichier": "pokekoi/image-04.webp" }]
           }
         },
         {
@@ -1296,15 +1152,13 @@
         {
           "type": "texte",
           "question": "Dans quel film entend-on cette réplique ?",
-          "media": {
-            "type": "audio",
-            "fichier": "kekidi/audio-01.mp4"
-          },
+          "media": { "type": "audio", "fichier": "kekidi/audio-01.mp4" },
           "reponses": [
             "asterix et obelix mission cleopatre",
             "asterix et obelix : mission cleopatre",
             "asterix & obelix mission cleopatre"
-          ]
+          ],
+          "apres": { "medias": [{ "type": "image", "fichier": "kekidi/image-06.webp" }] }
         },
         {
           "type": "texte",
@@ -1373,6 +1227,7 @@
         {
           "type": "choix",
           "question": "Kaamelott : coche toutes les répliques qui ne sont PAS de Perceval",
+          "media": { "type": "image", "fichier": "kekidi/image-05.webp" },
           "options": [
             {
               "texte": "C’est pour ça : j’lis jamais rien. C’est un vrai piège à cons c’t’histoire-là. En plus j’sais pas lire."
