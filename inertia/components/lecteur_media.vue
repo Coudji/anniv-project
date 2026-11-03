@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, watch, watchEffect } from 'vue'
+import { computed, onBeforeUnmount, onUnmounted, ref, watch, watchEffect } from 'vue'
 import PixelIcone from '~/components/pixel_icone.vue'
 import type { MediaFront } from '~/question'
 import { muet, volume } from '../volume'
+import { prendreReprise, retenirReprise } from '../reprise'
 
 /**
  * Lecteur maison pour le son et la vidéo. Il ne joue que l'extrait entre
@@ -56,9 +57,22 @@ function aLArret() {
 }
 
 function auChargement() {
-  if (!element.value) return
-  dureeFichier.value = element.value.duration
-  element.value.currentTime = debut.value
+  const el = element.value
+  if (!el) return
+  dureeFichier.value = el.duration
+
+  // Même média que celui qui jouait sur l'écran précédent : on continue là où il en était
+  const temps = prendreReprise(props.media.url)
+  if (temps !== null && temps >= debut.value && temps < fin.value) {
+    el.currentTime = temps
+    instant.value = temps
+    el.play().catch(() => {
+      // Lecture automatique refusée par le navigateur : le bouton lecture reste disponible
+    })
+    return
+  }
+
+  el.currentTime = debut.value
   instant.value = debut.value
 }
 
@@ -135,6 +149,12 @@ function pleinEcran() {
     conteneur.value?.requestFullscreen()
   }
 }
+
+// Retenu avant que l'élément soit retiré de la page (ce qui le met en pause)
+onBeforeUnmount(() => {
+  const el = element.value
+  if (el && !el.paused) retenirReprise(props.media.url, el.currentTime)
+})
 
 onUnmounted(() => {
   cancelAnimationFrame(boucle)

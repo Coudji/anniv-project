@@ -1274,7 +1274,7 @@
           "question": "Complète la réplique !",
           "media": {
             "type": "video",
-            "fichier": "kekidi/jmj58.mp4",
+            "fichier": "kekidi/video-05.mp4",
             "fin": 27.5
           },
           "reponses": [
@@ -1287,7 +1287,7 @@
             "medias": [
               {
                 "type": "video",
-                "fichier": "kekidi/jmj58.mp4",
+                "fichier": "kekidi/video-05.mp4",
                 "debut": 22
               }
             ]
