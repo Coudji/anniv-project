@@ -4,13 +4,21 @@ import { useRouter } from '@adonisjs/inertia/vue'
 
 /**
  * Barre d'actions du mode triche, visible seulement quand il est activé.
- * Sur une catégorie : passer la question ou terminer la catégorie.
+ * Sur une catégorie : valider la question (écran de résultat compris), la passer
+ * sans résultat, ou terminer la catégorie.
  * Sur la grille : tout terminer, ou tout sauf le central.
  */
 const props = defineProps<{ categorie?: string }>()
 
 const page = usePage()
 const router = useRouter()
+
+// Sans confirmation : sert à avancer vite dans les tests
+function valider() {
+  if (props.categorie) {
+    router.post({ route: 'triche.valider', routeParams: { id: props.categorie } })
+  }
+}
 
 function passer() {
   if (props.categorie && window.confirm('Passer cette question ?')) {
@@ -40,6 +48,7 @@ function quitter() {
   <div v-if="page.props.triche" class="triche">
     <span class="pixel triche__titre">MODE TRICHE</span>
     <template v-if="categorie">
+      <button type="button" class="triche__bouton" @click="valider">VALIDER LA QUESTION</button>
       <button type="button" class="triche__bouton" @click="passer">PASSER LA QUESTION</button>
       <button type="button" class="triche__bouton" @click="terminer">TERMINER LA CATEGORIE</button>
     </template>

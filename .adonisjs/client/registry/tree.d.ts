@@ -16,6 +16,7 @@ export interface ApiDefinition {
   triche: {
     desactiver: typeof routes['triche.desactiver']
     activer: typeof routes['triche.activer']
+    valider: typeof routes['triche.valider']
     passer: typeof routes['triche.passer']
     terminer: typeof routes['triche.terminer']
     tout: typeof routes['triche.tout']

@@ -13,6 +13,7 @@ export type ScannedRoutes = {
     'categories.repondre': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.desactiver': { paramsTuple?: []; params?: {} }
     'triche.activer': { paramsTuple: [ParamValue]; params: {'code': ParamValue} }
+    'triche.valider': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.passer': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.terminer': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.tout': { paramsTuple?: []; params?: {} }
@@ -37,6 +38,7 @@ export type ScannedRoutes = {
     'players.store': { paramsTuple?: []; params?: {} }
     'players.reset': { paramsTuple?: []; params?: {} }
     'categories.repondre': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'triche.valider': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.passer': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.terminer': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.tout': { paramsTuple?: []; params?: {} }

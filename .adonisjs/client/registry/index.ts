@@ -60,6 +60,12 @@ const routes = {
     tokens: [[0,"triche"],[1,"code"]],
     types: placeholder as Registry['triche.activer']['types'],
   },
+  'triche.valider': {
+    methods: ["POST"],
+    pattern: '/triche/valider/:id',
+    tokens: [[0,"triche"],[0,"valider"],[1,"id"]],
+    types: placeholder as Registry['triche.valider']['types'],
+  },
   'triche.passer': {
     methods: ["POST"],
     pattern: '/triche/passer/:id',

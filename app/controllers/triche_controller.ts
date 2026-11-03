@@ -4,7 +4,7 @@ import { CATEGORY_IDS, estCategorie, loadContent } from '#services/content'
 import { joueurEnSession } from '#services/progression'
 import { oublierSerie } from '#services/series'
 import { oublierFiche } from '#services/fiches'
-import { oublierIntro } from '#services/intros'
+import { etatIntro, oublierIntro } from '#services/intros'
 
 /**
  * Mode triche, pour les tests et en cas de souci le jour J.
@@ -51,6 +51,42 @@ export default class TricheController {
     if (player[id] >= total) {
       return ctx.response.redirect().toRoute('grille')
     }
+    return ctx.response.redirect().toRoute('categories.show', { id })
+  }
+
+  /**
+   * Valide la question en cours comme une bonne réponse : l'écran de résultat
+   * s'affiche (avec le "LE SAVAIS-TU ?" et ses médias), puis la question suivante
+   */
+  async valider(ctx: HttpContext) {
+    const player = await this.joueur(ctx)
+    const id = ctx.params.id
+    if (!player || !estCategorie(id)) {
+      return ctx.response.redirect().toRoute('grille')
+    }
+
+    const { categories } = await loadContent()
+    const total = categories[id].questions.length
+    if (player[id] >= total) {
+      return ctx.response.redirect().toRoute('grille')
+    }
+
+    // Pour une intro, on montre la vidéo de l'intro en cours
+    const question = categories[id].questions[player[id]]
+    let intro: number | null = null
+    if (question.type === 'intro') {
+      const etat = await etatIntro(ctx.session, `${id}:${player[id]}`)
+      intro = etat.intro
+    }
+
+    ctx.session.flash('resolue', { index: player[id], historique: null, intro })
+    player[id] += 1
+    await player.save()
+    oublierSerie(ctx.session)
+    oublierFiche(ctx.session)
+    oublierIntro(ctx.session)
+
+    ctx.session.flash('resultat', player[id] >= total ? 'terminee' : 'bonne')
     return ctx.response.redirect().toRoute('categories.show', { id })
   }
 

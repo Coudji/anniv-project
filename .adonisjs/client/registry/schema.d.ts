@@ -124,6 +124,19 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['activer']>>>
     }
   }
+  'triche.valider': {
+    methods: ["POST"]
+    pattern: '/triche/valider/:id'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { id: ParamValue }
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['valider']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['valider']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['valider']>>>
+    }
+  }
   'triche.passer': {
     methods: ["POST"]
     pattern: '/triche/passer/:id'
