@@ -386,7 +386,7 @@
           "reponses": ["world of warcraft", "wow"],
           "apres": {
             "reponse": "World of Warcraft",
-            "texte": "Une musique de l'extension Warlords of Draenor (2014).",
+            "texte": "« A Light in the Darkness », une musique de l'extension Warlords of Draenor (2014).",
             "medias": [{ "type": "image", "fichier": "kelzik/image-10.webp" }]
           }
         },
