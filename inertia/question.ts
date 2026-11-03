@@ -79,6 +79,7 @@ export type SerieFront = {
 }
 
 export type ApresFront = {
+  reponse: string | null
   texte: string | null
   medias: MediaFront[]
 }

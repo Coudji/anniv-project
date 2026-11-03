@@ -159,6 +159,7 @@ export function apresPourFront(apres?: Apres) {
   if (!apres) return null
 
   return {
+    reponse: apres.reponse ?? null,
     texte: apres.texte ?? null,
     medias: (apres.medias ?? []).map((media) => mediaPourFront(media)!),
   }

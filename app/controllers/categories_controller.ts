@@ -15,7 +15,7 @@ import {
   type HistoriqueSerie,
 } from '#services/series'
 import { etatFiche, fichePourFront, repondreFiche } from '#services/fiches'
-import { etatIntro, introPourFront, repondreIntro, videoIntro } from '#services/intros'
+import { etatIntro, introPourFront, jeuIntro, repondreIntro, videoIntro } from '#services/intros'
 import type { Question } from '#services/content'
 
 type Resultat = 'bonne' | 'terminee'
@@ -77,17 +77,25 @@ export default class CategoriesController {
     const question = resolue ? categorie.questions[resolue.index] : undefined
     if (!resolue || !question) return null
 
+    const introTrouvee = question.type === 'intro' && typeof resolue.intro === 'number'
+    let apres = apresPourFront(question.apres)
+
+    // Intro : la réponse est le jeu de l'intro qui a été jouée
+    if (introTrouvee && !apres?.reponse) {
+      const jeu = await jeuIntro(resolue.intro as number)
+      if (jeu) apres = { texte: null, medias: [], ...apres, reponse: `Pokémon ${jeu}` }
+    }
+
     return {
       question: question.question,
-      media:
-        question.type === 'intro' && typeof resolue.intro === 'number'
-          ? await videoIntro(resolue.intro)
-          : questionPourFront(question).media,
+      media: introTrouvee
+        ? await videoIntro(resolue.intro as number)
+        : questionPourFront(question).media,
       serie:
         question.type === 'serie' && resolue.historique
           ? await historiquePourFront(resolue.historique, question)
           : null,
-      apres: apresPourFront(question.apres),
+      apres,
     }
   }
 

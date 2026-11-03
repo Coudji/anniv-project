@@ -88,6 +88,14 @@ export async function introPourFront(etat: EtatIntro) {
 }
 
 /**
+ * Le nom du jeu de l'intro trouvée, pour l'écran de résultat
+ */
+export async function jeuIntro(index: number) {
+  const liste = await chargerIntros()
+  return liste[index]?.jeu ?? null
+}
+
+/**
  * La vidéo de l'intro trouvée, pour l'écran de résultat
  */
 export async function videoIntro(index: number) {

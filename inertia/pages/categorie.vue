@@ -62,8 +62,12 @@ const segments = computed(() =>
         </h1>
       </div>
 
-      <div v-if="resolue.apres" class="cadre apres">
-        <span class="pixel apres__titre">LE SAVAIS-TU ?</span>
+      <p v-if="resolue.apres?.reponse" class="reponse">{{ resolue.apres.reponse }}</p>
+
+      <div
+        v-if="resolue.apres && (resolue.apres.texte || resolue.apres.medias.length)"
+        class="cadre apres"
+      >
         <p v-if="resolue.apres.texte" class="apres__texte">{{ resolue.apres.texte }}</p>
         <MediaDisplay v-for="(media, index) in resolue.apres.medias" :key="index" :media="media" />
       </div>
@@ -157,8 +161,14 @@ const segments = computed(() =>
   gap: 14px;
 }
 
-.apres__titre {
-  color: var(--jaune);
+.reponse {
+  margin: -6px 0 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--texte);
+  white-space: pre-line;
 }
 
 .apres__texte {

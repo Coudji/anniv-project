@@ -35,6 +35,8 @@ export interface Media {
  * Contenu affiché après une bonne réponse : du texte et/ou des médias
  */
 export interface Apres {
+  /** La bonne réponse, écrite proprement, affichée en grand sous "BONNE REPONSE !" */
+  reponse?: string
   texte?: string
   medias?: Media[]
 }
