@@ -9,6 +9,11 @@ const fichierBase = env.get('DB_FILE') || app.makePath('storage/db.sqlite3')
 // Crée le dossier de la base s'il n'existe pas (premier lancement, nouveau build)
 mkdirSync(dirname(fichierBase), { recursive: true })
 
+// Binaire SQLite compilé sur place (voir SQLITE_BINDING dans start/env.ts). L'option
+// nativeBinding est lue par knex pour better-sqlite3 mais absente des types de Lucid.
+const binaireSqlite = env.get('SQLITE_BINDING')
+const optionsSqlite = (binaireSqlite ? { options: { nativeBinding: binaireSqlite } } : {}) as object
+
 const dbConfig = defineConfig({
   /**
    * Default connection used for all queries.
@@ -27,6 +32,7 @@ const dbConfig = defineConfig({
          * Database file location.
          */
         filename: fichierBase,
+        ...optionsSqlite,
       },
 
       /**

@@ -28,6 +28,10 @@ export default await Env.create(new URL('../', import.meta.url), {
   // hors du dossier build/ pour que la progression survive à un nouveau build.
   DB_FILE: Env.schema.string.optional(),
 
+  // Binaire SQLite compilé sur place (better_sqlite3.node), quand celui fourni par le
+  // paquet ne marche pas sur le serveur (glibc trop ancienne, ex : Oracle Linux 8)
+  SQLITE_BINDING: Env.schema.string.optional(),
+
   // Code secret du mode triche (laisser vide pour le désactiver)
   TRICHE_CODE: Env.schema.string.optional(),
 })
