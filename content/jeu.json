@@ -1193,7 +1193,18 @@
     "cat9": {
       "nom": "Kékiveu ?",
       "theme": { "couleur": "jaune", "icone": "trophee" },
-      "questions": [{ "type": "texte", "question": "Question test", "reponses": ["test"] }]
+      "questions": [
+        {
+          "type": "texte",
+          "question": "Question de Fanny : dans Doctor Who, quelle est « l'arme » du Docteur ?",
+          "media": { "type": "image", "fichier": "kekiveu/image-01.webp" },
+          "reponses": ["tournevis sonique", "tournevis sonic", "sonic screwdriver"],
+          "apres": {
+            "reponse": "Le tournevis sonique",
+            "texte": "Bravo, bien joué ! Et si tu as trouvé du premier coup, Fanny t'offre une double ration de biscuits maison 🍪🍪"
+          }
+        }
+      ]
     }
   }
 }
