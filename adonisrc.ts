@@ -122,6 +122,15 @@ export default defineConfig({
       pattern: 'public/**',
       reloadServer: false,
     },
+    {
+      pattern: 'content/**',
+      reloadServer: false,
+    },
+    {
+      // Autorise la compilation de better-sqlite3 au "pnpm i --prod" dans build/
+      pattern: 'pnpm-workspace.yaml',
+      reloadServer: false,
+    },
   ],
 
   hooks: {

@@ -1,5 +1,13 @@
+import { mkdirSync } from 'node:fs'
+import { dirname } from 'node:path'
 import app from '@adonisjs/core/services/app'
+import env from '#start/env'
 import { defineConfig } from '@adonisjs/lucid'
+
+const fichierBase = env.get('DB_FILE') || app.makePath('storage/db.sqlite3')
+
+// Crée le dossier de la base s'il n'existe pas (premier lancement, nouveau build)
+mkdirSync(dirname(fichierBase), { recursive: true })
 
 const dbConfig = defineConfig({
   /**
@@ -18,7 +26,7 @@ const dbConfig = defineConfig({
         /**
          * Database file location.
          */
-        filename: app.makePath('storage/db.sqlite3'),
+        filename: fichierBase,
       },
 
       /**
