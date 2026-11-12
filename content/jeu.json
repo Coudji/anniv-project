@@ -1203,6 +1203,22 @@
             "reponse": "Le tournevis sonique",
             "texte": "Bravo, bien joué ! Et si tu as trouvé du premier coup, Fanny t'offre une double ration de biscuits maison 🍪🍪"
           }
+        },
+        {
+          "type": "choix",
+          "question": "Question d'Ayden : quel est le numéro d'identification ninja de Naruto ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-01.mp4" },
+          "options": [
+            { "texte": "012607" },
+            { "texte": "012610" },
+            { "texte": "009720" },
+            { "texte": "012611" }
+          ],
+          "bonne": 0,
+          "apres": {
+            "reponse": "012607",
+            "texte": "C'est le matricule inscrit sur sa fiche de ninja. Le 009720, c'est celui de Kakashi !"
+          }
         }
       ]
     }
