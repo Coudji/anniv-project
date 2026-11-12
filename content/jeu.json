@@ -1349,7 +1349,6 @@
           "bonne": 2,
           "apres": {
             "reponse": "À le protéger",
-            "texte": "Le caniche était un chien de chasse qui allait rapporter les canards dans l'eau. On le tondait court pour qu'il nage plus facilement, mais on laissait le poil sur les articulations et le torse pour les protéger du froid.",
             "medias": [{ "type": "video", "fichier": "kekiveu/video-09.mp4" }]
           }
         }
