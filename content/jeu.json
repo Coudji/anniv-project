@@ -1196,12 +1196,12 @@
       "questions": [
         {
           "type": "texte",
-          "question": "Question de Fanny : dans Doctor Who, quelle est « l'arme » du Docteur ?",
-          "media": { "type": "image", "fichier": "kekiveu/image-01.webp" },
-          "reponses": ["tournevis sonique", "tournevis sonic", "sonic screwdriver"],
+          "question": "Question de Mamy (1/2) : quel est le nom du dragon de la planète Namek ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-05.mp4" },
+          "reponses": ["polunga", "porunga"],
           "apres": {
-            "reponse": "Le tournevis sonique",
-            "texte": "Bravo, bien joué ! Et si tu as trouvé du premier coup, Fanny t'offre une double ration de biscuits maison 🍪🍪"
+            "reponse": "Polunga",
+            "texte": "« Porunga » en version originale. Son nom veut dire « dieu des rêves » en namek, et il faut lui parler en namek pour qu'il exauce les vœux."
           }
         },
         {
@@ -1221,32 +1221,6 @@
           }
         },
         {
-          "type": "texte",
-          "question": "Question de Rosie : quel est le liquide météorologique que Luffy refuse d'avaler alors qu'il est affamé ?",
-          "media": { "type": "video", "fichier": "kekiveu/video-02.mp4" },
-          "reponses": ["pluie de sirop"],
-          "apres": {
-            "reponse": "La pluie de sirop",
-            "texte": "Sur Whole Cake Island, Big Mom déclenche une tempête qui fait pleuvoir du sirop. Luffy, affamé, refuse d'en avaler une goutte : il attend la cuisine de Sanji (chapitre 845, épisode 809). Le rébus : la pluie + « THE » (de) + une scie (si) + Barney qui rote (rot)."
-          }
-        },
-        {
-          "type": "texte",
-          "question": "Question d'Éric (Ange Noir) : qu'est-ce que c'est ?",
-          "media": { "type": "image", "fichier": "kekiveu/image-02.webp" },
-          "reponses": [
-            "vanne egr",
-            "egr",
-            "valve egr",
-            "soupape egr",
-            "vanne de recirculation des gaz d'echappement"
-          ],
-          "apres": {
-            "reponse": "Une vanne EGR",
-            "texte": "EGR pour Exhaust Gas Recirculation : elle renvoie une partie des gaz d'échappement dans l'admission du moteur. La combustion est moins chaude, ce qui réduit les oxydes d'azote (NOx). Revers de la médaille : elle s'encrasse vite."
-          }
-        },
-        {
           "type": "choix",
           "question": "Question de Wendy : sur quoi se basent les relations sociales en Corée du Sud ?",
           "options": [
@@ -1263,6 +1237,37 @@
           "apres": {
             "reponse": "Le MBTI",
             "texte": "Ce test de personnalité en 16 types (ENFP, ISTJ…) a explosé en Corée vers 2019 : on se le demande dès la première rencontre, et certaines entreprises le réclament même à l'embauche. Avant lui, les Coréens jugeaient les gens au groupe sanguin… comme au Japon, où c'est toujours une des premières questions qu'on te pose."
+          }
+        },
+        {
+          "type": "choix",
+          "question": "Question de Mathias : que sont les lunules ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-07.mp4" },
+          "options": [
+            { "texte": "Les cernes sous les yeux" },
+            { "texte": "Les petites peaux autour des ongles" },
+            { "texte": "Les petits cratères de la Lune" },
+            { "texte": "Les plis de peau sur les articulations des doigts" },
+            { "texte": "Les demi-lunes blanches à la base des ongles" },
+            { "texte": "Les phases de la Lune" },
+            { "texte": "Les petites taches blanches sur les ongles" },
+            { "texte": "Les lignes de la paume de la main" }
+          ],
+          "bonne": 4,
+          "apres": {
+            "reponse": "Les demi-lunes blanches à la base des ongles",
+            "texte": "« Lunula » veut dire « petite lune » en latin. C'est la partie visible de la matrice, là où l'ongle se fabrique : si on l'abîme, l'ongle reste déformé. Elle se voit surtout sur le pouce.",
+            "medias": [{ "type": "image", "fichier": "kekiveu/image-03.webp" }]
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Question de Rosie : quel est le liquide météorologique que Luffy refuse d'avaler alors qu'il est affamé ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-02.mp4" },
+          "reponses": ["pluie de sirop"],
+          "apres": {
+            "reponse": "La pluie de sirop",
+            "texte": "Sur Whole Cake Island, Big Mom déclenche une tempête qui fait pleuvoir du sirop. Luffy, affamé, refuse d'en avaler une goutte : il attend la cuisine de Sanji (chapitre 845, épisode 809). Le rébus : la pluie + « THE » (de) + une scie (si) + Barney qui rote (rot)."
           }
         },
         {
@@ -1291,48 +1296,6 @@
           }
         },
         {
-          "type": "texte",
-          "question": "Question de Mamy (1/2) : quel est le nom du dragon de la planète Namek ?",
-          "media": { "type": "video", "fichier": "kekiveu/video-05.mp4" },
-          "reponses": ["polunga", "porunga"],
-          "apres": {
-            "reponse": "Polunga",
-            "texte": "« Porunga » en version originale. Son nom veut dire « dieu des rêves » en namek, et il faut lui parler en namek pour qu'il exauce les vœux."
-          }
-        },
-        {
-          "type": "texte",
-          "question": "Question de Mamy (2/2) : combien de tomes compte la saga Naruto ?",
-          "media": { "type": "video", "fichier": "kekiveu/video-06.mp4" },
-          "reponses": ["72"],
-          "tolerance": 0,
-          "apres": {
-            "reponse": "72 tomes",
-            "texte": "700 chapitres publiés au Japon de 1999 à 2014 : 27 tomes pour la première partie, 45 pour Shippuden."
-          }
-        },
-        {
-          "type": "choix",
-          "question": "Question de Mathias : que sont les lunules ?",
-          "media": { "type": "video", "fichier": "kekiveu/video-07.mp4" },
-          "options": [
-            { "texte": "Les cernes sous les yeux" },
-            { "texte": "Les petites peaux autour des ongles" },
-            { "texte": "Les petits cratères de la Lune" },
-            { "texte": "Les plis de peau sur les articulations des doigts" },
-            { "texte": "Les demi-lunes blanches à la base des ongles" },
-            { "texte": "Les phases de la Lune" },
-            { "texte": "Les petites taches blanches sur les ongles" },
-            { "texte": "Les lignes de la paume de la main" }
-          ],
-          "bonne": 4,
-          "apres": {
-            "reponse": "Les demi-lunes blanches à la base des ongles",
-            "texte": "« Lunula » veut dire « petite lune » en latin. C'est la partie visible de la matrice, là où l'ongle se fabrique : si on l'abîme, l'ongle reste déformé. Elle se voit surtout sur le pouce.",
-            "medias": [{ "type": "image", "fichier": "kekiveu/image-03.webp" }]
-          }
-        },
-        {
           "type": "choix",
           "question": "Question de Cassie : à quoi servent les pompons du caniche ?",
           "media": { "type": "video", "fichier": "kekiveu/video-08.mp4" },
@@ -1350,6 +1313,43 @@
           "apres": {
             "reponse": "À le protéger",
             "medias": [{ "type": "video", "fichier": "kekiveu/video-09.mp4" }]
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Question de Mamy (2/2) : combien de tomes compte la saga Naruto ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-06.mp4" },
+          "reponses": ["72"],
+          "tolerance": 0,
+          "apres": {
+            "reponse": "72 tomes",
+            "texte": "700 chapitres publiés au Japon de 1999 à 2014 : 27 tomes pour la première partie, 45 pour Shippuden."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Question d'Éric (Ange Noir) : qu'est-ce que c'est ?",
+          "media": { "type": "image", "fichier": "kekiveu/image-02.webp" },
+          "reponses": [
+            "vanne egr",
+            "egr",
+            "valve egr",
+            "soupape egr",
+            "vanne de recirculation des gaz d'echappement"
+          ],
+          "apres": {
+            "reponse": "Une vanne EGR",
+            "texte": "EGR pour Exhaust Gas Recirculation : elle renvoie une partie des gaz d'échappement dans l'admission du moteur. La combustion est moins chaude, ce qui réduit les oxydes d'azote (NOx). Revers de la médaille : elle s'encrasse vite."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Question de Fanny : dans Doctor Who, quelle est « l'arme » du Docteur ?",
+          "media": { "type": "image", "fichier": "kekiveu/image-01.webp" },
+          "reponses": ["tournevis sonique", "tournevis sonic", "sonic screwdriver"],
+          "apres": {
+            "reponse": "Le tournevis sonique",
+            "texte": "Bravo, bien joué ! Et si tu as trouvé du premier coup, Fanny t'offre une double ration de biscuits maison 🍪🍪"
           }
         },
         {
