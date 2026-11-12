@@ -1187,6 +1187,17 @@
             "reponse": "« Ça va être tout noir ! »",
             "texte": "RRRrrrr!!! (2004), d'Alain Chabat."
           }
+        },
+        {
+          "type": "texte",
+          "question": "Mary Poppins a un mot pour tout, mais celui-là est beaucoup trop long : comment s'écrit-il ? Sans faute, sinon ça ne passe pas !",
+          "media": { "type": "video", "fichier": "kekidi/video-06.mp4" },
+          "reponses": ["supercalifragilisticexpialidocious", "supercalifragilistic expialidocious"],
+          "tolerance": 0,
+          "apres": {
+            "reponse": "Supercalifragilisticexpialidocious",
+            "texte": "34 lettres ! Mary Poppins (1964). Même la version française l'avoue : « ce mot trop long est parfaitement atroce »."
+          }
         }
       ]
     },
