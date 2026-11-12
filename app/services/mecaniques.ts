@@ -187,9 +187,10 @@ export function questionPourFront(question: Question) {
         question: question.question,
         media: mediaPourFront(question.media),
         multiple: Array.isArray(question.bonne),
-        options: question.options.map((option) =>
-          'texte' in option ? { texte: option.texte } : { image: `/medias/${option.image}` }
-        ),
+        options: question.options.map((option) => ({
+          ...('texte' in option ? { texte: option.texte } : { image: `/medias/${option.image}` }),
+          ...(option.groupe ? { groupe: option.groupe } : {}),
+        })),
       }
   }
 }

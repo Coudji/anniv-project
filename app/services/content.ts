@@ -50,7 +50,8 @@ export interface QuestionTexte {
   tolerance?: number
 }
 
-export type OptionChoix = { texte: string } | { image: string }
+/** `groupe` : titre de la liste où ranger l'option (ex : "Nom", "Race"), les options d'un même groupe se suivent */
+export type OptionChoix = ({ texte: string } | { image: string }) & { groupe?: string }
 
 export interface QuestionChoix {
   type: 'choix'

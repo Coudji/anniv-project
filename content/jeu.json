@@ -1196,12 +1196,13 @@
       "questions": [
         {
           "type": "texte",
-          "question": "Question de Mamy (1/2) : quel est le nom du dragon de la planète Namek ?",
+          "question": "Question de Mamy : quel est le nom du dragon de la planète Namek ?",
           "media": { "type": "video", "fichier": "kekiveu/video-05.mp4" },
           "reponses": ["polunga", "porunga"],
           "apres": {
             "reponse": "Polunga",
-            "texte": "« Porunga » en version originale. Son nom veut dire « dieu des rêves » en namek, et il faut lui parler en namek pour qu'il exauce les vœux."
+            "texte": "« Porunga » en version originale. Son nom veut dire « dieu des rêves » en namek, et il faut lui parler en namek pour qu'il exauce les vœux.",
+            "medias": [{ "type": "image", "fichier": "kekiveu/image-04.webp" }]
           }
         },
         {
@@ -1275,18 +1276,18 @@
           "question": "Question de Papy : quel est le chien le plus connu de l'univers de Stephen King ? Coche son nom et sa race.",
           "media": { "type": "video", "fichier": "kekiveu/video-03.mp4" },
           "options": [
-            { "texte": "Cujo" },
-            { "texte": "Beethoven" },
-            { "texte": "Hooch" },
-            { "texte": "Lassie" },
-            { "texte": "Rintintin" },
-            { "texte": "Croc-Blanc" },
-            { "texte": "Saint-Bernard" },
-            { "texte": "Terre-Neuve" },
-            { "texte": "Bouvier bernois" },
-            { "texte": "Dogue de Bordeaux" },
-            { "texte": "Montagne des Pyrénées" },
-            { "texte": "Léonberg" }
+            { "texte": "Cujo", "groupe": "Nom" },
+            { "texte": "Beethoven", "groupe": "Nom" },
+            { "texte": "Hooch", "groupe": "Nom" },
+            { "texte": "Lassie", "groupe": "Nom" },
+            { "texte": "Rintintin", "groupe": "Nom" },
+            { "texte": "Croc-Blanc", "groupe": "Nom" },
+            { "texte": "Saint-Bernard", "groupe": "Race" },
+            { "texte": "Terre-Neuve", "groupe": "Race" },
+            { "texte": "Bouvier bernois", "groupe": "Race" },
+            { "texte": "Dogue de Bordeaux", "groupe": "Race" },
+            { "texte": "Montagne des Pyrénées", "groupe": "Race" },
+            { "texte": "Léonberg", "groupe": "Race" }
           ],
           "bonne": [0, 6],
           "apres": {
@@ -1317,7 +1318,7 @@
         },
         {
           "type": "texte",
-          "question": "Question de Mamy (2/2) : combien de tomes compte la saga Naruto ?",
+          "question": "Question de Mamy : combien de tomes compte la saga Naruto ?",
           "media": { "type": "video", "fichier": "kekiveu/video-06.mp4" },
           "reponses": ["72"],
           "tolerance": 0,

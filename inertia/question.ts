@@ -9,6 +9,7 @@ export type MediaFront = {
 export type OptionFront = {
   texte?: string
   image?: string
+  groupe?: string
 }
 
 export type QuestionFront = {

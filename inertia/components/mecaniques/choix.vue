@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { Form } from '@adonisjs/inertia/vue'
 import PixelIcone from '~/components/pixel_icone.vue'
-import type { QuestionFront } from '~/question'
+import type { OptionFront, QuestionFront } from '~/question'
 
 const props = defineProps<{
   categorie: string
@@ -11,6 +11,18 @@ const props = defineProps<{
 
 // Options en images : en grille. Options en texte : une par ligne
 const enImages = computed(() => props.question.options?.some((option) => option.image) ?? false)
+
+// Options rangées en listes séparées quand elles ont un `groupe` (l'index d'origine est gardé)
+const groupes = computed(() => {
+  const liste: { titre: string | null; options: { option: OptionFront; index: number }[] }[] = []
+  ;(props.question.options ?? []).forEach((option, index) => {
+    const titre = option.groupe ?? null
+    const dernier = liste[liste.length - 1]
+    if (dernier && dernier.titre === titre) dernier.options.push({ option, index })
+    else liste.push({ titre, options: [{ option, index }] })
+  })
+  return liste
+})
 
 // Image ouverte en grand (pour repérer les détails), sans changer la sélection
 const agrandie = ref<string | null>(null)
@@ -25,29 +37,37 @@ const agrandie = ref<string | null>(null)
   >
     <p class="enonce">{{ question.question }}</p>
 
-    <div class="options" :class="{ 'options--images': enImages }">
-      <label v-for="(option, index) in question.options" :key="index" class="cadre option">
-        <input
-          v-if="question.multiple"
-          type="checkbox"
-          name="reponse[]"
-          :value="index"
-          class="option__radio"
-        />
-        <input v-else type="radio" name="reponse" :value="index" required class="option__radio" />
-        <template v-if="option.image">
-          <img :src="option.image" alt="" class="option__image" />
-          <button
-            type="button"
-            class="option__zoom"
-            aria-label="Agrandir l'image"
-            @click.prevent="agrandie = option.image"
-          >
-            <PixelIcone nom="loupe" :taille="18" />
-          </button>
-        </template>
-        <span v-else class="option__texte">{{ option.texte }}</span>
-      </label>
+    <div v-for="(groupe, g) in groupes" :key="g" class="groupe">
+      <p v-if="groupe.titre" class="groupe__titre">{{ groupe.titre }}</p>
+      <div class="options" :class="{ 'options--images': enImages }">
+        <label
+          v-for="{ option, index } in groupe.options"
+          :key="index"
+          class="cadre option"
+          :class="groupe.titre ? (g % 2 ? 'option--groupe2' : 'option--groupe1') : ''"
+        >
+          <input
+            v-if="question.multiple"
+            type="checkbox"
+            name="reponse[]"
+            :value="index"
+            class="option__radio"
+          />
+          <input v-else type="radio" name="reponse" :value="index" required class="option__radio" />
+          <template v-if="option.image">
+            <img :src="option.image" alt="" class="option__image" />
+            <button
+              type="button"
+              class="option__zoom"
+              aria-label="Agrandir l'image"
+              @click.prevent="agrandie = option.image"
+            >
+              <PixelIcone nom="loupe" :taille="18" />
+            </button>
+          </template>
+          <span v-else class="option__texte">{{ option.texte }}</span>
+        </label>
+      </div>
     </div>
 
     <div v-if="agrandie" class="zoom" @click="agrandie = null">
@@ -59,6 +79,31 @@ const agrandie = ref<string | null>(null)
 </template>
 
 <style scoped>
+.groupe + .groupe {
+  margin-top: 22px;
+}
+
+.groupe__titre {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.groupe + .groupe .groupe__titre {
+  color: #5ec8ff;
+}
+
+.option.option--groupe1 {
+  --cadre: var(--accent-attenue);
+}
+
+.option.option--groupe2 {
+  --cadre: #2f6f94;
+}
+
 .options {
   display: flex;
   flex-direction: column;
