@@ -1219,6 +1219,16 @@
             "reponse": "012607",
             "texte": "C'est le matricule inscrit sur sa fiche de ninja. Le 009720, c'est celui de Kakashi !"
           }
+        },
+        {
+          "type": "texte",
+          "question": "Question de Rosie : quel est le liquide météorologique que Luffy refuse d'avaler alors qu'il est affamé ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-02.mp4" },
+          "reponses": ["pluie de sirop"],
+          "apres": {
+            "reponse": "La pluie de sirop",
+            "texte": "Sur Whole Cake Island, Big Mom déclenche une tempête qui fait pleuvoir du sirop. Luffy, affamé, refuse d'en avaler une goutte : il attend la cuisine de Sanji (chapitre 845, épisode 809). Le rébus : la pluie + « THE » (de) + une scie (si) + Barney qui rote (rot)."
+          }
         }
       ]
     }
