@@ -1264,6 +1264,31 @@
             "reponse": "Le MBTI",
             "texte": "Ce test de personnalité en 16 types (ENFP, ISTJ…) a explosé en Corée vers 2019 : on se le demande dès la première rencontre, et certaines entreprises le réclament même à l'embauche. Avant lui, les Coréens jugeaient les gens au groupe sanguin… comme au Japon, où c'est toujours une des premières questions qu'on te pose."
           }
+        },
+        {
+          "type": "choix",
+          "question": "Question de Papy : quel est le chien le plus connu de l'univers de Stephen King ? Coche son nom et sa race.",
+          "media": { "type": "video", "fichier": "kekiveu/video-03.mp4" },
+          "options": [
+            { "texte": "Cujo" },
+            { "texte": "Beethoven" },
+            { "texte": "Hooch" },
+            { "texte": "Lassie" },
+            { "texte": "Rintintin" },
+            { "texte": "Croc-Blanc" },
+            { "texte": "Saint-Bernard" },
+            { "texte": "Terre-Neuve" },
+            { "texte": "Bouvier bernois" },
+            { "texte": "Dogue de Bordeaux" },
+            { "texte": "Montagne des Pyrénées" },
+            { "texte": "Léonberg" }
+          ],
+          "bonne": [0, 6],
+          "apres": {
+            "reponse": "Cujo, un Saint-Bernard",
+            "texte": "Roman de Stephen King paru en 1981, adapté au cinéma en 1983 : un gentil Saint-Bernard mordu par une chauve-souris enragée devient un monstre qui terrorise Castle Rock.",
+            "medias": [{ "type": "video", "fichier": "kekiveu/video-04.mp4" }]
+          }
         }
       ]
     }
