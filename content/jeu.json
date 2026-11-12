@@ -1291,24 +1291,24 @@
           }
         },
         {
-          "type": "choix",
-          "question": "Question de Mamy : que signifie la certification ISO 9001 ?",
+          "type": "texte",
+          "question": "Question de Mamy (1/2) : quel est le nom du dragon de la planète Namek ?",
           "media": { "type": "video", "fichier": "kekiveu/video-05.mp4" },
-          "options": [
-            { "texte": "Le management de l'environnement" },
-            { "texte": "La sécurité de l'information" },
-            { "texte": "Le management de la qualité" },
-            { "texte": "La santé et la sécurité au travail" },
-            { "texte": "La sécurité des denrées alimentaires" },
-            { "texte": "Le management de l'énergie" },
-            { "texte": "La lutte contre la corruption" },
-            { "texte": "La responsabilité sociétale" }
-          ],
-          "bonne": 2,
+          "reponses": ["polunga", "porunga"],
           "apres": {
-            "reponse": "Le management de la qualité",
-            "texte": "Une entreprise certifiée ISO 9001 a prouvé, lors d'un audit indépendant, qu'elle s'organise pour fournir des produits ou services conformes et satisfaire ses clients. Les autres propositions sont aussi des normes ISO (14001 pour l'environnement, par exemple).",
-            "medias": [{ "type": "video", "fichier": "kekiveu/video-06.mp4" }]
+            "reponse": "Polunga",
+            "texte": "« Porunga » en version originale. Son nom veut dire « dieu des rêves » en namek, et il faut lui parler en namek pour qu'il exauce les vœux."
+          }
+        },
+        {
+          "type": "texte",
+          "question": "Question de Mamy (2/2) : combien de tomes compte la saga Naruto ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-06.mp4" },
+          "reponses": ["72", "72 tomes", "soixante-douze", "soixante douze"],
+          "tolerance": 0,
+          "apres": {
+            "reponse": "72 tomes",
+            "texte": "700 chapitres publiés au Japon de 1999 à 2014 : 27 tomes pour la première partie, 45 pour Shippuden."
           }
         }
       ]
