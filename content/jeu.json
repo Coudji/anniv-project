@@ -1329,7 +1329,7 @@
           "apres": {
             "reponse": "Les demi-lunes blanches à la base des ongles",
             "texte": "« Lunula » veut dire « petite lune » en latin. C'est la partie visible de la matrice, là où l'ongle se fabrique : si on l'abîme, l'ongle reste déformé. Elle se voit surtout sur le pouce.",
-            "medias": [{ "type": "video", "fichier": "kekiveu/video-08.mp4" }]
+            "medias": [{ "type": "image", "fichier": "kekiveu/image-03.webp" }]
           }
         }
       ]
