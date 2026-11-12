@@ -1289,6 +1289,27 @@
             "texte": "Roman de Stephen King paru en 1981, adapté au cinéma en 1983 : un gentil Saint-Bernard mordu par une chauve-souris enragée devient un monstre qui terrorise Castle Rock.",
             "medias": [{ "type": "video", "fichier": "kekiveu/video-04.mp4" }]
           }
+        },
+        {
+          "type": "choix",
+          "question": "Question de Mamy : que signifie la certification ISO 9001 ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-05.mp4" },
+          "options": [
+            { "texte": "Le management de l'environnement" },
+            { "texte": "La sécurité de l'information" },
+            { "texte": "Le management de la qualité" },
+            { "texte": "La santé et la sécurité au travail" },
+            { "texte": "La sécurité des denrées alimentaires" },
+            { "texte": "Le management de l'énergie" },
+            { "texte": "La lutte contre la corruption" },
+            { "texte": "La responsabilité sociétale" }
+          ],
+          "bonne": 2,
+          "apres": {
+            "reponse": "Le management de la qualité",
+            "texte": "Une entreprise certifiée ISO 9001 a prouvé, lors d'un audit indépendant, qu'elle s'organise pour fournir des produits ou services conformes et satisfaire ses clients. Les autres propositions sont aussi des normes ISO (14001 pour l'environnement, par exemple).",
+            "medias": [{ "type": "video", "fichier": "kekiveu/video-06.mp4" }]
+          }
         }
       ]
     }
