@@ -1304,7 +1304,7 @@
           "type": "texte",
           "question": "Question de Mamy (2/2) : combien de tomes compte la saga Naruto ?",
           "media": { "type": "video", "fichier": "kekiveu/video-06.mp4" },
-          "reponses": ["72", "72 tomes", "soixante-douze", "soixante douze"],
+          "reponses": ["72"],
           "tolerance": 0,
           "apres": {
             "reponse": "72 tomes",
