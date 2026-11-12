@@ -1245,6 +1245,25 @@
             "reponse": "Une vanne EGR",
             "texte": "EGR pour Exhaust Gas Recirculation : elle renvoie une partie des gaz d'échappement dans l'admission du moteur. La combustion est moins chaude, ce qui réduit les oxydes d'azote (NOx). Revers de la médaille : elle s'encrasse vite."
           }
+        },
+        {
+          "type": "choix",
+          "question": "Question de Wendy : sur quoi se basent les relations sociales en Corée du Sud ?",
+          "options": [
+            { "texte": "Le signe chinois lié à l'année de naissance" },
+            { "texte": "Le nom du clan de la famille" },
+            { "texte": "Le MBTI" },
+            { "texte": "La somme des chiffres donnés à chaque lettre du prénom" },
+            { "texte": "Le groupe sanguin" },
+            { "texte": "L'heure de naissance" },
+            { "texte": "Le signe du zodiaque" },
+            { "texte": "L'ennéagramme" }
+          ],
+          "bonne": 2,
+          "apres": {
+            "reponse": "Le MBTI",
+            "texte": "Ce test de personnalité en 16 types (ENFP, ISTJ…) a explosé en Corée vers 2019 : on se le demande dès la première rencontre, et certaines entreprises le réclament même à l'embauche. Avant lui, les Coréens jugeaient les gens au groupe sanguin… comme au Japon, où c'est toujours une des premières questions qu'on te pose."
+          }
         }
       ]
     }
