@@ -1331,6 +1331,27 @@
             "texte": "« Lunula » veut dire « petite lune » en latin. C'est la partie visible de la matrice, là où l'ongle se fabrique : si on l'abîme, l'ongle reste déformé. Elle se voit surtout sur le pouce.",
             "medias": [{ "type": "image", "fichier": "kekiveu/image-03.webp" }]
           }
+        },
+        {
+          "type": "choix",
+          "question": "Question de Cassie : à quoi servent les pompons du caniche ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-08.mp4" },
+          "options": [
+            { "texte": "À faire joli pour les concours de beauté" },
+            { "texte": "À l'aider à flotter" },
+            { "texte": "À protéger ses articulations et ses organes vitaux" },
+            { "texte": "À le rafraîchir en été" },
+            { "texte": "À éloigner les puces et les tiques" },
+            { "texte": "À amortir ses chutes quand il saute" },
+            { "texte": "À équilibrer sa course" },
+            { "texte": "À cacher ses griffes" }
+          ],
+          "bonne": 2,
+          "apres": {
+            "reponse": "À le protéger",
+            "texte": "Le caniche était un chien de chasse qui allait rapporter les canards dans l'eau. On le tondait court pour qu'il nage plus facilement, mais on laissait le poil sur les articulations et le torse pour les protéger du froid.",
+            "medias": [{ "type": "video", "fichier": "kekiveu/video-09.mp4" }]
+          }
         }
       ]
     }
