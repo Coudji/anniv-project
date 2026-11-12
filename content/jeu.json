@@ -1229,6 +1229,22 @@
             "reponse": "La pluie de sirop",
             "texte": "Sur Whole Cake Island, Big Mom déclenche une tempête qui fait pleuvoir du sirop. Luffy, affamé, refuse d'en avaler une goutte : il attend la cuisine de Sanji (chapitre 845, épisode 809). Le rébus : la pluie + « THE » (de) + une scie (si) + Barney qui rote (rot)."
           }
+        },
+        {
+          "type": "texte",
+          "question": "Question d'Éric (Ange Noir) : qu'est-ce que c'est ?",
+          "media": { "type": "image", "fichier": "kekiveu/image-02.webp" },
+          "reponses": [
+            "vanne egr",
+            "egr",
+            "valve egr",
+            "soupape egr",
+            "vanne de recirculation des gaz d'echappement"
+          ],
+          "apres": {
+            "reponse": "Une vanne EGR",
+            "texte": "EGR pour Exhaust Gas Recirculation : elle renvoie une partie des gaz d'échappement dans l'admission du moteur. La combustion est moins chaude, ce qui réduit les oxydes d'azote (NOx). Revers de la médaille : elle s'encrasse vite."
+          }
         }
       ]
     }
