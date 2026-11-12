@@ -5,6 +5,7 @@ import { joueurEnSession } from '#services/progression'
 import { oublierSerie } from '#services/series'
 import { oublierFiche } from '#services/fiches'
 import { etatIntro, oublierIntro } from '#services/intros'
+import { etatOmbre, oublierOmbre } from '#services/ombres'
 
 /**
  * Mode triche, pour les tests et en cas de souci le jour J.
@@ -47,6 +48,7 @@ export default class TricheController {
     oublierSerie(ctx.session)
     oublierFiche(ctx.session)
     oublierIntro(ctx.session)
+    oublierOmbre(ctx.session)
 
     if (player[id] >= total) {
       return ctx.response.redirect().toRoute('grille')
@@ -79,12 +81,19 @@ export default class TricheController {
       intro = etat.intro
     }
 
-    ctx.session.flash('resolue', { index: player[id], historique: null, intro })
+    // Pour une ombre, on montre le Pokémon en cours
+    let ombre: number | null = null
+    if (question.type === 'ombre') {
+      ombre = etatOmbre(ctx.session, `${id}:${player[id]}`, question).id
+    }
+
+    ctx.session.flash('resolue', { index: player[id], historique: null, intro, ombre })
     player[id] += 1
     await player.save()
     oublierSerie(ctx.session)
     oublierFiche(ctx.session)
     oublierIntro(ctx.session)
+    oublierOmbre(ctx.session)
 
     ctx.session.flash('resultat', player[id] >= total ? 'terminee' : 'bonne')
     return ctx.response.redirect().toRoute('categories.show', { id })
@@ -103,6 +112,7 @@ export default class TricheController {
       oublierSerie(ctx.session)
       oublierFiche(ctx.session)
       oublierIntro(ctx.session)
+      oublierOmbre(ctx.session)
     }
     return ctx.response.redirect().toRoute('grille')
   }
@@ -123,6 +133,7 @@ export default class TricheController {
       oublierSerie(ctx.session)
       oublierFiche(ctx.session)
       oublierIntro(ctx.session)
+      oublierOmbre(ctx.session)
     }
     return ctx.response.redirect().toRoute('grille')
   }

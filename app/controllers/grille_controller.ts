@@ -10,6 +10,7 @@ import {
 import { oublierSerie } from '#services/series'
 import { oublierFiche } from '#services/fiches'
 import { oublierIntro } from '#services/intros'
+import { oublierOmbre } from '#services/ombres'
 
 export default class GrilleController {
   async show({ session, response, inertia }: HttpContext) {
@@ -22,6 +23,7 @@ export default class GrilleController {
     oublierSerie(session)
     oublierFiche(session)
     oublierIntro(session)
+    oublierOmbre(session)
 
     const content = await loadContent()
 

@@ -1000,6 +1000,11 @@
           "question": "Complète la fiche de ce badge d'arène",
           "generateur": "badges",
           "objectif": 5
+        },
+        {
+          "type": "ombre",
+          "question": "Quel est ce Pokémon ? Trouve 5 ombres (1re et 2e génération) : +1 si juste, −1 si faux.",
+          "objectif": 5
         }
       ]
     },

@@ -16,6 +16,7 @@ import {
 } from '#services/series'
 import { etatFiche, fichePourFront, repondreFiche } from '#services/fiches'
 import { etatIntro, introPourFront, jeuIntro, repondreIntro, videoIntro } from '#services/intros'
+import { etatOmbre, ombrePourFront, pokemonTrouve, repondreOmbre } from '#services/ombres'
 import type { Question } from '#services/content'
 
 type Resultat = 'bonne' | 'terminee'
@@ -26,7 +27,12 @@ type Resultat = 'bonne' | 'terminee'
  * trouvée pour une question d'intro (sa vidéo s'affiche à la place du média).
  * Le reste est reconstruit depuis le JSON (la session vit dans un cookie de taille limitée).
  */
-type Resolue = { index: number; historique: HistoriqueSerie | null; intro?: number | null }
+type Resolue = {
+  index: number
+  historique: HistoriqueSerie | null
+  intro?: number | null
+  ombre?: number | null
+}
 
 export default class CategoriesController {
   /**
@@ -65,6 +71,11 @@ export default class CategoriesController {
       return { ...questionPourFront(question), intro: await introPourFront(etat) }
     }
 
+    if (question.type === 'ombre') {
+      const etat = etatOmbre(session, cle, question)
+      return { ...questionPourFront(question), ombre: await ombrePourFront(etat, question) }
+    }
+
     return questionPourFront(question)
   }
 
@@ -86,11 +97,23 @@ export default class CategoriesController {
       if (jeu) apres = { texte: null, medias: [], ...apres, reponse: `Pokémon ${jeu}` }
     }
 
+    // Ombre : la réponse est le dernier Pokémon trouvé, montré en couleur
+    let mediaOmbre = null
+    if (question.type === 'ombre' && typeof resolue.ombre === 'number') {
+      const trouve = await pokemonTrouve(resolue.ombre)
+      if (trouve) {
+        mediaOmbre = trouve.media
+        if (!apres?.reponse) apres = { texte: null, medias: [], ...apres, reponse: trouve.nom }
+      }
+    }
+
     return {
       question: question.question,
-      media: introTrouvee
-        ? await videoIntro(resolue.intro as number)
-        : questionPourFront(question).media,
+      media: mediaOmbre
+        ? mediaOmbre
+        : introTrouvee
+          ? await videoIntro(resolue.intro as number)
+          : questionPourFront(question).media,
       serie:
         question.type === 'serie' && resolue.historique
           ? await historiquePourFront(resolue.historique, question)
@@ -154,6 +177,7 @@ export default class CategoriesController {
     const reponse = ctx.request.input('reponse', '')
     let historique: HistoriqueSerie | null = null
     let intro: number | null = null
+    let ombre: number | null = null
 
     if (question.type === 'serie') {
       // Série : la question n'est validée qu'une fois l'objectif atteint
@@ -182,6 +206,20 @@ export default class CategoriesController {
         return ctx.response.redirect().toRoute('categories.show', { id })
       }
       intro = trouvee
+    } else if (question.type === 'ombre') {
+      // Ombre : +1 / -1 et un nouveau Pokémon à chaque réponse, validée à l'objectif
+      const { correct, fini } = await repondreOmbre(
+        ctx.session,
+        `${id}:${player[id]}`,
+        question,
+        reponse
+      )
+      if (fini === null) {
+        if (correct === true) ctx.session.flash('success', 'Bien joué !')
+        if (correct === false) ctx.session.flash('error', 'Raté !')
+        return ctx.response.redirect().toRoute('categories.show', { id })
+      }
+      ombre = fini
     } else {
       const verification = verifierReponse(question, reponse)
 
@@ -194,7 +232,7 @@ export default class CategoriesController {
       }
     }
 
-    const resolue: Resolue = { index: player[id], historique, intro }
+    const resolue: Resolue = { index: player[id], historique, intro, ombre }
     ctx.session.flash('resolue', resolue)
 
     player[id] += 1

@@ -21,6 +21,14 @@ export type QuestionFront = {
   serie?: SerieFront
   fiche?: FicheFront
   intro?: IntroFront
+  ombre?: OmbreFront
+}
+
+export type OmbreFront = {
+  image: string
+  compteur: number
+  objectif: number
+  derniere: { nom: string; image: string; correct: boolean } | null
 }
 
 export type IntroFront = {

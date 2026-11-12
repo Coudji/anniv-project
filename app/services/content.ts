@@ -120,8 +120,28 @@ export interface QuestionIntro {
   apres?: Apres
 }
 
+/**
+ * "Quel est ce Pokémon ?" : une ombre au hasard (image noircie par le CSS), il tape le nom.
+ * +1 si juste, -1 si faux (sans descendre sous 0), un nouveau Pokémon à chaque réponse,
+ * jusqu'à l'objectif. `max` : numéro du dernier Pokémon possible (251 par défaut, 2 générations).
+ */
+export interface QuestionOmbre {
+  type: 'ombre'
+  question: string
+  media?: Media
+  apres?: Apres
+  objectif: number
+  max?: number
+}
+
 export type Question =
-  QuestionTexte | QuestionChoix | QuestionListe | QuestionSerie | QuestionFiche | QuestionIntro
+  | QuestionTexte
+  | QuestionChoix
+  | QuestionListe
+  | QuestionSerie
+  | QuestionFiche
+  | QuestionIntro
+  | QuestionOmbre
 
 /**
  * Apparence d'une catégorie : une couleur de la palette et une icône pixel

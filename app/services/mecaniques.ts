@@ -45,7 +45,7 @@ function toleranceParDefaut(attendue: string) {
 /**
  * La saisie correspond-elle à l'une des réponses acceptées, à la tolérance près ?
  */
-function correspond(saisie: string, acceptees: string[], tolerance?: number) {
+export function correspond(saisie: string, acceptees: string[], tolerance?: number) {
   const donnee = normaliser(saisie)
 
   return acceptees.some((acceptee) => {
@@ -131,6 +131,7 @@ export function verifierReponse(question: Question, reponse: unknown): Verificat
     case 'serie':
     case 'fiche':
     case 'intro':
+    case 'ombre':
       // Les séries, les fiches et les intros sont gérées à part (services/series,
       // services/fiches et services/intros), car elles ont un état
       return { correct: false }
@@ -175,6 +176,7 @@ export function questionPourFront(question: Question) {
     case 'serie':
     case 'fiche':
     case 'intro':
+    case 'ombre':
       return {
         type: question.type,
         question: question.question,
