@@ -1351,6 +1351,16 @@
             "reponse": "À le protéger",
             "medias": [{ "type": "video", "fichier": "kekiveu/video-09.mp4" }]
           }
+        },
+        {
+          "type": "texte",
+          "question": "Question de Rory : comment Mao Mao appelle-t-elle les parties intimes de maître Jinshi quand elle les touche dans la saison 2 ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-10.mp4" },
+          "reponses": ["grenouille"],
+          "apres": {
+            "reponse": "Une grenouille",
+            "medias": [{ "type": "video", "fichier": "kekiveu/video-11.mp4" }]
+          }
         }
       ]
     }
