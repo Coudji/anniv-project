@@ -111,6 +111,19 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['desactiver']>>>
     }
   }
+  'triche.enveloppes': {
+    methods: ["GET","HEAD"]
+    pattern: '/triche/enveloppes'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['enveloppes']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['enveloppes']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/triche_controller').default['enveloppes']>>>
+    }
+  }
   'triche.activer': {
     methods: ["GET","HEAD"]
     pattern: '/triche/:code'

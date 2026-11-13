@@ -11,6 +11,7 @@ declare module '@adonisjs/inertia/types' {
   export interface InertiaPages {
     'accueil': ExtractProps<(typeof import('../../inertia/pages/accueil.vue'))['default']>
     'categorie': ExtractProps<(typeof import('../../inertia/pages/categorie.vue'))['default']>
+    'enveloppes': ExtractProps<(typeof import('../../inertia/pages/enveloppes.vue'))['default']>
     'errors/not_found': ExtractProps<(typeof import('../../inertia/pages/errors/not_found.vue'))['default']>
     'errors/server_error': ExtractProps<(typeof import('../../inertia/pages/errors/server_error.vue'))['default']>
     'final': ExtractProps<(typeof import('../../inertia/pages/final.vue'))['default']>

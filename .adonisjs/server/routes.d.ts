@@ -12,6 +12,7 @@ export type ScannedRoutes = {
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'categories.repondre': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.desactiver': { paramsTuple?: []; params?: {} }
+    'triche.enveloppes': { paramsTuple?: []; params?: {} }
     'triche.activer': { paramsTuple: [ParamValue]; params: {'code': ParamValue} }
     'triche.valider': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.passer': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
@@ -24,6 +25,7 @@ export type ScannedRoutes = {
     'final': { paramsTuple?: []; params?: {} }
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.desactiver': { paramsTuple?: []; params?: {} }
+    'triche.enveloppes': { paramsTuple?: []; params?: {} }
     'triche.activer': { paramsTuple: [ParamValue]; params: {'code': ParamValue} }
   }
   HEAD: {
@@ -32,6 +34,7 @@ export type ScannedRoutes = {
     'final': { paramsTuple?: []; params?: {} }
     'categories.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'triche.desactiver': { paramsTuple?: []; params?: {} }
+    'triche.enveloppes': { paramsTuple?: []; params?: {} }
     'triche.activer': { paramsTuple: [ParamValue]; params: {'code': ParamValue} }
   }
   POST: {

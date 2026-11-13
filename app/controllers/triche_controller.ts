@@ -6,6 +6,32 @@ import { oublierSerie } from '#services/series'
 import { oublierFiche } from '#services/fiches'
 import { etatIntro, oublierIntro } from '#services/intros'
 import { etatOmbre, oublierOmbre } from '#services/ombres'
+import type { Question } from '#services/content'
+
+/**
+ * La bonne réponse en toutes lettres : la réponse affichée au résultat si elle existe,
+ * sinon la première réponse acceptée ou la (les) bonne(s) option(s)
+ */
+function reponseEnClair(question: Question) {
+  if (question.apres?.reponse) return question.apres.reponse
+  switch (question.type) {
+    case 'texte':
+      return question.reponses[0]
+    case 'choix': {
+      const bonnes = Array.isArray(question.bonne) ? question.bonne : [question.bonne]
+      return bonnes
+        .map((i) => {
+          const option = question.options[i]
+          return 'texte' in option ? option.texte : `image n° ${i + 1}`
+        })
+        .join(' + ')
+    }
+    case 'liste':
+      return question.elements.map((element) => element.reponses[0]).join(', ')
+    default:
+      return '—'
+  }
+}
 
 /**
  * Mode triche, pour les tests et en cas de souci le jour J.
@@ -24,6 +50,27 @@ export default class TricheController {
   desactiver({ session, response }: HttpContext) {
     session.forget('triche')
     return response.redirect().toRoute('grille')
+  }
+
+  /**
+   * Les réponses de la catégorie centrale, à imprimer et découper pour les enveloppes
+   * (mode triche uniquement). Toujours à jour avec jeu.json.
+   */
+  async enveloppes({ session, inertia, response }: HttpContext) {
+    if (session.get('triche') !== true) return response.redirect().toRoute('grille')
+
+    const { categories } = await loadContent()
+    const cartes = categories.cat9.questions.map((question, index) => {
+      const morceaux = question.question.match(/^(Question d(?:e |').+?)\s?:\s*(.*)$/)
+      const texte = morceaux ? morceaux[2] : question.question
+      return {
+        numero: index + 1,
+        titre: morceaux ? morceaux[1] : 'Question',
+        question: texte.charAt(0).toUpperCase() + texte.slice(1),
+        reponse: reponseEnClair(question),
+      }
+    })
+    return inertia.render('enveloppes', { cartes })
   }
 
   private async joueur({ session }: HttpContext) {

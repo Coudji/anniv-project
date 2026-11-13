@@ -54,6 +54,12 @@ const routes = {
     tokens: [[0,"triche"],[0,"off"]],
     types: placeholder as Registry['triche.desactiver']['types'],
   },
+  'triche.enveloppes': {
+    methods: ["GET","HEAD"],
+    pattern: '/triche/enveloppes',
+    tokens: [[0,"triche"],[0,"enveloppes"]],
+    types: placeholder as Registry['triche.enveloppes']['types'],
+  },
   'triche.activer': {
     methods: ["GET","HEAD"],
     pattern: '/triche/:code',

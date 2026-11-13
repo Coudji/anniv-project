@@ -21,6 +21,7 @@ router.post('/categorie/:id', [controllers.Categories, 'repondre'])
 
 // Mode triche
 router.get('/triche/off', [controllers.Triche, 'desactiver'])
+router.get('/triche/enveloppes', [controllers.Triche, 'enveloppes'])
 router.get('/triche/:code', [controllers.Triche, 'activer'])
 router.post('/triche/valider/:id', [controllers.Triche, 'valider'])
 router.post('/triche/passer/:id', [controllers.Triche, 'passer'])
