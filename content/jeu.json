@@ -1209,7 +1209,8 @@
       "questions": [
         {
           "type": "texte",
-          "question": "Question de Coudji : combien de jours y a-t-il entre le jour de ta naissance et le 15 novembre 2026 (en comptant les deux jours) ?",
+          "question": "Question d'Amand : combien de jours y a-t-il entre le jour de ta naissance et le 15 novembre 2026 (en comptant les deux jours) ?",
+          "media": { "type": "video", "fichier": "kekiveu/video-12.mp4" },
           "reponses": ["12785", "12 785"],
           "tolerance": 0,
           "apres": { "reponse": "12 785 jours" }
