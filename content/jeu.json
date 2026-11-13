@@ -1003,7 +1003,7 @@
         },
         {
           "type": "ombre",
-          "question": "Quel est ce Pokémon ? Trouve 10 ombres (1re et 2e génération) : +1 si juste, −1 si faux.",
+          "question": "Quel est ce Pokémon ?",
           "objectif": 10
         }
       ]
