@@ -1209,6 +1209,13 @@
       "questions": [
         {
           "type": "texte",
+          "question": "Question de Coudji : combien de jours y a-t-il entre le jour de ta naissance et le 15 novembre 2026 (en comptant les deux jours) ?",
+          "reponses": ["12785", "12 785"],
+          "tolerance": 0,
+          "apres": { "reponse": "12 785 jours" }
+        },
+        {
+          "type": "texte",
           "question": "Question de Mamy : quel est le nom du dragon de la planète Namek ?",
           "media": { "type": "video", "fichier": "kekiveu/video-05.mp4" },
           "reponses": ["polunga", "porunga"],
